@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hudson Stingers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #000000, #333333, #822008, #1e1e1e);
+            color: #d3d3d3; /* Light Gray Text */
+        }
+
+        header {
+            background-color: #000000 !important;
+            background-image: url('./images/Hudson_FRC_4295_Banner.png'); /* Replace with your banner's URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px; /* Increased size for a more dynamic look */
+            width: 100%;
+        }
+
+        h1, h2, h3, p {
+            color: #d3d3d3; /* Light Gray Text for Headings and Paragraphs */
+        }
+
+        button.btn-primary {
+            background-color: #822008;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button.btn-primary:hover {
+            background-color: #9b2b10;
+        }
+
+        .form-control, .form-group label {
+            background-color: #222;
+            color: #d3d3d3; /* Light Gray Text for Form Controls and Labels */
+            border: 1px solid #444;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .banner-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center; /* Center text within the banner */
+        }
+
+        .intro-text {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav.navbar {
+            background-color: #1e1e1e;
+        }
+
+        nav.navbar .nav-link {
+            color: #d3d3d3;
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .map {
+            margin-top: 20px;
+        }
+
+        hr {
+            border-color: #822008;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/header.js"></script>
+</head>
+<body>
+    <main class="container mt-5">
+        <div class="intro-text">
+            <h1 class="display-4">Contact Us</h1>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <p>If you are curious about anything we and FIRST do, please feel free to drop an email! We will make it a point to call or email back within two days. We appreciate the enthusiasm- that's what builds robots! <br><em>* Indicates required field</em></p>
+                <form class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" id="comment" name="comment"></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <p>Email: <a href="mailto:hudsonisdrobotics@gmail.com">hudsonisdrobotics@gmail.com</a></p>
+                <p>Address: 6735 Ted Trout Dr, Lufkin, TX 75904</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.032963327297!2d-94.73391152438591!3d31.22485048147995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8637397d51a120a9%3A0x4ccf34267fc78c29!2s6735%20Ted%20Trout%20Dr%2C%20Lufkin%2C%20TX%2075904!5e0!3m2!1sen!2sus!4v1636415765060!5m2!1sen!2sus" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
