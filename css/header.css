@@ -14,8 +14,8 @@ header {
 .banner {
     width: 100%;
     height: auto;
-    max-height: 555px;
-    object-fit: cover;
+    max-height: 200px;
+    object-fit: scale-down;
 }
 
 .banner-content {

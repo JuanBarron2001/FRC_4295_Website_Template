@@ -1,10 +1,14 @@
 const createImage = () => {
+    const anchor = document.createElement('a');
+    anchor.href = './index.html';
+
     const image = document.createElement('img');
     image.src = './images/banner/Hudson_FRC_4295_Banner_Cropped.png';
     image.alt = 'Hudson Stingers Banner';
     image.classList.add('banner');
 
-    return image;
+    anchor.appendChild(image);
+    return anchor;
 };
 
 const createTitle = () => {
