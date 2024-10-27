@@ -1,0 +1,35 @@
+h1, h2, h3, p {
+    color: #d3d3d3; /* Light Gray Text for Headings and Paragraphs */
+}
+
+button.btn-primary {
+    background-color: #822008;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.btn-primary:hover {
+    background-color: #9b2b10;
+}
+
+.form-control, .form-group label {
+    background-color: #222;
+    color: #d3d3d3; /* Light Gray Text for Form Controls and Labels */
+    border: 1px solid #444;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro-text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+hr {
+    border-color: #822008;
+}
