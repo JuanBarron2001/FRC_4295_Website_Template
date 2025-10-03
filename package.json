@@ -1,0 +1,24 @@
+{
+  "name": "frc_4295_website_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanBarron2001/FRC_4295_Website_Template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanBarron2001/FRC_4295_Website_Template/issues"
+  },
+  "homepage": "https://github.com/JuanBarron2001/FRC_4295_Website_Template#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
