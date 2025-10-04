@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  {% include "header.njk" %}
-  <main>
-    {{ content | safe }}
-  </main>
-  {% include "footer.njk" %}
-</body>
+  {% include "head/" + (head or "default") + "_head.njk" %}
+  <body>
+    {% include "header.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
+    {% include "footer.njk" %}
+  </body>
 </html>
