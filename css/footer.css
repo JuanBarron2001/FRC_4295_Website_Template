@@ -1,0 +1,15 @@
+footer {
+    background-color: #1e1e1e; /* Dark background */
+}
+
+footer a {
+    color: #d3d3d3; /* Light gray text */
+}
+
+footer a:hover {
+    color: #00FFFF; /* Pop color when hovering */
+}
+
+.footer img {
+    max-height: 50px;
+}
