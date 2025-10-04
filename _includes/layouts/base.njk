@@ -3,7 +3,7 @@
   {% include "head/" + (head or "default") + "_head.njk" %}
   <body>
     {% include "header.njk" %}
-    <main>
+    <main class="container mt-5">
       {{ content | safe }}
     </main>
     {% include "footer.njk" %}
