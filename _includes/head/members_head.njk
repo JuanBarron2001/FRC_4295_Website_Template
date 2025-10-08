@@ -1,73 +1,58 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hudson Stingers Robotics Members | FRC Team 4295 Students & Mentors</title>
-  
-    <!-- SEO Meta -->
-    <meta name="description" content="Meet the members of Hudson Stingers Robotics, FRC Team 4295 at Hudson High School in Lufkin, TX. Learn about our student team members and dedicated mentors who guide us in the FIRST Robotics Competition.">
-    <meta name="keywords" content="Hudson Stingers Robotics members, FRC Team 4295 students, Hudson High School robotics mentors, FIRST Robotics Competition team, STEM education Hudson TX">
-  
-    <link rel="canonical" href="https://www.hudsonrobotics4295.com/members/">
-    <meta name="robots" content="index, follow">
-  
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Hudson Stingers Robotics Members | FRC Team 4295">
-    <meta property="og:description" content="Meet the students and mentors of Hudson Stingers Robotics, FRC Team 4295 at Hudson High School in Lufkin, TX.">
-    <meta property="og:url" content="https://www.hudsonrobotics4295.com/members/">
-    <meta property="og:image" content="https://www.hudsonrobotics4295.com/images/team-photo.jpg">
-  
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hudson Stingers Robotics Members | FRC Team 4295">
-    <meta name="twitter:description" content="Meet the students and mentors of Hudson Stingers Robotics, FRC Team 4295.">
-    <meta name="twitter:image" content="https://www.hudsonrobotics4295.com/images/team-photo.jpg">
-  
-    <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="/css/header.css" rel="stylesheet">
-    <link href="/css/footer.css" rel="stylesheet">
-    <link href="/css/shared.css" rel="stylesheet">
-    <link href="/css/body_red_stripe.css" rel="stylesheet">
-  
-    <style>
-      .list-group-item {
-        background-color: #1e1e1e;
-        border: 1px solid #444;
-        color: #d3d3d3;
-      }
-    </style>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script data-goatcounter="https://juanbarron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  
-  
-    <!-- Structured Data: Organization with members -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"EducationalOrganization",
-      "name":"Hudson Stingers Robotics",
-      "alternateName":"Hudson High School FRC Team 4295",
-      "url":"https://www.hudsonrobotics4295.com/",
-      "member":[
-        {"@type":"Person","name":"Alex Johnson"},
-        {"@type":"Person","name":"Emily Parker"},
-        {"@type":"Person","name":"Michael Smith"},
-        {"@type":"Person","name":"Sarah Davis"},
-        {"@type":"Person","name":"Joshua Brown"},
-        {"@type":"Person","name":"Jessica Taylor"},
-        {"@type":"Person","name":"Daniel Wilson"},
-        {"@type":"Person","name":"Ashley Moore"},
-        {"@type":"Person","name":"Dr. Amanda Cooper","jobTitle":"Mentor"},
-        {"@type":"Person","name":"Mr. William Johnson","jobTitle":"Mentor"},
-        {"@type":"Person","name":"Mrs. Linda Martinez","jobTitle":"Mentor"},
-        {"@type":"Person","name":"Mr. Thomas Lee","jobTitle":"Mentor"},
-        {"@type":"Person","name":"Ms. Laura White","jobTitle":"Mentor"}
-      ]
-    }
-    </script>
-</head>
+{% extends "head/_head.njk" %}
+
+{% block headMeta %}
+<!-- SEO Meta -->
+<meta name="description" content="Meet the members of Hudson Stingers Robotics, FRC Team 4295 at Hudson High School in Lufkin, TX. Learn about our student team members and dedicated mentors who guide us in the FIRST Robotics Competition.">
+<meta name="keywords" content="Hudson Stingers Robotics members, FRC Team 4295 students, Hudson High School robotics mentors, FIRST Robotics Competition team, STEM education Hudson TX">
+
+<link rel="canonical" href="https://www.hudsonrobotics4295.com/members/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hudson Stingers Robotics Members | FRC Team 4295">
+<meta property="og:description" content="Meet the students and mentors of Hudson Stingers Robotics, FRC Team 4295 at Hudson High School in Lufkin, TX.">
+<meta property="og:url" content="https://www.hudsonrobotics4295.com/members/">
+<meta property="og:image" content="https://www.hudsonrobotics4295.com/images/team-photo.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hudson Stingers Robotics Members | FRC Team 4295">
+<meta name="twitter:description" content="Meet the students and mentors of Hudson Stingers Robotics, FRC Team 4295.">
+<meta name="twitter:image" content="https://www.hudsonrobotics4295.com/images/team-photo.jpg">
+
+<style>
+  .list-group-item {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #d3d3d3;
+  }
+</style>
+
+
+<!-- Structured Data: Organization with members -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EducationalOrganization",
+  "name":"Hudson Stingers Robotics",
+  "alternateName":"Hudson High School FRC Team 4295",
+  "url":"https://www.hudsonrobotics4295.com/",
+  "member":[
+    {"@type":"Person","name":"Alex Johnson"},
+    {"@type":"Person","name":"Emily Parker"},
+    {"@type":"Person","name":"Michael Smith"},
+    {"@type":"Person","name":"Sarah Davis"},
+    {"@type":"Person","name":"Joshua Brown"},
+    {"@type":"Person","name":"Jessica Taylor"},
+    {"@type":"Person","name":"Daniel Wilson"},
+    {"@type":"Person","name":"Ashley Moore"},
+    {"@type":"Person","name":"Dr. Amanda Cooper","jobTitle":"Mentor"},
+    {"@type":"Person","name":"Mr. William Johnson","jobTitle":"Mentor"},
+    {"@type":"Person","name":"Mrs. Linda Martinez","jobTitle":"Mentor"},
+    {"@type":"Person","name":"Mr. Thomas Lee","jobTitle":"Mentor"},
+    {"@type":"Person","name":"Ms. Laura White","jobTitle":"Mentor"}
+  ]
+}
+</script>
+{% endblock %}
