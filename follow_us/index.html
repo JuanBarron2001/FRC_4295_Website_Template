@@ -98,8 +98,18 @@
   <body>
     <header>
     <a href="/">
-        <img src="/images/banner/Hudson_FRC_4295_Banner_Cropped.png" alt="Hudson Stingers Banner" class="banner">
-    </a>
+        <img 
+          src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
+          srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
+          sizes="100vw"
+          width="1854" height="555"
+          fetchpriority="high"
+          alt="Hudson Stingers Banner"
+          class="banner">
+      </a>      
 </header>
 <div class="header-content" style="background-color: rgb(90, 90, 90);">
     <h1 class="display-4">Hudson Stingers</h1>
@@ -198,7 +208,18 @@
                 <h5>Contact Us</h5>
                 <p>Email: <a href="mailto:hudsonisdrobotics@gmail.com" class="text-white">hudsonisdrobotics@gmail.com</a></p>
                 <p>Address: 6735 Ted Trout Dr, Lufkin, TX 75904</p>
-                <img src="/images/logos/FRC_Logo.png" alt="FRC Logo" class="img-fluid mx-auto d-block mt-2">
+                <img 
+                src="/images/logos/FRC_Logo-480.webp"
+                srcset="/images/logos/FRC_Logo-320.webp 320w,
+                        /images/logos/FRC_Logo-480.webp 480w,
+                        /images/logos/FRC_Logo-516.webp 516w"
+                sizes="(max-width: 480px) 320px, 
+                        (max-width: 768px) 480px, 
+                        516px"
+                width="516" height="309"
+                class="img-fluid mx-auto d-block mt-2"
+                loading="lazy"
+                alt="FRC Logo">
             </div>
         </div>
         <hr class="bg-white">
