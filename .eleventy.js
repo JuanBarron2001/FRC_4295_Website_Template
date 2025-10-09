@@ -5,5 +5,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("favicon.ico");
     eleventyConfig.addPassthroughCopy("site.webmanifest");
+    eleventyConfig.addPassthroughCopy("node_modules/lite-youtube-embed/src");
   };
   
