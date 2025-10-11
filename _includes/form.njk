@@ -27,17 +27,50 @@
     </form>
   </section>
   
-  <script>
+  <script type="module">
+    import validator from "https://cdn.jsdelivr.net/npm/validator@13.11.0/+esm";
+  
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.querySelector("#{{form_id}} form");
   
       form.addEventListener("submit", function (e) {
         e.preventDefault();
   
+        // Grab values
+        const name = form.querySelector("#name").value.trim();
+        const phone = form.querySelector("#phone").value.trim();
+        const email = form.querySelector("#email").value.trim();
+        const comment = form.querySelector("#comment").value.trim();
+  
+        // Remove old message if any
+        const oldMsg = form.parentElement.querySelector(".form-message");
+        if (oldMsg) oldMsg.remove();
+  
+        // Validate
+        let errors = [];
+        if (validator.isEmpty(name)) errors.push("Name is required.");
+        if (!validator.isEmail(email)) errors.push("Valid email is required.");
+        if (validator.isEmpty(phone)) {
+          errors.push("Phone number is required.");
+        } else if (!validator.isMobilePhone(phone, "any")) {
+          errors.push("Valid phone number is required.");
+        }
+        if (validator.isEmpty(comment)) errors.push("Comment is required.");
+  
+        if (errors.length > 0) {
+          const msg = document.createElement("div");
+          msg.className = "form-message alert alert-danger mt-4";
+          msg.innerHTML = "❌ Please fix the following:<br>" + errors.join("<br>");
+          form.parentElement.appendChild(msg);
+          return; // stop here, don’t fake submit
+        }
+  
+        // Disable button + show "sending..."
         const button = form.querySelector("button[type=submit]");
         button.disabled = true;
         button.textContent = "Sending...";
   
+        // Fake async request
         setTimeout(() => {
           const success = Math.random() > 0.3;
   
@@ -58,7 +91,6 @@
             ? "✅ Your message was sent successfully!"
             : "❌ Something went wrong. Please try again.";
   
-          // If success, hide the form and show message
           if (success) {
             form.style.display = "none";
           }
@@ -68,5 +100,6 @@
       });
     });
   </script>
+  
   
   
