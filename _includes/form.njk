@@ -27,3 +27,46 @@
     </form>
   </section>
   
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("#{{form_id}} form");
+  
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+  
+        const button = form.querySelector("button[type=submit]");
+        button.disabled = true;
+        button.textContent = "Sending...";
+  
+        setTimeout(() => {
+          const success = Math.random() > 0.3;
+  
+          // Restore button state
+          button.disabled = false;
+          button.textContent = "Submit";
+  
+          // Remove old message if any
+          const oldMsg = form.parentElement.querySelector(".form-message");
+          if (oldMsg) oldMsg.remove();
+  
+          // Create alert box
+          const msg = document.createElement("div");
+          msg.className = `form-message alert mt-4 ${
+            success ? "alert-success" : "alert-danger"
+          }`;
+          msg.textContent = success
+            ? "✅ Your message was sent successfully!"
+            : "❌ Something went wrong. Please try again.";
+  
+          // If success, hide the form and show message
+          if (success) {
+            form.style.display = "none";
+          }
+  
+          form.parentElement.appendChild(msg);
+        }, 1000);
+      });
+    });
+  </script>
+  
+  
