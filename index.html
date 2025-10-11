@@ -3,6 +3,9 @@ layout: layouts/base.njk
 title: Hudson Stingers Robotics | Hudson High School FIRST Robotics Competition Team 4295
 head: index
 style: body_gray_stripe
+form_id: sponsors
+form_title: Support Our Robotics Team
+form_message: If you are interested in sponsoring Hudson Stingers Robotics, please fill out the form below. We’ll contact you with more information as soon as possible. Thank you for supporting STEM education in Hudson, TX!
 ---
 
     <header class="intro-text text-center">
@@ -28,21 +31,8 @@ style: body_gray_stripe
     </section>
 
     <hr>
-    <section id="sponsors" class="text-center">
-      <h2>Support Our Robotics Team</h2>
-      <p>If you are interested in sponsoring Hudson Stingers Robotics, please fill out the form below. We’ll contact you with more information as soon as possible. Thank you for supporting STEM education in Hudson, TX!</p>
-      <form class="form-group">
-        <label for="name">Name / Organization:</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" class="form-control" id="phone" name="phone">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-        <label for="comment">Comment:</label>
-        <textarea class="form-control" id="comment" name="comment"></textarea>
-        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-      </form>
-    </section>
+
+    {% include "form.njk" %}
 
     <!-- Videos -->
     <section class="videos mt-5">
