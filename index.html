@@ -182,21 +182,37 @@
     </section>
 
     <hr>
-    <section id="sponsors" class="text-center">
-      <h2>Support Our Robotics Team</h2>
-      <p>If you are interested in sponsoring Hudson Stingers Robotics, please fill out the form below. We’ll contact you with more information as soon as possible. Thank you for supporting STEM education in Hudson, TX!</p>
-      <form class="form-group">
+
+    <section id="sponsors" class="text-center" data-form-id="sponsors" data-lambda-url="">
+    <h2>Support Our Robotics Team</h2>
+    <p>If you are interested in sponsoring Hudson Stingers Robotics, please fill out the form below. We’ll contact you with more information as soon as possible. Thank you for supporting STEM education in Hudson, TX!</p>
+    <form class="form-group">
+      <div class="mb-3">
         <label for="name">Name / Organization:</label>
         <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
         <label for="phone">Phone Number:</label>
         <input type="tel" class="form-control" id="phone" name="phone">
+      </div>
+      <div class="mb-3">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
         <label for="comment">Comment:</label>
         <textarea class="form-control" id="comment" name="comment"></textarea>
-        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-      </form>
-    </section>
+      </div>
+      <!-- Honeypot -->
+      <div style="display:none;">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </section>
+
+  <script type="module" src="/js/form_handler.mjs"></script>
 
     <!-- Videos -->
     <section class="videos mt-5">

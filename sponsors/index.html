@@ -190,18 +190,36 @@
       <p>Interested in becoming a sponsor? Fill out the form below and we’ll contact you with details about sponsorship levels and benefits.</p>
     </div>
 
-    <!-- Sponsorship Form -->
-    <form class="form-group mt-4" aria-label="Sponsorship form">
-      <label for="name">Name / Organization*:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-      <label for="phone">Phone Number:</label>
-      <input type="tel" class="form-control" id="phone" name="phone">
-      <label for="email">Email*:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-      <label for="comment">Message:</label>
-      <textarea class="form-control" id="comment" name="comment"></textarea>
+    <section id="sponsors" class="text-center" data-form-id="sponsors" data-lambda-url="">
+    <h2></h2>
+    <p></p>
+    <form class="form-group">
+      <div class="mb-3">
+        <label for="name">Name / Organization:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" class="form-control" id="phone" name="phone">
+      </div>
+      <div class="mb-3">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" id="comment" name="comment"></textarea>
+      </div>
+      <!-- Honeypot -->
+      <div style="display:none;">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website">
+      </div>
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
+  </section>
+
+  <script type="module" src="/js/form_handler.mjs"></script>
 
 
 
