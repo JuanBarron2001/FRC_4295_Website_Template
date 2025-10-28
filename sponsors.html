@@ -3,6 +3,7 @@ layout: layouts/base.njk
 title: Sponsors | Hudson Stingers Robotics FRC Team 4295
 head: sponsors
 style: body_red_dynamic_stripe
+form_id: sponsors
 ---
 
     <div class="intro-text text-center">
@@ -50,17 +51,6 @@ style: body_red_dynamic_stripe
       <p>Interested in becoming a sponsor? Fill out the form below and we’ll contact you with details about sponsorship levels and benefits.</p>
     </div>
 
-    <!-- Sponsorship Form -->
-    <form class="form-group mt-4" aria-label="Sponsorship form">
-      <label for="name">Name / Organization*:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-      <label for="phone">Phone Number:</label>
-      <input type="tel" class="form-control" id="phone" name="phone">
-      <label for="email">Email*:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-      <label for="comment">Message:</label>
-      <textarea class="form-control" id="comment" name="comment"></textarea>
-      <button type="submit" class="btn btn-primary mt-3">Submit</button>
-    </form>
+    {% include "form.njk" %}
 
 

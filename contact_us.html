@@ -3,6 +3,8 @@ layout: layouts/base.njk
 title: Contact Hudson Stingers Robotics | FRC Team 4295 Hudson High School
 head: contact_us
 style: body_red_stripe
+form_id: member
+form_message: If you’re interested in joining, mentoring, sponsoring, or just learning more about FIRST Robotics, we’d love to hear from you. We typically respond within two business days.
 ---
 <div class="intro-text text-center">
   <h1 class="display-4">Contact Hudson Stingers Robotics</h1>
@@ -10,19 +12,8 @@ style: body_red_stripe
 </div>
 
 <div class="row mt-4">
-  <!-- Contact Form -->
-  <div class="col-md-6">
-    <p>If you’re interested in joining, mentoring, sponsoring, or just learning more about FIRST Robotics, we’d love to hear from you. We typically respond within two business days. <br><em>* Indicates required field</em></p>
-    <form class="form-group" aria-label="Contact form">
-      <label for="name">Name*:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-      <label for="email">Email*:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-      <label for="comment">Message*:</label>
-      <textarea class="form-control" id="comment" name="comment" required></textarea>
-      <button type="submit" class="btn btn-primary mt-3">Submit</button>
-    </form>
-  </div>
+
+  {% include "form.njk"%}
 
   <!-- Contact Info -->
   <div class="col-md-6">

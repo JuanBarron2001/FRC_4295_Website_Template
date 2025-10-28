@@ -1,0 +1,30 @@
+<section id="{{form_id}}" class="text-center" data-form-id="{{form_id}}" data-lambda-url="{{lambda_url}}">
+    <h2>{{form_title}}</h2>
+    <p>{{form_message}}</p>
+    <form class="form-group">
+      <div class="mb-3">
+        <label for="name">Name / Organization:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" class="form-control" id="phone" name="phone">
+      </div>
+      <div class="mb-3">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" id="comment" name="comment"></textarea>
+      </div>
+      <!-- Honeypot -->
+      <div style="display:none;">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </section>
+
+  <script type="module" src="/js/form_handler.mjs"></script>
