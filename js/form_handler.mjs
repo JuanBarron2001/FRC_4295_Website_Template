@@ -1,123 +1,88 @@
 import validator from "https://cdn.jsdelivr.net/npm/validator@13.11.0/+esm";
 
-let form = ''
-let endpoint = ''
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector("section[data-form-id]");
+  if (!section) return;
 
-let name = '';
-let phone = '';
-let email = '';
-let comment = '';
+  const form = section.querySelector("form");
+  const endpoint = section.dataset.lambdaUrl;
 
-document.addEventListener("DOMContentLoaded", function () {
-    const section = document.querySelector("section[data-form-id]");
-    form = section.querySelector("form");
-
-    endpoint = section.dataset.lambdaUrl;
-
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    resetMessage(form);
 
-    resetMessage();
+    const values = grabValuesFromForm(form);
+    const errors = validate(values);
 
-    grabValuesFromForm();
-
-    const errors = grabErrorsFromFormInputs();
-    if (errors.length > 0) {
-      const message = "❌ Please fix the following:<br>" + errors.join("<br>");
-      showMessage(false, message);
+    if (errors.length) {
+      showMessage(form, false, "❌ Please fix the following:<br>" + errors.join("<br>"));
       return;
     }
 
-    disableSubmitButton();
+    disableSubmitButton(form);
 
-    const payload = createPayload();
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
 
-    makeAPICallFormSubmit(payload);
+      if (!res.ok) throw new Error("Bad response");
+      const data = await res.json();
+
+      showMessage(form, true, data.message || "✅ Success!");
+      form.style.display = "none";
+    } catch (err) {
+      console.error(err);
+      showMessage(form, false, "❌ Something went wrong. Please try again.");
+    } finally {
+      enableSubmitButton(form);
+    }
   });
 });
 
-const grabValuesFromForm = () => {
-  name = form.querySelector("#name").value.trim();
-  phone = form.querySelector("#phone").value.trim();
-  email = form.querySelector("#email").value.trim();
-  comment = form.querySelector("#comment").value.trim();
-};
+const grabValuesFromForm = (form) => ({
+  name: form.querySelector("#name").value.trim(),
+  phoneNumber: form.querySelector("#phone").value.trim(),
+  email: form.querySelector("#email").value.trim(),
+  message: form.querySelector("#comment").value.trim(),
+});
 
-const resetMessage = () => {
-    const oldMsg = form.parentElement.querySelector(".form-message");
-    if (oldMsg) oldMsg.remove();
-};
-
-const grabErrorsFromFormInputs = () => {
-  let errors = [];
+const validate = ({ name, phoneNumber, email, message }) => {
+  const errors = [];
   if (validator.isEmpty(name)) errors.push("Name is required.");
   if (!validator.isEmail(email)) errors.push("Valid email is required.");
-  if (validator.isEmpty(phone)) {
+  if (validator.isEmpty(phoneNumber)) {
     errors.push("Phone number is required.");
-  } else if (!validator.isMobilePhone(phone, "any")) {
+  } else if (!validator.isMobilePhone(phoneNumber, "any")) {
     errors.push("Valid phone number is required.");
   }
-  if (validator.isEmpty(comment)) errors.push("Comment is required.");
-
+  if (validator.isEmpty(message)) errors.push("Comment is required.");
   return errors;
 };
 
-const disableSubmitButton = () => {
+const resetMessage = (form) => {
+  const oldMsg = form.parentElement.querySelector(".form-message");
+  if (oldMsg) oldMsg.remove();
+};
+
+const showMessage = (form, isSuccess, message) => {
+  const msg = document.createElement("div");
+  msg.className = `form-message alert mt-4 ${isSuccess ? "alert-success" : "alert-danger"}`;
+  msg.setAttribute("role", "alert");
+  msg.innerHTML = message;
+  form.parentElement.appendChild(msg);
+};
+
+const disableSubmitButton = (form) => {
   const button = form.querySelector("button[type=submit]");
   button.disabled = true;
   button.textContent = "Sending...";
 };
 
-const enableSubmitButton = () => {
+const enableSubmitButton = (form) => {
   const button = form.querySelector("button[type=submit]");
   button.disabled = false;
   button.textContent = "Submit";
-}
-
-const createPayload = () => {
-  return {
-    name: name,
-    phoneNumber: phone,
-    email: email,
-    message: comment
-  };
 };
-
-const makeAPICallFormSubmit = (payload) => {
-      // Call the endpoint
-      fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        enableSubmitButton();
-
-        resetMessage();
-
-        showMessage(true, data.message);
-
-        form.style.display = "none";
-      })
-      .catch((err) => {
-        enableSubmitButton();
-
-        resetMessage();
-
-        const message = "❌ Something went wrong. Please try again.";
-        showMessage(false, message);
-      });
-};
-
-const showMessage = (isSuccess, message) => {
-  const cssClass = `form-message alert mt-4 ${isSuccess ? "alert-success" : "alert-danger"}`;
-
-  const msg = document.createElement("div");
-  msg.className = cssClass;
-  msg.innerHTML = message;
-
-  form.parentElement.appendChild(msg);
-}
