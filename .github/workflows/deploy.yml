@@ -21,6 +21,8 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          LAMBDA_URL: ${{ secrets.LAMBDA_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
