@@ -8,45 +8,70 @@ form_title: Support Our Robotics Team
 form_message: If you are interested in sponsoring Hudson Stingers Robotics, please fill out the form below. We’ll contact you with more information as soon as possible. Thank you for supporting STEM education in Hudson, TX!
 ---
 
-    <header class="intro-text text-center">
-      <h1 class="display-4">Hudson Stingers Robotics</h1>
-      <p class="lead">Hudson High School’s official <strong>FIRST Robotics Competition (FRC) Team 4295</strong> in Hudson, Texas.</p>
-    </header>
+<header class="intro-text text-center my-5">
+  <h1 class="display-5 fw-bold">Hudson Stingers Robotics</h1>
+  <p class="lead">
+    Hudson High School’s official <span class="fw-bold">FIRST Robotics Competition (FRC) Team 4295</span> in Hudson, Texas.
+  </p>
+</header>
 
-    <h2 class="text-center">Welcome to Our Team</h2>
-    <p class="text-center">Hudson Stingers Robotics is powered by passionate students and dedicated mentors, working together to build competitive robots and inspire STEM education in our community.</p>
-    <hr>
+<div class="container">
+  <h2 class="text-center mb-4">Welcome to Our Team</h2>
+  <p class="text-center">
+    Hudson Stingers Robotics is powered by passionate students and dedicated mentors, working together to build competitive robots and inspire STEM education in our community.
+  </p>
+  <hr class="border-2 border-danger opacity-100 my-5">
 
-    <!-- Mission and Vision -->
-    <section id="mission-vision">
-      <h2>Mission and Vision</h2>
-      <div class="mission">
-        <h3>Mission Statement</h3>
-        <p>At Hudson Stingers Robotics, we’re buzzing with a passion for science, technology, engineering, and math (STEM). Through hands-on learning, teamwork, and mentorship, we prepare students to innovate, problem-solve, and compete at the highest levels of FRC.</p>
+  <!-- Mission and Vision -->
+  <section id="mission-vision" class="my-5">
+    <h2 class="text-center mb-4">Mission and Vision</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-3 border rounded h-100">
+          <h3 class="h5 fw-bold">Mission Statement</h3>
+          <p>At Hudson Stingers Robotics, we’re buzzing with a passion for science, technology, engineering, and math (STEM). Through hands-on learning, teamwork, and mentorship, we prepare students to innovate, problem-solve, and compete at the highest levels of FRC.</p>
+        </div>
       </div>
-      <div class="vision">
-        <h3>Vision Statement</h3>
-        <p>We envision a future where every student has the opportunity to explore STEM fields, supported by mentors and peers. Our goal is to create a lasting legacy of innovation, teamwork, and excellence that extends beyond competitions into the wider Hudson community.</p>
+      <div class="col-md-6">
+        <div class="p-3 border rounded h-100">
+          <h3 class="h5 fw-bold">Vision Statement</h3>
+          <p>We envision a future where every student has the opportunity to explore STEM fields, supported by mentors and peers. Our goal is to create a lasting legacy of innovation, teamwork, and excellence that extends beyond competitions into the wider Hudson community.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr>
+  <hr class="border-2 border-danger opacity-100 my-5">
 
+  <!-- Sponsor Form -->
+  <section class="my-5">
     {% include "form.njk" %}
+  </section>
 
-    <!-- Videos -->
-    <section class="videos mt-5">
-      <h2>Competition Highlights</h2>
-      <h3>2025 - Game Rules</h3>
-      <lite-youtube videoid="YWbxcjlY9JY" playlabel="FRC 2025 Game Rules"></lite-youtube>
-      <h3>2024 - Game Rules</h3>
-      <lite-youtube videoid="9keeDyFxzY4" playlabel="FRC 2024 Game Rules"></lite-youtube>
-      <h3>2024 Competition</h3>
-      <lite-youtube videoid="GP7oNte1q0U" playlabel="Hudson Stingers 2024 Competition"></lite-youtube>
-      <h3>2023 Competition</h3>
-      <lite-youtube videoid="Mw2-b3eukQc" playlabel="Hudson Stingers 2023 Competition"></lite-youtube>
-      <h3>2023 Game Rules</h3>
-      <lite-youtube videoid="0zpflsYc4PA" playlabel="FRC 2023 Game Rules"></lite-youtube>
-    </section>
-  
-
+  <!-- Videos -->
+  <section class="videos my-5">
+    <h2 class="text-center mb-4">Competition Highlights</h2>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold">2025 - Game Rules</h3>
+        <lite-youtube videoid="YWbxcjlY9JY" playlabel="FRC 2025 Game Rules" class="mb-4"></lite-youtube>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold">2024 - Game Rules</h3>
+        <lite-youtube videoid="9keeDyFxzY4" playlabel="FRC 2024 Game Rules" class="mb-4"></lite-youtube>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold">2024 Competition</h3>
+        <lite-youtube videoid="GP7oNte1q0U" playlabel="Hudson Stingers 2024 Competition" class="mb-4"></lite-youtube>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold">2023 Competition</h3>
+        <lite-youtube videoid="Mw2-b3eukQc" playlabel="Hudson Stingers 2023 Competition" class="mb-4"></lite-youtube>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold">2023 Game Rules</h3>
+        <lite-youtube videoid="0zpflsYc4PA" playlabel="FRC 2023 Game Rules" class="mb-4"></lite-youtube>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,5 +1,5 @@
 header {
-    background-color: #000000 !important;
+    background-color: #000;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,40 +7,41 @@ header {
     width: 100%;
     height: auto;
     max-height: 100vh;
-    /* height: 500px; /* Increased size for a more dynamic look */
-    /*width: 100%;*/
-}
-
-.banner {
+  }
+  
+  .banner {
     width: 100%;
     height: auto;
     max-height: 200px;
     object-fit: scale-down;
-}
-
-.banner-content {
+  }
+  
+  .banner-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; /* Center text within the banner */
-    color: #ffffff; /* Ensure text is visible against the banner */
-}
-
-nav.navbar {
-    background-color: gray;
-}
-
-nav.navbar .nav-link {
+    text-align: center;
+    color: #fff;
+  }
+  
+  nav.navbar {
+    background-color: #2e2e2e;
+  }
+  
+  nav.navbar .nav-link {
     color: #d3d3d3;
-}
-
-nav.navbar .nav-link:hover {
-    color: #ffffff;
-}
-
-.header-content {
+    text-decoration: none;
+  }
+  
+  nav.navbar .nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .header-content {
     text-align: center;
     padding: 20px 0;
-    color: #ffffff;
-}
+    color: #fff;
+  }
+  

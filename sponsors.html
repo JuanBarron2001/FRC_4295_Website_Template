@@ -6,51 +6,54 @@ style: body_red_dynamic_stripe
 form_id: sponsors
 ---
 
-    <div class="intro-text text-center">
-      <h1 class="display-4">Our Sponsors</h1>
-      <p class="lead">A huge thank you to the businesses and organizations that support <strong>Hudson Stingers Robotics, FRC Team 4295</strong>.</p>
+<div class="intro-text text-center my-5">
+  <h1 class="display-5 fw-bold">Our Sponsors</h1>
+  <p class="lead">
+    A huge thank you to the businesses and organizations that support 
+    <span class="fw-bold">Hudson Stingers Robotics, FRC Team 4295</span>.
+  </p>
+</div>
+
+<!-- Sponsor Logos -->
+<div class="container my-5">
+  <div class="row text-center g-4" aria-label="Hudson Stingers Robotics sponsors">
+    <div class="col-md-4 sponsor-logo">
+      <img src="/images/logos/lockheed.png" alt="Lockheed Martin sponsor of Hudson Stingers Robotics" class="img-fluid mx-auto d-block bg-white p-2 rounded shadow-sm mb-2" width="150" height="150">
+      <p>Lockheed Martin</p>
     </div>
-
-    <!-- Sponsor Logos -->
-    <div class="row text-center mb-5">
-      <div class="col-md-4 mb-4 sponsor-logo">
-        <img src="/images/logos/lockheed.png" alt="Lockheed Martin sponsor of Hudson Stingers Robotics" class="img-fluid mb-2" width="150" height="150" style="background-color: #FFFFFF;">
-        <p>Lockheed Martin</p>
-      </div>
-      <div class="col-md-4 mb-4 sponsor-logo">
-        <img src="/images/logos/optimum.jpg" alt="Optimum sponsor of Hudson Stingers Robotics" class="img-fluid mb-2" width="150" height="150">
-        <p>Optimum</p>
-      </div>
-      <div class="col-md-4 mb-4 sponsor-logo">
-        <img src="/images/logos/Kayses_Kreations.jpg" alt="Kasye's Kreations sponsor of Hudson Stingers Robotics" class="img-fluid mb-2" width="150" height="150">
-        <p>Kasye's Kreations</p>
-      </div>
-      <div class="col-md-4 mb-4 sponsor-logo">
-        <img src="/images/logos/Souther_Magic_Trouble.jpg" alt="Southern Magic Travel sponsor of Hudson Stingers Robotics" class="img-fluid mb-2" width="150" height="150">
-        <p>Southern Magic Travel</p>
-      </div>
-      <div class="col-md-4 mb-4 sponsor-logo">
-        <img src="https://via.placeholder.com/150" alt="East Texas Glass sponsor of Hudson Stingers Robotics" class="img-fluid mb-2">
-        <p>East Texas Glass</p>
-      </div>
-      <div class="col-md-4 mb-4 sponsor-logo">
-        <img src="https://via.placeholder.com/150" alt="Future Sponsor placeholder" class="img-fluid mb-2">
-        <p>Future Sponsor (YOU)</p>
-      </div>
+    <div class="col-md-4 sponsor-logo">
+      <img src="/images/logos/optimum.jpg" alt="Optimum sponsor of Hudson Stingers Robotics" class="img-fluid mx-auto d-block mb-2" width="150" height="150">
+      <p>Optimum</p>
     </div>
-
-    <!-- Sponsorship CTA -->
-    <div class="mt-5 text-center">
-      <h2>Sponsor Hudson Stingers Robotics</h2>
-      <p>By sponsoring <strong>Hudson Stingers Robotics</strong>, your business will:</p>
-      <ul class="list-unstyled">
-        <li>✔ Gain visibility on our robot, team shirts, website, and events</li>
-        <li>✔ Support STEM education and inspire future engineers in Lufkin, TX</li>
-        <li>✔ Be recognized at competitions and community outreach events</li>
-      </ul>
-      <p>Interested in becoming a sponsor? Fill out the form below and we’ll contact you with details about sponsorship levels and benefits.</p>
+    <div class="col-md-4 sponsor-logo">
+      <img src="/images/logos/Kayses_Kreations.jpg" alt="Kayse's Kreations sponsor of Hudson Stingers Robotics" class="img-fluid mx-auto d-block mb-2" width="150" height="150">
+      <p>Kayse's Kreations</p>
     </div>
+    <div class="col-md-4 sponsor-logo">
+      <img src="/images/logos/Souther_Magic_Trouble.jpg" alt="Southern Magic Travel sponsor of Hudson Stingers Robotics" class="img-fluid mx-auto d-block mb-2" width="150" height="150">
+      <p>Southern Magic Travel</p>
+    </div>
+    <div class="col-md-4 sponsor-logo">
+      <img src="https://via.placeholder.com/150" alt="East Texas Glass sponsor of Hudson Stingers Robotics" class="img-fluid mx-auto d-block mb-2">
+      <p>East Texas Glass</p>
+    </div>
+    <div class="col-md-4 sponsor-logo">
+      <img src="https://via.placeholder.com/150" alt="Future Sponsor placeholder" class="img-fluid mx-auto d-block mb-2">
+      <p>Future Sponsor (YOU)</p>
+    </div>
+  </div>
+</div>
 
-    {% include "form.njk" %}
+<!-- Sponsorship CTA -->
+<div class="container text-center my-5">
+  <h2 class="fw-bold">Sponsor Hudson Stingers Robotics</h2>
+  <p>By sponsoring <strong>Hudson Stingers Robotics</strong>, your business will:</p>
+  <ul class="list-unstyled">
+    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Gain visibility on our robot, team shirts, website, and events</li>
+    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Support STEM education and inspire future engineers in Lufkin, TX</li>
+    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Be recognized at competitions and community outreach events</li>
+  </ul>
+  <p>Interested in becoming a sponsor? Fill out the form below and we’ll contact you with details about sponsorship levels and benefits.</p>
+</div>
 
-
+{% include "form.njk" %}
