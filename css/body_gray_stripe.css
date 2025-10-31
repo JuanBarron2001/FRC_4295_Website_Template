@@ -1,5 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #000000, #2e2e2e, #000000);
-    color: #d3d3d3; /* Light Gray Text */
-}
+    color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  

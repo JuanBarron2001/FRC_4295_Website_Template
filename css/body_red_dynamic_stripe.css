@@ -3,11 +3,24 @@ body {
     background: linear-gradient(135deg, #000000, #3a3a3a, #822008, #3a3a3a, #000000);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    color: #d3d3d3; /* Light Gray Text */
-}
-
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
+    background-color: #000; /* Fallback */
+    color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      animation: none;
+      background-position: center;
+    }
+  }
+  
