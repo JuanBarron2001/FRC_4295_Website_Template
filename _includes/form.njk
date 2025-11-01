@@ -1,36 +1,48 @@
-<section id="{{form_id}}" class="text-center" data-form-id="{{form_id}}" data-lambda-url="{{lambda_url}}">
-  <h2>{{form_title}}</h2>
-  <p>{{form_message}}</p>
+<section id="{{form_id}}" class="py-4" data-form-id="{{form_id}}" data-lambda-url="{{lambda_url}}">
+  <div class="container">
+    <form class="p-4 border border-3 border-dark rounded" style="background-color:#2b2b2b; color:#e0e0e0;">
+      
+      <!-- Custom form header -->
+      <div class="form-header mb-4 text-center" style="background-color:#3a3a3a; padding:1rem; border-radius:4px;">
+        <h2 class="fw-bold mb-2">{{form_title}}</h2>
+        <p class="mb-0" style="color:#bfbfbf;">{{form_message}}</p>
+        <hr class="mx-auto mt-3 mb-0" style="width:80px; border-top:2px solid #822008; opacity:1;">
+      </div>
 
-  <form>
-    <div class="mb-3">
-      <label for="name" class="form-label">Name / Organization:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-    </div>
+      <!-- Name -->
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control bg-light text-dark border-0" id="name" name="name" placeholder="Name / Organization" required>
+        <label for="name">Name / Organization</label>
+      </div>
 
-    <div class="mb-3">
-      <label for="phone" class="form-label">Phone Number:</label>
-      <input type="tel" class="form-control" id="phone" name="phone">
-    </div>
+      <!-- Phone -->
+      <div class="form-floating mb-3">
+        <input type="tel" class="form-control bg-light text-dark border-0" id="phone" name="phone" placeholder="Phone Number">
+        <label for="phone">Phone Number</label>
+      </div>
 
-    <div class="mb-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
+      <!-- Email -->
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control bg-light text-dark border-0" id="email" name="email" placeholder="Email" required>
+        <label for="email">Email</label>
+      </div>
 
-    <div class="mb-3">
-      <label for="comment" class="form-label">Comment:</label>
-      <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
-    </div>
+      <!-- Comment -->
+      <div class="form-floating mb-3">
+        <textarea class="form-control bg-light text-dark border-0" id="comment" name="comment" placeholder="Leave a comment" style="height: 120px"></textarea>
+        <label for="comment">Comment</label>
+      </div>
 
-    <!-- Honeypot -->
-    <div class="d-none">
-      <label for="website" class="form-label">Leave this field empty</label>
-      <input type="text" id="website" name="website" class="form-control">
-    </div>
+      <!-- Honeypot -->
+      <div class="d-none">
+        <label for="website" class="form-label">Leave this field empty</label>
+        <input type="text" id="website" name="website" class="form-control">
+      </div>
 
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-  </form>
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+    </form>
+  </div>
 </section>
 
 <script type="module" src="/js/form_handler.mjs"></script>
