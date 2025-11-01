@@ -47,9 +47,10 @@ const grabValuesFromForm = (form) => ({
   phoneNumber: form.querySelector("#phone").value.trim(),
   email: form.querySelector("#email").value.trim(),
   message: form.querySelector("#comment").value.trim(),
+  honeyPot: form.querySelector("#website").value.trim()
 });
 
-const validate = ({ name, phoneNumber, email, message }) => {
+const validate = ({ name, phoneNumber, email, message, honeyPot }) => {
   const errors = [];
   if (validator.isEmpty(name)) errors.push("Name is required.");
   if (!validator.isEmail(email)) errors.push("Valid email is required.");
