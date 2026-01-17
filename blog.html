@@ -24,7 +24,7 @@ head: blog
       <article class="card-hover p-8 border-l-4 border-tech">
         <div class="flex items-start gap-4 mb-4">
           <div class="p-3 bg-tech bg-opacity-20 rounded-lg">
-            <i class="fa-solid {{ post.data.icon or 'fa-robot' }} text-tech"></i>
+            <i class="fa-solid {{ post.data.icon | default: 'fa-robot' }} text-tech"></i>
           </div>
           <div class="flex-1">
             <time class="text-tech font-semibold">{{ post.date | readableDate }}</time>
