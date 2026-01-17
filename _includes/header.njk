@@ -1,47 +1,85 @@
-<header>
-    <a href="/">
-      <img 
-        src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
-        srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
-                /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
-                /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
-                /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
-        sizes="100vw"
-        width="1854" height="555"
-        fetchpriority="high"
-        alt="Hudson Stingers Banner"
-        class="banner">
-    </a>      
-  </header>
-  
-  <div class="header-content bg-dark text-white py-3">
-    <h1 class="display-4 m-0">Hudson Stingers</h1>
+<header class="sticky top-0 z-50 backdrop-blur-tech border-b border-gray-800">
+  <!-- Banner & Branding -->
+  <div class="bg-gradient-dark relative overflow-hidden">
+    <!-- Animated gradient background -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <a href="/" class="flex items-center gap-4 group">
+        <img 
+          src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
+          srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 300px, 400px"
+          width="400" height="120"
+          fetchpriority="high"
+          alt="Hudson Stingers Banner"
+          class="h-16 w-auto object-contain group-hover:opacity-80 transition-opacity duration-300">
+      </a>
+      <div class="mt-4">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-gray-100">
+          Hudson Stingers
+        </h1>
+        <p class="text-tech font-bold text-lg mt-2">FIRST Robotics Competition • Team 4295</p>
+      </div>
+    </div>
   </div>
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-grays">
-    <div class="container-fluid">
-      <!-- Navbar toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about_first/">About FIRST</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact_us/">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/follow_us/">Follow Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/members/">Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="/sponsors/">Sponsors</a></li>
-        </ul>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-tech hover:bg-gray-800 focus:outline-none" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Desktop navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Home</a>
+          <a href="/about/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About</a>
+          <a href="/about_first/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About FIRST</a>
+          <a href="/contact_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Contact</a>
+          <a href="/follow_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Follow Us</a>
+          <a href="/members/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Members</a>
+          <a href="/gallery/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Gallery</a>
+          <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Blog</a>
+          <a href="/sponsors/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Sponsors</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Home</a>
+        <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About</a>
+        <a href="/about_first/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About FIRST</a>
+        <a href="/contact_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Contact</a>
+        <a href="/follow_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Follow Us</a>
+        <a href="/members/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Members</a>
+        <a href="/gallery/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Gallery</a>
+        <a href="/blog/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Blog</a>
+        <a href="/sponsors/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Sponsors</a>
       </div>
     </div>
   </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
   

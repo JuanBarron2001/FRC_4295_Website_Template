@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include "head/" + (head or "default") + "_head.njk" %}
-  <body>
+  <body class="bg-gray-950 text-gray-200">
     {% include "header.njk" %}
-    <main class="container mt-5">
+    <main class="min-h-screen">
       {{ content | safe }}
     </main>
     {% include "footer.njk" %}

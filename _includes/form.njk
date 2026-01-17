@@ -1,36 +1,123 @@
-<section id="{{form_id}}" class="text-center" data-form-id="{{form_id}}" data-lambda-url="{{lambda_url}}">
-  <h2>{{form_title}}</h2>
-  <p>{{form_message}}</p>
+<section id="{{form_id}}" class="py-12 md:py-16" data-form-id="{{form_id}}" data-lambda-url="{{lambda_url}}">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Card Container -->
+    <div class="card-hover border-2 border-tech border-opacity-30 p-8 md:p-10">
+      <!-- Form Header -->
+      <div class="mb-10 pb-8 border-b-2 border-gray-800">
+        <h2 class="heading-tech mb-3">{{form_title}}</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">{{form_message}}</p>
+      </div>
 
-  <form>
-    <div class="mb-3">
-      <label for="name" class="form-label">Name / Organization:</label>
-      <input type="text" class="form-control" id="name" name="name" required>
+      <!-- Form Body -->
+      <form class="space-y-6" id="contact-form">
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="name" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            <span class="text-tech">*</span> Name / Organization
+          </label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your name or organization" 
+            class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200" 
+            required
+          >
+          <p class="text-xs text-gray-500 mt-1">Your full name or business name</p>
+        </div>
+
+        <!-- Phone Field -->
+        <div class="form-group">
+          <label for="phone" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            Phone Number
+          </label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="+1 (555) 123-4567" 
+            class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200"
+          >
+          <p class="text-xs text-gray-500 mt-1">We'll use this to contact you</p>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            <span class="text-tech">*</span> Email Address
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your.email@example.com" 
+            class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200" 
+            required
+          >
+          <p class="text-xs text-gray-500 mt-1">We'll never share your email</p>
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group">
+          <label for="comment" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            <span class="text-tech">*</span> Message
+          </label>
+          <textarea 
+            id="comment" 
+            name="comment" 
+            placeholder="Tell us more about your interest in sponsoring Hudson Stingers..." 
+            rows="5" 
+            class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200 resize-none focus:min-h-32"
+            required
+          ></textarea>
+          <p class="text-xs text-gray-500 mt-1">Minimum 10 characters</p>
+        </div>
+
+        <!-- Honeypot (hidden from users) -->
+        <div class="hidden">
+          <label for="website">Leave this field empty</label>
+          <input type="text" id="website" name="website">
+        </div>
+
+        <!-- Form Actions -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <button 
+            type="submit" 
+            class="flex-1 px-6 py-4 bg-tech hover:bg-maroon-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-glow-maroon transition-all duration-300 active:scale-95 text-lg hover:scale-105 transform"
+          >
+            <span class="flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+            </span>
+          </button>
+          <button 
+            type="reset" 
+            class="flex-1 px-6 py-4 bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold rounded-lg shadow-lg transition-all duration-300 active:scale-95 text-lg hover:scale-105 transform"
+          >
+            <span class="flex items-center justify-center gap-2">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+              Clear
+            </span>
+          </button>
+        </div>
+
+        <!-- Form Status Messages -->
+        <div id="form-status" class="hidden mt-6 p-4 rounded-lg text-center"></div>
+      </form>
+
+      <!-- Info Callout -->
+      <div class="mt-10 pt-8 border-t border-gray-800 bg-tech bg-opacity-10 rounded-lg p-6">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-circle-info text-tech text-xl flex-shrink-0 mt-1"></i>
+          <div>
+            <p class="text-gray-300 text-sm">
+              <span class="text-tech font-semibold">Response Time:</span> We typically respond within 2 business days. For urgent inquiries, email us directly at <a href="mailto:hudsonisdrobotics@gmail.com" class="text-tech hover:underline">hudsonisdrobotics@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="mb-3">
-      <label for="phone" class="form-label">Phone Number:</label>
-      <input type="tel" class="form-control" id="phone" name="phone">
-    </div>
-
-    <div class="mb-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-
-    <div class="mb-3">
-      <label for="comment" class="form-label">Comment:</label>
-      <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
-    </div>
-
-    <!-- Honeypot -->
-    <div class="d-none">
-      <label for="website" class="form-label">Leave this field empty</label>
-      <input type="text" id="website" name="website" class="form-control">
-    </div>
-
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-  </form>
+  </div>
 </section>
 
 <script type="module" src="/js/form_handler.mjs"></script>

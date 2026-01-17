@@ -20,7 +20,10 @@
   "homepage": "https://github.com/JuanBarron2001/FRC_4295_Website_Template#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "lite-youtube-embed": "^0.3.3"
+    "autoprefixer": "^10.4.22",
+    "lite-youtube-embed": "^0.3.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
   },
   "dependencies": {
     "dotenv": "^17.2.3"
