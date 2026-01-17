@@ -21,15 +21,92 @@
     <link rel="manifest" href="/site.webmanifest">
   
     <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8af3554e29.js" crossorigin="anonymous"></script>
-    <link href="/css/header.css" rel="stylesheet">
-    <link href="/css/footer.css" rel="stylesheet">
-    <link href="/css/shared.css" rel="stylesheet">
-    <link href="/css/body_gray_stripe.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration and Styles -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              tech: '#822008',
+              dark: '#0f0f0f',
+              gray: {
+                950: '#0a0a0a',
+                900: '#1a1a1a',
+                800: '#2e2e2e',
+                700: '#3a3a3a',
+                600: '#4a4a4a',
+                500: '#606060',
+                400: '#757575',
+                300: '#999999',
+                200: '#d3d3d3',
+                100: '#e8e8e8',
+                50: '#f5f5f5',
+              },
+            },
+            backgroundImage: {
+              'gradient-dark': 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2e2e2e 100%)',
+              'gradient-tech': 'linear-gradient(135deg, #0f0f0f 0%, #3a3a3a 25%, #822008 50%, #3a3a3a 75%, #0f0f0f 100%)',
+              'gradient-accent': 'linear-gradient(135deg, #822008 0%, #c73220 50%, #822008 100%)',
+            },
+            boxShadow: {
+              'glow-maroon': '0 0 20px rgba(130, 32, 8, 0.5)',
+              'glow-maroon-lg': '0 0 40px rgba(130, 32, 8, 0.6)',
+              'tech': '0 10px 40px rgba(0, 0, 0, 0.8)',
+            },
+          }
+        }
+      }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+      @layer components {
+        .btn-primary {
+          @apply px-6 py-3 bg-tech hover:bg-maroon-600 text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300 active:scale-95;
+        }
+        .btn-primary-outline {
+          @apply px-6 py-3 border-2 border-tech text-tech hover:bg-tech hover:text-white font-semibold rounded-md transition-all duration-300;
+        }
+        .card {
+          @apply bg-gray-900 border border-gray-800 rounded-lg shadow-tech overflow-hidden;
+        }
+        .card-hover {
+          @apply card hover:border-tech hover:border-opacity-100 hover:shadow-glow-maroon transition-all duration-300 border-opacity-30;
+        }
+        .section-divider {
+          @apply h-1 bg-gradient-to-r from-transparent via-tech to-transparent my-12;
+        }
+        .form-input {
+          @apply w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 focus:border-tech focus:outline-none focus:ring-1 focus:ring-tech transition-all duration-200;
+        }
+        .form-label {
+          @apply block text-gray-300 font-semibold mb-2;
+        }
+        .heading-tech {
+          @apply text-4xl md:text-5xl font-black tracking-tighter text-gray-100;
+        }
+        .subheading-tech {
+          @apply text-xl md:text-2xl font-bold text-gray-200 mt-4;
+        }
+        .gradient-text-tech {
+          @apply bg-gradient-to-r from-tech to-orange-400 bg-clip-text text-transparent;
+        }
+        .backdrop-blur-tech {
+          @apply backdrop-blur-sm bg-gray-950 bg-opacity-80;
+        }
+      }
+    </style>
   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <!-- Lite YouTube Embed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"></script>
+    
     <script data-goatcounter="https://juanbarron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   
     
@@ -109,183 +186,229 @@
 </script>
 
   </head>
-  <body>
-    <header>
-    <a href="/">
-      <img 
-        src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
-        srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
-                /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
-                /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
-                /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
-        sizes="100vw"
-        width="1854" height="555"
-        fetchpriority="high"
-        alt="Hudson Stingers Banner"
-        class="banner">
-    </a>      
-  </header>
-  
-  <div class="header-content bg-dark text-white py-3">
-    <h1 class="display-4 m-0">Hudson Stingers</h1>
+  <body class="bg-gray-950 text-gray-200">
+    <header class="sticky top-0 z-50 backdrop-blur-tech border-b border-gray-800">
+  <!-- Banner & Branding -->
+  <div class="bg-gradient-dark relative overflow-hidden">
+    <!-- Animated gradient background -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <a href="/" class="flex items-center gap-4 group">
+        <img 
+          src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
+          srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 300px, 400px"
+          width="400" height="120"
+          fetchpriority="high"
+          alt="Hudson Stingers Banner"
+          class="h-16 w-auto object-contain group-hover:opacity-80 transition-opacity duration-300">
+      </a>
+      <div class="mt-4">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-gray-100">
+          Hudson Stingers
+        </h1>
+        <p class="text-tech font-bold text-lg mt-2">FIRST Robotics Competition • Team 4295</p>
+      </div>
+    </div>
   </div>
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-grays">
-    <div class="container-fluid">
-      <!-- Navbar toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about_first/">About FIRST</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact_us/">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/follow_us/">Follow Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/members/">Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="/sponsors/">Sponsors</a></li>
-        </ul>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-tech hover:bg-gray-800 focus:outline-none" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Desktop navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Home</a>
+          <a href="/about/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About</a>
+          <a href="/about_first/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About FIRST</a>
+          <a href="/contact_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Contact</a>
+          <a href="/follow_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Follow Us</a>
+          <a href="/members/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Members</a>
+          <a href="/gallery/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Gallery</a>
+          <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Blog</a>
+          <a href="/sponsors/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Sponsors</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Home</a>
+        <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About</a>
+        <a href="/about_first/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About FIRST</a>
+        <a href="/contact_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Contact</a>
+        <a href="/follow_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Follow Us</a>
+        <a href="/members/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Members</a>
+        <a href="/gallery/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Gallery</a>
+        <a href="/blog/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Blog</a>
+        <a href="/sponsors/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Sponsors</a>
       </div>
     </div>
   </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
   
-    <main class="container mt-5">
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
+  
+    <main class="min-h-screen">
       
-<div class="intro-text text-center my-5">
-  <h1 class="display-5 fw-bold">Hudson Stingers Robotics Blog</h1>
-  <p class="lead">
-    Follow <span class="fw-bold">FRC Team 4295</span> through kickoff, brainstorming, building, testing, and competitions.
-  </p>
-</div>
+<section class="relative overflow-hidden bg-gradient-dark py-16 md:py-24">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute bottom-0 left-1/3 w-96 h-96 bg-tech rounded-full filter blur-3xl"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="heading-tech mb-4">Team Blog</h1>
+    <p class="text-xl text-gray-300">Follow Hudson Stingers through kickoff, brainstorming, building, testing, and competitions.</p>
+  </div>
+</section>
 
-<div class="container blog-container my-5">
-  <article class="mb-5 pb-4 border-bottom border-secondary">
-    <header>
-      <h2 class="h4 fw-bold">October 1, 2023 – Kickoff Event</h2>
-    </header>
-    <p>
-      We attended the <strong>FIRST Robotics Competition Kickoff</strong> and received the details for this year’s challenge: 
-      <em>Crescendo</em>! Our team is buzzing with ideas already. Stay tuned for updates on our progress.
-    </p>
-  </article>
+<div class="section-divider"></div>
 
-  <article class="mb-5 pb-4 border-bottom border-secondary">
-    <header>
-      <h2 class="h4 fw-bold">October 10, 2023 – Brainstorming Session</h2>
-    </header>
-    <p>
-      We held our first major brainstorming session today. After lively discussion, we’ve developed a basic design for our robot. 
-      Next steps: creating detailed plans and starting the build.
-    </p>
-  </article>
+<section class="py-16 md:py-24 bg-gray-950">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="space-y-8">
+      
+      <article class="card-hover p-8 border-l-4 border-tech">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="p-3 bg-tech bg-opacity-20 rounded-lg">
+            <i class="fa-solid true text-tech"></i>
+          </div>
+          <div class="flex-1">
+            <time class="text-tech font-semibold">January 10, 2026</time>
+            <h2 class="subheading-tech mt-2">Kickoff Event - REBUILT™ 2026</h2>
+            <div class="text-sm text-gray-400 mt-1">
+              By <span class="text-tech">Anonymous</span> • Hudson Robotics Team
+            </div>
+          </div>
+        </div>
+        <div class="text-gray-300 prose prose-invert max-w-none">
+          <p>We are excited to share this incredible moment with everyone! Today we attended the <strong>2026 FIRST® Robotics Competition Kickoff</strong> and learned about this year's game: <strong>REBUILT™</strong>, presented by Haas. A huge shoutout to the <strong>Lufkin Pantherbots (Team 2582)</strong> for their amazing hospitality in hosting us at the kickoff event!</p>
+<p>This year's challenge centers around scoring Fuel in alternating active Hubs and climbing Towers for bonus points. The unique Hub activation system and multiple Ranking Point thresholds are going to make strategy crucial.</p>
+<h2>Our Game Plan</h2>
+<p>After watching the reveal, we're ready to start brainstorming! Here's our initial thinking:</p>
+<p><strong>Tank Drive</strong> - We're focusing on a tank drive system this year for better control when navigating the field's Bumps and Trenches.</p>
+<p><strong>Climbing</strong> - With up to 30 points available for reaching Level 3, climbing is non-negotiable. We're designing for at least Level 2 capability.</p>
+<p><strong>Fuel Management</strong> - The alternating Hub system means we need smart autonomous routines and precise timing during our active windows to hit those Energized and Supercharged thresholds.</p>
+<h2>Next Steps</h2>
+<p>We're ready to start the build season strong! The team will be meeting this week to develop detailed CAD designs, finalize our strategy, and start prototyping key mechanisms. Let's make this year unforgettable!</p>
+<p><strong>#FRC2026 #REBUILT #HudsonStingers #Team4295</strong></p>
 
-  <article class="mb-5 pb-4 border-bottom border-secondary">
-    <header>
-      <h2 class="h4 fw-bold">October 20, 2023 – Building Begins</h2>
-    </header>
-    <p>
-      Today we started building our robot for the <em>Crescendo</em> challenge. It’s a lot of hard work, but our team spirit is high and we’re ready for the challenge.
-    </p>
-  </article>
-
-  <article class="mb-5 pb-4 border-bottom border-secondary">
-    <header>
-      <h2 class="h4 fw-bold">November 5, 2023 – Halfway Point</h2>
-    </header>
-    <p>
-      We’re halfway through build season! The frame is complete, and we’ve started working on electronics and programming. Progress is strong, and we’re learning every day.
-    </p>
-  </article>
-
-  <article class="mb-5 pb-4 border-bottom border-secondary">
-    <header>
-      <h2 class="h4 fw-bold">November 20, 2023 – Testing Phase</h2>
-    </header>
-    <p>
-      The robot is built, and we’ve moved on to testing. A few hiccups, but nothing we can’t fix. Each challenge makes us stronger.
-    </p>
-  </article>
-
-  <article class="mb-5">
-    <header>
-      <h2 class="h4 fw-bold">December 10, 2023 – Competition Day</h2>
-    </header>
-    <p>
-      Competition day! Our robot performed amazingly against tough competition. The whole team is proud of what we’ve achieved this season.
-    </p>
-  </article>
-</div>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+</section>
 
     </main>
-    <footer class="bg-dark text-white py-4 mt-5">
-    <div class="container">
-      <div class="row">
-        <!-- Quick Links -->
-        <div class="col-md-4 mb-3">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a class="text-white text-decoration-none" href="/">Home</a></li>
-            <li><a class="text-white text-decoration-none" href="/about/">About</a></li>
-            <li><a class="text-white text-decoration-none" href="/about_first/">About FIRST</a></li>
-            <li><a class="text-white text-decoration-none" href="/contact_us/">Contact Us</a></li>
-            <li><a class="text-white text-decoration-none" href="/follow_us/">Follow Us</a></li>
-            <li><a class="text-white text-decoration-none" href="/members/">Members</a></li>
-            <li><a class="text-white text-decoration-none" href="/gallery/">Gallery</a></li>
-            <li><a class="text-white text-decoration-none" href="/blog/">Blog</a></li>
-            <li><a class="text-white text-decoration-none" href="/sponsors/">Sponsors</a></li>
-          </ul>
-        </div>
-  
-        <!-- Social Media -->
-        <div class="col-md-4 mb-3">
-          <h5>Social Media</h5>
-          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-white fs-4 me-3">
+    <footer class="bg-gray-950 border-t border-gray-800 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold text-gray-100 mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-tech rounded-full"></span>
+          Quick Links
+        </h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Home</a></li>
+          <li><a href="/about/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ About</a></li>
+          <li><a href="/about_first/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ About FIRST</a></li>
+          <li><a href="/contact_us/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Contact Us</a></li>
+          <li><a href="/follow_us/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Follow Us</a></li>
+          <li><a href="/members/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Members</a></li>
+          <li><a href="/gallery/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Gallery</a></li>
+          <li><a href="/blog/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Blog</a></li>
+          <li><a href="/sponsors/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Sponsors</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h3 class="text-lg font-bold text-gray-100 mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-tech rounded-full"></span>
+          Connect
+        </h3>
+        <div class="flex gap-4 mb-6">
+          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/team4295" target="_blank" rel="noopener" class="text-white fs-4 me-3">
+          <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-white fs-4">
+          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
             <i class="fa-brands fa-x-twitter"></i>
           </a>
+          <a href="https://www.youtube.com/@hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
         </div>
-  
-        <!-- Contact -->
-        <div class="col-md-4 mb-3">
-          <h5>Contact Us</h5>
-          <p class="mb-1">
-            Email: <a href="mailto:hudsonisdrobotics@gmail.com" class="text-white text-decoration-none">hudsonisdrobotics@gmail.com</a>
-          </p>
-          <p class="mb-2">Address: 6735 Ted Trout Dr, Lufkin, TX 75904</p>
-          <img 
-            src="/images/logos/FRC_Logo-480.webp"
-            srcset="/images/logos/FRC_Logo-320.webp 320w,
-                    /images/logos/FRC_Logo-480.webp 480w,
-                    /images/logos/FRC_Logo-516.webp 516w"
-            sizes="(max-width: 480px) 320px, 
-                    (max-width: 768px) 480px, 
-                    516px"
-            width="516" height="309"
-            class="img-fluid mx-auto d-block mt-2"
-            loading="lazy"
-            alt="FRC Logo">
-        </div>
+        <p class="text-sm text-gray-400">Follow us for real-time updates and behind-the-scenes content.</p>
       </div>
-  
-      <hr class="border-light">
-      <p class="mb-0 small text-center">
-        © 2025 Hudson Stingers. Unauthorized reproduction of this text may result in robot rebellion. You’ve been warned. 😜
-      </p>
+
+      <!-- Contact & Info -->
+      <div>
+        <h3 class="text-lg font-bold text-gray-100 mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-tech rounded-full"></span>
+          Get in Touch
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+          <p class="flex items-start gap-2">
+            <i class="fa-solid fa-envelope text-tech mt-1"></i>
+            <a href="mailto:hudsonisdrobotics@gmail.com" class="hover:text-tech transition-colors duration-200">hudsonisdrobotics@gmail.com</a>
+          </p>
+          <p class="flex items-start gap-2">
+            <i class="fa-solid fa-map-pin text-tech mt-1"></i>
+            <span>6735 Ted Trout Dr<br/>Lufkin, TX 75904</span>
+          </p>
+        </div>
+        <img 
+          src="/images/logos/FRC_Logo-480.webp"
+          srcset="/images/logos/FRC_Logo-320.webp 320w,
+                  /images/logos/FRC_Logo-480.webp 480w,
+                  /images/logos/FRC_Logo-516.webp 516w"
+          sizes="(max-width: 480px) 320px, 
+                  (max-width: 768px) 480px, 
+                  516px"
+          width="200" height="120"
+          class="mt-4 opacity-70 hover:opacity-100 transition-opacity duration-300"
+          loading="lazy"
+          alt="FIRST Robotics Logo">
+      </div>
     </div>
-  </footer>
+
+    <!-- Divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-8"></div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center text-sm text-gray-400">
+      <p>© 2025 Hudson Stingers Robotics. Powered by innovation, fueled by passion. 🤖</p>
+    </div>
+  </div>
+</footer>
   
   </body>
 </html>

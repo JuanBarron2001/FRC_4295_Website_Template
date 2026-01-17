@@ -1,5 +1,29 @@
 import validator from "https://cdn.jsdelivr.net/npm/validator@13.11.0/+esm";
 
+// Enhanced form styling and focus effects
+const form = document.getElementById('contact-form');
+const statusDiv = document.getElementById('form-status');
+
+if (form) {
+  // Add focus effects to inputs
+  const inputs = form.querySelectorAll('input, textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      this.parentElement.classList.add('form-group-focused');
+    });
+    input.addEventListener('blur', function() {
+      if (!this.value) {
+        this.parentElement.classList.remove('form-group-focused');
+      }
+    });
+  });
+
+  // Update form status display on submit
+  form.addEventListener('submit', function(e) {
+    statusDiv.classList.add('hidden');
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const section = document.querySelector("section[data-form-id]");
   if (!section) return;
@@ -47,9 +71,10 @@ const grabValuesFromForm = (form) => ({
   phoneNumber: form.querySelector("#phone").value.trim(),
   email: form.querySelector("#email").value.trim(),
   message: form.querySelector("#comment").value.trim(),
+  honeyPot: form.querySelector("#website").value.trim()
 });
 
-const validate = ({ name, phoneNumber, email, message }) => {
+const validate = ({ name, phoneNumber, email, message, honeyPot }) => {
   const errors = [];
   if (validator.isEmpty(name)) errors.push("Name is required.");
   if (!validator.isEmail(email)) errors.push("Valid email is required.");
