@@ -55,6 +55,9 @@ head: calendar
       <button onclick="filterEvents('outreach')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="outreach">
         <i class="fa-solid fa-handshake mr-2"></i>Outreach
       </button>
+      <button onclick="filterEvents('holiday')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="holiday">
+        <i class="fa-solid fa-calendar-xmark mr-2"></i>Holidays
+      </button>
     </div>
   </div>
 </section>
@@ -104,6 +107,7 @@ head: calendar
                 {% elsif event.type == 'meeting' %}bg-blue-900 text-blue-200
                 {% elsif event.type == 'workshop' %}bg-purple-900 text-purple-200
                 {% elsif event.type == 'outreach' %}bg-green-900 text-green-200
+                {% elsif event.type == 'holiday' %}bg-orange-900 text-orange-200
                 {% endif %}">
                 {{ event.type }}
               </span>
@@ -264,6 +268,11 @@ head: calendar
   .fc-event-outreach {
     background-color: #22c55e !important;
     border-color: #16a34a !important;
+  }
+  
+  .fc-event-holiday {
+    background-color: #f97316 !important;
+    border-color: #ea580c !important;
   }
   
   /* Event text */

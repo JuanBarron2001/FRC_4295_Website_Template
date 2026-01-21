@@ -10,53 +10,403 @@
     "icon": "fa-rocket"
   },
   {
-    "title": "Build Season Begins",
-    "date": "2026-01-11",
-    "endDate": "2026-03-01",
-    "time": "After School",
+    "title": "Build Session - Week 1",
+    "date": "2026-01-12",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
     "location": "Hudson High School - Robotics Lab",
     "type": "meeting",
-    "description": "Daily build sessions to design, prototype, and construct the competition robot.",
+    "description": "Week 1 build session - Robot design and prototyping.",
     "icon": "fa-wrench"
   },
   {
-    "title": "Week 1 Competition",
-    "date": "2026-03-15",
-    "endDate": "2026-03-17",
+    "title": "Build Session - Week 1",
+    "date": "2026-01-13",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 1 build session - Robot design and prototyping.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 1",
+    "date": "2026-01-15",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 1 build session - Robot design and prototyping.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 1",
+    "date": "2026-01-16",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 1 build session - Robot design and prototyping.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 1",
+    "date": "2026-01-17",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 1 build session - Extended Saturday work day.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "MLK Holiday",
+    "date": "2026-01-19",
+    "endDate": null,
     "time": "All Day",
-    "location": "TBD",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "Martin Luther King Jr. Day - No school, no build session.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Build Session - Week 2",
+    "date": "2026-01-19",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 2 build session - Chassis and drivetrain construction.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 2",
+    "date": "2026-01-20",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 2 build session - Chassis and drivetrain construction.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 2",
+    "date": "2026-01-22",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 2 build session - Chassis and drivetrain construction.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 2",
+    "date": "2026-01-23",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 2 build session - Chassis and drivetrain construction.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 2",
+    "date": "2026-01-24",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 2 build session - Extended Saturday work day.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 3",
+    "date": "2026-01-26",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 3 build session - Mechanism fabrication.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 3",
+    "date": "2026-01-27",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 3 build session - Mechanism fabrication.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 3",
+    "date": "2026-01-29",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 3 build session - Mechanism fabrication.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 3",
+    "date": "2026-01-30",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 3 build session - Mechanism fabrication.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 3",
+    "date": "2026-01-31",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 3 build session - Extended Saturday work day.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 4",
+    "date": "2026-02-02",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 4 build session - Electronics and wiring.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 4",
+    "date": "2026-02-03",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 4 build session - Electronics and wiring.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 4",
+    "date": "2026-02-05",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 4 build session - Electronics and wiring.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 4",
+    "date": "2026-02-06",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 4 build session - Electronics and wiring.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 4",
+    "date": "2026-02-07",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 4 build session - Extended Saturday work day.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 5",
+    "date": "2026-02-09",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 5 build session - Programming and testing.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 5",
+    "date": "2026-02-10",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 5 build session - Programming and testing.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "8th Grade CTE Tour",
+    "date": "2026-02-12",
+    "endDate": null,
+    "time": "8:00 AM - 10:45 AM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "outreach",
+    "description": "Tour and Q&A session for 8th grade students. Team veterans will give tours and answer questions about robotics.",
+    "icon": "fa-school"
+  },
+  {
+    "title": "Build Session - Week 5",
+    "date": "2026-02-12",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 5 build session - Programming and testing.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Teacher Inservice Day",
+    "date": "2026-02-13",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Teacher professional development day.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Build Session - Week 5",
+    "date": "2026-02-13",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 5 build session - Programming and testing.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 5",
+    "date": "2026-02-14",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 5 build session - Extended Saturday work day.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "President's Day",
+    "date": "2026-02-16",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - President's Day holiday.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Build Session - Week 6",
+    "date": "2026-02-16",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 6 build session - Final assembly and refinement.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 6",
+    "date": "2026-02-17",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 6 build session - Final assembly and refinement.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 6",
+    "date": "2026-02-19",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 6 build session - Final assembly and refinement.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 6",
+    "date": "2026-02-20",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 6 build session - Final assembly and refinement.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Build Session - Week 6",
+    "date": "2026-02-21",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Week 6 build session - Extended Saturday work day.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Spring Break",
+    "date": "2026-03-09",
+    "endDate": "2026-03-14",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "Spring Break - No school.",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "title": "FIT District McAllen Event",
+    "date": "2026-03-12",
+    "endDate": "2026-03-15",
+    "time": "All Day",
+    "location": "McAllen, TX",
     "type": "competition",
-    "description": "First regional competition of the season. Three days of qualification and elimination matches.",
+    "description": "Week 2 FIT District competition. Three days of qualification and elimination matches.",
     "icon": "fa-trophy"
   },
   {
-    "title": "Community Outreach",
-    "date": "2026-02-08",
-    "endDate": null,
-    "time": "10:00 AM - 2:00 PM",
-    "location": "Hudson Community Center",
-    "type": "outreach",
-    "description": "STEM demonstration and robot showcase for local elementary school students.",
-    "icon": "fa-handshake"
+    "title": "FIT District Waco Event",
+    "date": "2026-03-19",
+    "endDate": "2026-03-22",
+    "time": "All Day",
+    "location": "Waco, TX",
+    "type": "competition",
+    "description": "Week 3 FIT District competition. Three days of qualification and elimination matches.",
+    "icon": "fa-trophy"
   },
   {
-    "title": "Practice Match Day",
-    "date": "2026-02-22",
+    "title": "Good Friday Holiday",
+    "date": "2026-04-03",
     "endDate": null,
-    "time": "10:00 AM - 5:00 PM",
-    "location": "Hudson High School Gym",
-    "type": "workshop",
-    "description": "Full field practice with other local FRC teams. Driver training and strategy refinement.",
-    "icon": "fa-gamepad"
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "Good Friday - No school.",
+    "icon": "fa-calendar-xmark"
   },
   {
-    "title": "Sponsor Appreciation Night",
-    "date": "2026-04-05",
+    "title": "School Holiday",
+    "date": "2026-04-06",
     "endDate": null,
-    "time": "6:00 PM - 8:00 PM",
-    "location": "Hudson High School Cafeteria",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "High School Graduation",
+    "date": "2026-05-23",
+    "endDate": null,
+    "time": "TBD",
+    "location": "Hudson High School",
     "type": "meeting",
-    "description": "Thank you event for our sponsors. Robot demonstrations, team presentations, and networking.",
-    "icon": "fa-heart"
+    "description": "Hudson High School graduation ceremony. Congratulations to our graduating seniors!",
+    "icon": "fa-graduation-cap"
   }
 ]
