@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Kickoff Event",
+    "date": "2026-01-10",
+    "endDate": null,
+    "time": "9:00 AM - 4:00 PM",
+    "location": "Lufkin High School",
+    "type": "competition",
+    "description": "Annual FIRST Robotics Competition season kickoff. Game reveal and initial strategy session.",
+    "icon": "fa-rocket"
+  },
+  {
+    "title": "Build Season Begins",
+    "date": "2026-01-11",
+    "endDate": "2026-03-01",
+    "time": "After School",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Daily build sessions to design, prototype, and construct the competition robot.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Week 1 Competition",
+    "date": "2026-03-15",
+    "endDate": "2026-03-17",
+    "time": "All Day",
+    "location": "TBD",
+    "type": "competition",
+    "description": "First regional competition of the season. Three days of qualification and elimination matches.",
+    "icon": "fa-trophy"
+  },
+  {
+    "title": "Community Outreach",
+    "date": "2026-02-08",
+    "endDate": null,
+    "time": "10:00 AM - 2:00 PM",
+    "location": "Hudson Community Center",
+    "type": "outreach",
+    "description": "STEM demonstration and robot showcase for local elementary school students.",
+    "icon": "fa-handshake"
+  },
+  {
+    "title": "Practice Match Day",
+    "date": "2026-02-22",
+    "endDate": null,
+    "time": "10:00 AM - 5:00 PM",
+    "location": "Hudson High School Gym",
+    "type": "workshop",
+    "description": "Full field practice with other local FRC teams. Driver training and strategy refinement.",
+    "icon": "fa-gamepad"
+  },
+  {
+    "title": "Sponsor Appreciation Night",
+    "date": "2026-04-05",
+    "endDate": null,
+    "time": "6:00 PM - 8:00 PM",
+    "location": "Hudson High School Cafeteria",
+    "type": "meeting",
+    "description": "Thank you event for our sponsors. Robot demonstrations, team presentations, and networking.",
+    "icon": "fa-heart"
+  }
+]

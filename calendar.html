@@ -1,0 +1,173 @@
+---
+layout: layouts/base.njk
+title: Calendar - Hudson Stingers Robotics | FRC Team 4295 Events
+head: calendar
+---
+
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-gradient-dark py-16 md:py-24">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-maroon-600 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="heading-tech mb-4">
+      <i class="fa-solid fa-calendar-days mr-3"></i>Event Calendar
+    </h1>
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+      Stay up to date with Hudson Stingers competitions, meetings, workshops, and community events throughout the season.
+    </p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Event Filter Section -->
+<section class="py-8 bg-gray-900 border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap gap-3 justify-center">
+      <button onclick="filterEvents('all')" class="filter-btn active px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-tech text-white" data-filter="all">
+        <i class="fa-solid fa-list mr-2"></i>All Events
+      </button>
+      <button onclick="filterEvents('competition')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="competition">
+        <i class="fa-solid fa-trophy mr-2"></i>Competitions
+      </button>
+      <button onclick="filterEvents('meeting')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="meeting">
+        <i class="fa-solid fa-users mr-2"></i>Meetings
+      </button>
+      <button onclick="filterEvents('workshop')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="workshop">
+        <i class="fa-solid fa-toolbox mr-2"></i>Workshops
+      </button>
+      <button onclick="filterEvents('outreach')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="outreach">
+        <i class="fa-solid fa-handshake mr-2"></i>Outreach
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Events Timeline -->
+<section class="py-16 md:py-24 bg-gray-950">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="space-y-6">
+      {% assign sortedEvents = events | sort: 'date' %}
+      {% for event in sortedEvents %}
+      <div class="event-card card hover-lift transition-all duration-300" data-type="{{ event.type }}">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">{{ event.date | date: "%d" }}</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">{{ event.date | date: "%b" }}</div>
+              <div class="text-gray-300 text-xs">{{ event.date | date: "%Y" }}</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2">
+                  <i class="fa-solid {{ event.icon }} text-tech mr-2"></i>{{ event.title }}
+                </h3>
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>{{ event.time }}
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>{{ event.location }}
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                {% if event.type == 'competition' %}bg-maroon-900 text-maroon-200
+                {% elsif event.type == 'meeting' %}bg-blue-900 text-blue-200
+                {% elsif event.type == 'workshop' %}bg-purple-900 text-purple-200
+                {% elsif event.type == 'outreach' %}bg-green-900 text-green-200
+                {% endif %}">
+                {{ event.type }}
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed">{{ event.description }}</p>
+            
+            {% if event.endDate %}
+            <div class="mt-3 text-sm text-gray-500 italic">
+              <i class="fa-solid fa-arrow-right mr-1"></i>
+              Multi-day event ending {{ event.endDate | date: "%B %d, %Y" }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Empty State -->
+    <div id="no-events" class="hidden text-center py-16">
+      <i class="fa-solid fa-calendar-xmark text-6xl text-gray-700 mb-4"></i>
+      <p class="text-xl text-gray-500">No events found in this category.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16 md:py-20 bg-gradient-dark relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">
+      Never Miss a Beat
+    </h2>
+    <p class="text-lg text-gray-300 mb-8">
+      Want to stay updated on all team activities? Follow us on social media or subscribe to our newsletter.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/follow_us/" class="btn-primary inline-flex items-center justify-center">
+        <i class="fa-solid fa-bell mr-2"></i>Follow Our Updates
+      </a>
+      <a href="/contact_us/" class="btn-primary-outline inline-flex items-center justify-center">
+        <i class="fa-solid fa-envelope mr-2"></i>Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function filterEvents(type) {
+    const cards = document.querySelectorAll('.event-card');
+    const noEventsMsg = document.getElementById('no-events');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    let visibleCount = 0;
+
+    // Update button states
+    filterBtns.forEach(btn => {
+      if (btn.dataset.filter === type) {
+        btn.classList.add('active', 'bg-tech', 'text-white');
+        btn.classList.remove('bg-gray-800', 'text-gray-300');
+      } else {
+        btn.classList.remove('active', 'bg-tech', 'text-white');
+        btn.classList.add('bg-gray-800', 'text-gray-300');
+      }
+    });
+
+    // Filter cards
+    cards.forEach(card => {
+      if (type === 'all' || card.dataset.type === type) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Show/hide empty state
+    if (visibleCount === 0) {
+      noEventsMsg.classList.remove('hidden');
+    } else {
+      noEventsMsg.classList.add('hidden');
+    }
+  }
+</script>
