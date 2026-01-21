@@ -1,0 +1,148 @@
+/* FullCalendar Custom Styling */
+#fullcalendar {
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 0.5rem;
+}
+
+.fc {
+  --fc-border-color: #3a3a3a;
+  --fc-button-bg-color: #822008;
+  --fc-button-border-color: #822008;
+  --fc-button-hover-bg-color: #982311;
+  --fc-button-hover-border-color: #982311;
+  --fc-button-active-bg-color: #7a1d0e;
+  --fc-button-active-border-color: #7a1d0e;
+  --fc-today-bg-color: rgba(130, 32, 8, 0.2);
+  --fc-page-bg-color: #1a1a1a;
+  --fc-neutral-bg-color: #2e2e2e;
+}
+
+/* Calendar background */
+.fc .fc-view-harness {
+  background-color: #1a1a1a;
+}
+
+/* Month title */
+.fc .fc-toolbar-title {
+  color: #f5f5f5;
+  font-weight: 900;
+}
+
+/* Navigation buttons */
+.fc .fc-button {
+  font-weight: 600;
+}
+
+/* Weekday headers - fix contrast */
+.fc .fc-col-header {
+  background-color: #2e2e2e;
+}
+
+.fc .fc-col-header-cell {
+  background-color: #2e2e2e;
+  border-color: #3a3a3a;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #f5f5f5;
+  font-weight: 700;
+  padding: 0.75rem 0.5rem;
+}
+
+/* Day cells */
+.fc .fc-daygrid-day {
+  background-color: #0f0f0f;
+}
+
+.fc .fc-daygrid-day-frame {
+  background-color: #0f0f0f;
+}
+
+/* Day numbers */
+.fc .fc-daygrid-day-number {
+  color: #d3d3d3;
+  padding: 0.5rem;
+}
+
+/* Today highlight */
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(130, 32, 8, 0.2) !important;
+  border: 2px solid #822008 !important;
+  box-shadow: inset 0 0 0 1px rgba(130, 32, 8, 0.5);
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+
+/* Other month days (grayed out) */
+.fc .fc-daygrid-day.fc-day-other {
+  background-color: #0a0a0a;
+}
+
+.fc .fc-daygrid-day.fc-day-other .fc-daygrid-day-number {
+  color: #606060;
+}
+
+/* Event Colors by Type - softer tones */
+.fc-event-competition {
+  background-color: #b32915 !important;
+  border-color: #822008 !important;
+}
+
+.fc-event-meeting {
+  background-color: #2563eb !important;
+  border-color: #1d4ed8 !important;
+}
+
+.fc-event-workshop {
+  background-color: #9333ea !important;
+  border-color: #7e22ce !important;
+}
+
+.fc-event-outreach {
+  background-color: #22c55e !important;
+  border-color: #16a34a !important;
+}
+
+.fc-event-holiday {
+  background-color: #f97316 !important;
+  border-color: #ea580c !important;
+}
+
+/* Event text */
+.fc-event {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.fc-event:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+.fc-event .fc-event-title {
+  font-weight: 600;
+}
+
+/* Scrollbar styling for dark theme */
+.fc-scroller::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.fc-scroller::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
