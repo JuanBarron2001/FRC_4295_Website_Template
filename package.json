@@ -26,6 +26,7 @@
     "tailwindcss": "^4.1.17"
   },
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "fullcalendar": "^6.1.20"
   }
 }

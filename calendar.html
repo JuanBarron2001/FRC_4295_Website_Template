@@ -23,12 +23,25 @@ head: calendar
 
 <div class="section-divider"></div>
 
-<!-- Event Filter Section -->
+<!-- View Toggle & Filter Section -->
 <section class="py-8 bg-gray-900 border-b border-gray-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- View Toggle -->
+    <div class="flex justify-center mb-6">
+      <div class="inline-flex rounded-lg bg-gray-800 p-1">
+        <button onclick="switchView('calendar')" id="calendar-view-btn" class="view-toggle-btn px-6 py-2 rounded-md font-medium transition-all duration-200 bg-tech text-white">
+          <i class="fa-solid fa-calendar mr-2"></i>Calendar View
+        </button>
+        <button onclick="switchView('list')" id="list-view-btn" class="view-toggle-btn px-6 py-2 rounded-md font-medium transition-all duration-200 text-gray-300">
+          <i class="fa-solid fa-list mr-2"></i>List View
+        </button>
+      </div>
+    </div>
+    
+    <!-- Event Type Filters -->
     <div class="flex flex-wrap gap-3 justify-center">
       <button onclick="filterEvents('all')" class="filter-btn active px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-tech text-white" data-filter="all">
-        <i class="fa-solid fa-list mr-2"></i>All Events
+        <i class="fa-solid fa-star mr-2"></i>All Events
       </button>
       <button onclick="filterEvents('competition')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="competition">
         <i class="fa-solid fa-trophy mr-2"></i>Competitions
@@ -46,8 +59,15 @@ head: calendar
   </div>
 </section>
 
-<!-- Events Timeline -->
-<section class="py-16 md:py-24 bg-gray-950">
+<!-- Calendar View -->
+<section id="calendar-view" class="py-16 md:py-24 bg-gray-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="fullcalendar" class="card"></div>
+  </div>
+</section>
+
+<!-- Events Timeline (List View) -->
+<section id="list-view" class="py-16 md:py-24 bg-gray-950 hidden">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="space-y-6">
       {% assign sortedEvents = events | sort: 'date' %}
@@ -135,8 +155,236 @@ head: calendar
   </div>
 </section>
 
+<!-- FullCalendar -->
+<script src="/lib/fullcalendar/index.global.min.js"></script>
+
+<style>
+  /* Custom FullCalendar Styling */
+  #fullcalendar {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+  }
+  
+  .fc {
+    --fc-border-color: #3a3a3a;
+    --fc-button-bg-color: #822008;
+    --fc-button-border-color: #822008;
+    --fc-button-hover-bg-color: #982311;
+    --fc-button-hover-border-color: #982311;
+    --fc-button-active-bg-color: #7a1d0e;
+    --fc-button-active-border-color: #7a1d0e;
+    --fc-today-bg-color: rgba(130, 32, 8, 0.2);
+    --fc-page-bg-color: #1a1a1a;
+    --fc-neutral-bg-color: #2e2e2e;
+  }
+  
+  /* Calendar background */
+  .fc .fc-view-harness {
+    background-color: #1a1a1a;
+  }
+  
+  /* Month title */
+  .fc .fc-toolbar-title {
+    color: #f5f5f5;
+    font-weight: 900;
+  }
+  
+  /* Navigation buttons */
+  .fc .fc-button {
+    font-weight: 600;
+  }
+  
+  /* Weekday headers - fix contrast */
+  .fc .fc-col-header {
+    background-color: #2e2e2e;
+  }
+  
+  .fc .fc-col-header-cell {
+    background-color: #2e2e2e;
+    border-color: #3a3a3a;
+  }
+  
+  .fc .fc-col-header-cell-cushion {
+    color: #f5f5f5;
+    font-weight: 700;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  /* Day cells */
+  .fc .fc-daygrid-day {
+    background-color: #0f0f0f;
+  }
+  
+  .fc .fc-daygrid-day-frame {
+    background-color: #0f0f0f;
+  }
+  
+  /* Day numbers */
+  .fc .fc-daygrid-day-number {
+    color: #d3d3d3;
+    padding: 0.5rem;
+  }
+  
+  /* Today highlight */
+  .fc .fc-daygrid-day.fc-day-today {
+    background-color: rgba(130, 32, 8, 0.2) !important;
+  }
+  
+  .fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+    color: #f5f5f5;
+    font-weight: 700;
+  }
+  
+  /* Other month days (grayed out) */
+  .fc .fc-daygrid-day.fc-day-other {
+    background-color: #0a0a0a;
+  }
+  
+  .fc .fc-daygrid-day.fc-day-other .fc-daygrid-day-number {
+    color: #606060;
+  }
+  
+  /* Event Colors by Type - softer tones */
+  .fc-event-competition {
+    background-color: #b32915 !important;
+    border-color: #822008 !important;
+  }
+  
+  .fc-event-meeting {
+    background-color: #2563eb !important;
+    border-color: #1d4ed8 !important;
+  }
+  
+  .fc-event-workshop {
+    background-color: #9333ea !important;
+    border-color: #7e22ce !important;
+  }
+  
+  .fc-event-outreach {
+    background-color: #22c55e !important;
+    border-color: #16a34a !important;
+  }
+  
+  /* Event text */
+  .fc-event {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .fc-event:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+  
+  .fc-event .fc-event-title {
+    font-weight: 600;
+  }
+  
+  /* Scrollbar styling for dark theme */
+  .fc-scroller::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .fc-scroller::-webkit-scrollbar-track {
+    background: #0f0f0f;
+  }
+  
+  .fc-scroller::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border-radius: 4px;
+  }
+  
+  .fc-scroller::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+  }
+</style>
+
 <script>
+  // Events data from JSON
+  const eventsData = {{ events | jsonify }};
+  
+  // Transform events for FullCalendar
+  const calendarEvents = eventsData.map(event => ({
+    title: event.title,
+    start: event.date,
+    end: event.endDate || event.date,
+    allDay: true,
+    extendedProps: {
+      type: event.type,
+      location: event.location,
+      time: event.time,
+      description: event.description,
+      icon: event.icon
+    },
+    classNames: [`fc-event-${event.type}`]
+  }));
+
+  let currentFilter = 'all';
+  let calendar;
+
+  // Initialize FullCalendar
+  document.addEventListener('DOMContentLoaded', function() {
+    const calendarEl = document.getElementById('fullcalendar');
+    
+    calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth'
+      },
+      events: calendarEvents,
+      eventClick: function(info) {
+        // Scroll to event in list view
+        switchView('list');
+        setTimeout(() => {
+          const eventCard = Array.from(document.querySelectorAll('.event-card'))
+            .find(card => card.querySelector('h3').textContent.includes(info.event.title));
+          if (eventCard) {
+            eventCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            eventCard.classList.add('ring-2', 'ring-tech');
+            setTimeout(() => eventCard.classList.remove('ring-2', 'ring-tech'), 2000);
+          }
+        }, 300);
+      },
+      height: 'auto',
+      contentHeight: 'auto',
+      aspectRatio: 1.8
+    });
+    
+    calendar.render();
+  });
+
+  // Switch between calendar and list view
+  function switchView(view) {
+    const calendarView = document.getElementById('calendar-view');
+    const listView = document.getElementById('list-view');
+    const calendarBtn = document.getElementById('calendar-view-btn');
+    const listBtn = document.getElementById('list-view-btn');
+    
+    if (view === 'calendar') {
+      calendarView.classList.remove('hidden');
+      listView.classList.add('hidden');
+      calendarBtn.classList.add('bg-tech', 'text-white');
+      calendarBtn.classList.remove('text-gray-300');
+      listBtn.classList.remove('bg-tech', 'text-white');
+      listBtn.classList.add('text-gray-300');
+    } else {
+      calendarView.classList.add('hidden');
+      listView.classList.remove('hidden');
+      listBtn.classList.add('bg-tech', 'text-white');
+      listBtn.classList.remove('text-gray-300');
+      calendarBtn.classList.remove('bg-tech', 'text-white');
+      calendarBtn.classList.add('text-gray-300');
+    }
+  }
+
+  // Filter events
   function filterEvents(type) {
+    currentFilter = type;
     const cards = document.querySelectorAll('.event-card');
     const noEventsMsg = document.getElementById('no-events');
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -153,7 +401,7 @@ head: calendar
       }
     });
 
-    // Filter cards
+    // Filter cards in list view
     cards.forEach(card => {
       if (type === 'all' || card.dataset.type === type) {
         card.style.display = 'block';
@@ -163,11 +411,23 @@ head: calendar
       }
     });
 
+    // Filter events in calendar view
+    if (calendar) {
+      calendar.getEvents().forEach(event => {
+        const eventType = event.extendedProps.type;
+        if (type === 'all' || eventType === type) {
+          event.setProp('display', 'auto');
+        } else {
+          event.setProp('display', 'none');
+        }
+      });
+    }
+
     // Show/hide empty state
     if (visibleCount === 0) {
-      noEventsMsg.classList.remove('hidden');
+      noEventsMsg?.classList.remove('hidden');
     } else {
-      noEventsMsg.classList.add('hidden');
+      noEventsMsg?.classList.add('hidden');
     }
   }
 </script>
