@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Hudson Stingers Robotics | FRC Team 4295 Events</title>
+  
+    <!-- Modern SVG favicon -->
+    <link rel="icon" href="/images/icon/favicon.svg" type="image/svg+xml">
+  
+    <!-- PNG fallbacks -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/icon/favicon-96x96.png">
+  
+    <!-- Legacy ICO fallback -->
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+  
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+  
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8af3554e29.js" crossorigin="anonymous"></script>
+    
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration and Styles -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              tech: '#822008',
+              dark: '#0f0f0f',
+              gray: {
+                950: '#0a0a0a',
+                900: '#1a1a1a',
+                800: '#2e2e2e',
+                700: '#3a3a3a',
+                600: '#4a4a4a',
+                500: '#606060',
+                400: '#757575',
+                300: '#999999',
+                200: '#d3d3d3',
+                100: '#e8e8e8',
+                50: '#f5f5f5',
+              },
+            },
+            backgroundImage: {
+              'gradient-dark': 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2e2e2e 100%)',
+              'gradient-tech': 'linear-gradient(135deg, #0f0f0f 0%, #3a3a3a 25%, #822008 50%, #3a3a3a 75%, #0f0f0f 100%)',
+              'gradient-accent': 'linear-gradient(135deg, #822008 0%, #c73220 50%, #822008 100%)',
+            },
+            boxShadow: {
+              'glow-maroon': '0 0 20px rgba(130, 32, 8, 0.5)',
+              'glow-maroon-lg': '0 0 40px rgba(130, 32, 8, 0.6)',
+              'tech': '0 10px 40px rgba(0, 0, 0, 0.8)',
+            },
+          }
+        }
+      }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+      @layer components {
+        .btn-primary {
+          @apply px-6 py-3 bg-tech hover:bg-maroon-600 text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300 active:scale-95;
+        }
+        .btn-primary-outline {
+          @apply px-6 py-3 border-2 border-tech text-tech hover:bg-tech hover:text-white font-semibold rounded-md transition-all duration-300;
+        }
+        .card {
+          @apply bg-gray-900 border border-gray-800 rounded-lg shadow-tech overflow-hidden;
+        }
+        .card-hover {
+          @apply card hover:border-tech hover:border-opacity-100 hover:shadow-glow-maroon transition-all duration-300 border-opacity-30;
+        }
+        .section-divider {
+          @apply h-1 bg-gradient-to-r from-transparent via-tech to-transparent my-12;
+        }
+        .form-input {
+          @apply w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 focus:border-tech focus:outline-none focus:ring-1 focus:ring-tech transition-all duration-200;
+        }
+        .form-label {
+          @apply block text-gray-300 font-semibold mb-2;
+        }
+        .heading-tech {
+          @apply text-4xl md:text-5xl font-black tracking-tighter text-gray-100;
+        }
+        .subheading-tech {
+          @apply text-xl md:text-2xl font-bold text-gray-200 mt-4;
+        }
+        .gradient-text-tech {
+          @apply bg-gradient-to-r from-tech to-orange-400 bg-clip-text text-transparent;
+        }
+        .backdrop-blur-tech {
+          @apply backdrop-blur-sm bg-gray-950 bg-opacity-80;
+        }
+      }
+    </style>
+  
+    <!-- Lite YouTube Embed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"></script>
+    
+    <script data-goatcounter="https://juanbarron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  
+    
+<!-- SEO Meta -->
+<meta name="description" content="Stay up to date with Hudson Stingers Robotics Team 4295 competitions, meetings, workshops, and community outreach events. Never miss an important FRC season date.">
+<meta name="keywords" content="FRC Team 4295, Hudson Stingers, robotics calendar, FRC competitions, team meetings, FIRST Robotics events, Hudson High School robotics schedule">
+
+<link rel="canonical" href="https://www.hudsonrobotics4295.com/calendar/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calendar - Hudson Stingers Robotics | FRC Team 4295">
+<meta property="og:description" content="View upcoming competitions, meetings, and events for Hudson Stingers Robotics Team 4295.">
+<meta property="og:url" content="https://www.hudsonrobotics4295.com/calendar/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Calendar - Hudson Stingers Robotics | FRC Team 4295">
+<meta name="twitter:description" content="View upcoming competitions, meetings, and events for Hudson Stingers Robotics Team 4295.">
+
+<!-- Structured Data: Event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hudson Stingers Robotics",
+  "alternateName": "FRC Team 4295",
+  "url": "https://www.hudsonrobotics4295.com",
+  "logo": "https://www.hudsonrobotics4295.com/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp",
+  "description": "Hudson High School FIRST Robotics Competition Team 4295 event calendar",
+  "sameAs": [
+    "https://www.thebluealliance.com/team/4295"
+  ]
+}
+</script>
+</head>
+
+  </head>
+  <body class="bg-gray-950 text-gray-200">
+    <header class="sticky top-0 z-50 backdrop-blur-tech border-b border-gray-800">
+  <!-- Banner & Branding -->
+  <div class="bg-gradient-dark relative overflow-hidden">
+    <!-- Animated gradient background -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <a href="/" class="flex items-center gap-4 group">
+        <img 
+          src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
+          srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
+                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 300px, 400px"
+          width="400" height="120"
+          fetchpriority="high"
+          alt="Hudson Stingers Banner"
+          class="h-16 w-auto object-contain group-hover:opacity-80 transition-opacity duration-300">
+      </a>
+      <div class="mt-4">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-gray-100">
+          Hudson Stingers
+        </h1>
+        <p class="text-tech font-bold text-lg mt-2">FIRST Robotics Competition • Team 4295</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-tech hover:bg-gray-800 focus:outline-none" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Desktop navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Home</a>
+          <a href="/about/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About</a>
+          <a href="/about_first/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About FIRST</a>
+          <a href="/calendar/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Calendar</a>
+          <a href="/contact_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Contact</a>
+          <a href="/follow_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Follow Us</a>
+          <a href="/members/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Members</a>
+          <a href="/gallery/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Gallery</a>
+          <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Blog</a>
+          <a href="/sponsors/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Sponsors</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Home</a>
+        <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About</a>
+        <a href="/about_first/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About FIRST</a>
+        <a href="/calendar/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Calendar</a>
+        <a href="/contact_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Contact</a>
+        <a href="/follow_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Follow Us</a>
+        <a href="/members/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Members</a>
+        <a href="/gallery/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Gallery</a>
+        <a href="/blog/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Blog</a>
+        <a href="/sponsors/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Sponsors</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
+  
+    <main class="min-h-screen">
+      
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-gradient-dark py-16 md:py-24">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-maroon-600 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="heading-tech mb-4">
+      <i class="fa-solid fa-calendar-days mr-3"></i>Event Calendar
+    </h1>
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+      Stay up to date with Hudson Stingers competitions, meetings, workshops, and community events throughout the season.
+    </p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- View Toggle & Filter Section -->
+<section class="py-8 bg-gray-900 border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- View Toggle -->
+    <div class="flex justify-center mb-6">
+      <div class="inline-flex rounded-lg bg-gray-800 p-1">
+        <button onclick="switchView('calendar')" id="calendar-view-btn" class="view-toggle-btn px-6 py-2 rounded-md font-medium transition-all duration-200 bg-tech text-white">
+          <i class="fa-solid fa-calendar mr-2"></i>Calendar View
+        </button>
+        <button onclick="switchView('list')" id="list-view-btn" class="view-toggle-btn px-6 py-2 rounded-md font-medium transition-all duration-200 text-gray-300">
+          <i class="fa-solid fa-list mr-2"></i>List View
+        </button>
+      </div>
+    </div>
+    
+    <!-- Event Type Filters -->
+    <div class="flex flex-wrap gap-3 justify-center">
+      <button onclick="filterEvents('all')" class="filter-btn active px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-tech text-white" data-filter="all">
+        <i class="fa-solid fa-star mr-2"></i>All Events
+      </button>
+      <button onclick="filterEvents('competition')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="competition">
+        <i class="fa-solid fa-trophy mr-2"></i>Competitions
+      </button>
+      <button onclick="filterEvents('meeting')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="meeting">
+        <i class="fa-solid fa-users mr-2"></i>Meetings
+      </button>
+      <button onclick="filterEvents('workshop')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="workshop">
+        <i class="fa-solid fa-toolbox mr-2"></i>Workshops
+      </button>
+      <button onclick="filterEvents('outreach')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="outreach">
+        <i class="fa-solid fa-handshake mr-2"></i>Outreach
+      </button>
+      <button onclick="filterEvents('holiday')" class="filter-btn px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="holiday">
+        <i class="fa-solid fa-calendar-xmark mr-2"></i>Holidays
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Calendar View -->
+<section id="calendar-view" class="py-16 md:py-24 bg-gray-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="fullcalendar" class="card"></div>
+  </div>
+</section>
+
+<!-- Events Timeline (List View) -->
+<section id="list-view" class="py-16 md:py-24 bg-gray-950 hidden">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="space-y-6">
+      
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="competition">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">10</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-rocket text-tech mr-2"></i>Kickoff Event
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>9:00 AM - 4:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Lufkin High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-maroon-900 text-maroon-200
+                ">
+                competition
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Annual FIRST Robotics Competition season kickoff. Game reveal and initial strategy session.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">12</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 1
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 1 build session - Robot design and prototyping.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">13</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 1
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 1 build session - Robot design and prototyping.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">15</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 1
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 1 build session - Robot design and prototyping.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">16</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 1
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 1 build session - Robot design and prototyping.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">17</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 1
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>10:00 AM - 5:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 1 build session - Extended Saturday work day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="holiday">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">19</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-calendar-xmark text-tech mr-2"></i>MLK Holiday
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-orange-900 text-orange-200
+                ">
+                holiday
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Martin Luther King Jr. Day - No school, no build session.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 opacity-60" data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">19</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 line-through">
+                  <i class="fa-solid fa-wrench text-gray-500 mr-2"></i>Build Session - Week 2
+                </h3>
+                
+                <div class="mb-2">
+                  <span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold uppercase">
+                    <i class="fa-solid fa-ban mr-1"></i>Canceled
+                  </span>
+                </div>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-gray-500"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-gray-500"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-gray-800 text-gray-400
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed line-through">Week 2 build session - Chassis and drivetrain construction.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">20</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 2
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 2 build session - Chassis and drivetrain construction.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">22</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 2
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 2 build session - Chassis and drivetrain construction.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 opacity-60" data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">23</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 line-through">
+                  <i class="fa-solid fa-wrench text-gray-500 mr-2"></i>Build Session - Week 2
+                </h3>
+                
+                <div class="mb-2">
+                  <span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold uppercase">
+                    <i class="fa-solid fa-ban mr-1"></i>Canceled
+                  </span>
+                </div>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-gray-500"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-gray-500"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-gray-800 text-gray-400
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed line-through">Week 2 build session - Chassis and drivetrain construction.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 opacity-60" data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">24</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 line-through">
+                  <i class="fa-solid fa-wrench text-gray-500 mr-2"></i>Build Session - Week 2
+                </h3>
+                
+                <div class="mb-2">
+                  <span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold uppercase">
+                    <i class="fa-solid fa-ban mr-1"></i>Canceled
+                  </span>
+                </div>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-gray-500"></i>10:00 AM - 5:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-gray-500"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-gray-800 text-gray-400
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed line-through">Week 2 build session - Extended Saturday work day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">26</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 3
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 3 build session - Mechanism fabrication.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">27</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 3
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 3 build session - Mechanism fabrication.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">29</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 3
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 3 build session - Mechanism fabrication.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">30</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 3
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 3 build session - Mechanism fabrication.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">31</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Jan</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 3
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>10:00 AM - 5:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 3 build session - Extended Saturday work day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">02</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 4
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 4 build session - Electronics and wiring.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">03</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 4
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 4 build session - Electronics and wiring.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">05</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 4
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 4 build session - Electronics and wiring.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">06</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 4
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 4 build session - Electronics and wiring.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">07</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 4
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>10:00 AM - 5:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 4 build session - Extended Saturday work day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">09</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 5
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 5 build session - Programming and testing.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">10</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 5
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 5 build session - Programming and testing.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="outreach">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">12</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-school text-tech mr-2"></i>8th Grade CTE Tour
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>8:00 AM - 10:45 AM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-green-900 text-green-200
+                ">
+                outreach
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Tour and Q&A session for 8th grade students. Team veterans will give tours and answer questions about robotics.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">12</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 5
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 5 build session - Programming and testing.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="holiday">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">13</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-calendar-xmark text-tech mr-2"></i>Teacher Inservice Day
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-orange-900 text-orange-200
+                ">
+                holiday
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">No school - Teacher professional development day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">13</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 5
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 5 build session - Programming and testing.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">14</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 5
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>10:00 AM - 5:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 5 build session - Extended Saturday work day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="holiday">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">16</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-calendar-xmark text-tech mr-2"></i>President's Day
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-orange-900 text-orange-200
+                ">
+                holiday
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">No school - President's Day holiday.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">16</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 6
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 6 build session - Final assembly and refinement.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">17</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 6
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 6 build session - Final assembly and refinement.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">19</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 6
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 6 build session - Final assembly and refinement.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">20</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 6
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>5:00 PM - 7:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 6 build session - Final assembly and refinement.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">21</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Feb</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-wrench text-tech mr-2"></i>Build Session - Week 6
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>10:00 AM - 5:00 PM
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School - Robotics Lab
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 6 build session - Extended Saturday work day.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="holiday">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">09</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Mar</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-umbrella-beach text-tech mr-2"></i>Spring Break
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-orange-900 text-orange-200
+                ">
+                holiday
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Spring Break - No school.</p>
+            
+            
+            <div class="mt-3 text-sm text-gray-500 italic">
+              <i class="fa-solid fa-arrow-right mr-1"></i>
+              Multi-day event ending March 14, 2026
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="competition">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">12</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Mar</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-trophy text-tech mr-2"></i>FIT District McAllen Event
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>McAllen, TX
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-maroon-900 text-maroon-200
+                ">
+                competition
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 2 FIT District competition. Three days of qualification and elimination matches.</p>
+            
+            
+            <div class="mt-3 text-sm text-gray-500 italic">
+              <i class="fa-solid fa-arrow-right mr-1"></i>
+              Multi-day event ending March 15, 2026
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="competition">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">19</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Mar</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-trophy text-tech mr-2"></i>FIT District Waco Event
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Waco, TX
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-maroon-900 text-maroon-200
+                ">
+                competition
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Week 3 FIT District competition. Three days of qualification and elimination matches.</p>
+            
+            
+            <div class="mt-3 text-sm text-gray-500 italic">
+              <i class="fa-solid fa-arrow-right mr-1"></i>
+              Multi-day event ending March 22, 2026
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="holiday">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">03</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Apr</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-calendar-xmark text-tech mr-2"></i>Good Friday Holiday
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-orange-900 text-orange-200
+                ">
+                holiday
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Good Friday - No school.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="holiday">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">06</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">Apr</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-calendar-xmark text-tech mr-2"></i>School Holiday
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>All Day
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-orange-900 text-orange-200
+                ">
+                holiday
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">No school.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-card card hover-lift transition-all duration-300 " data-type="meeting">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Date Badge -->
+          <div class="flex-shrink-0">
+            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+              <div class="text-white font-black text-3xl">23</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">May</div>
+              <div class="text-gray-300 text-xs">2026</div>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="flex-grow">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 ">
+                  <i class="fa-solid fa-graduation-cap text-tech mr-2"></i>High School Graduation
+                </h3>
+                
+                <div class="flex flex-wrap gap-3 text-sm text-gray-400">
+                  <span>
+                    <i class="fa-solid fa-clock mr-1 text-tech"></i>TBD
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>Hudson High School
+                  </span>
+                </div>
+              </div>
+              <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
+                bg-blue-900 text-blue-200
+                ">
+                meeting
+              </span>
+            </div>
+            
+            <p class="text-gray-300 leading-relaxed ">Hudson High School graduation ceremony. Congratulations to our graduating seniors!</p>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Empty State -->
+    <div id="no-events" class="hidden text-center py-16">
+      <i class="fa-solid fa-calendar-xmark text-6xl text-gray-700 mb-4"></i>
+      <p class="text-xl text-gray-500">No events found in this category.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Disclaimer Notice -->
+<section class="py-8 bg-gray-950">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+      <div class="flex items-start gap-3">
+        <i class="fa-solid fa-circle-info text-tech text-xl mt-1 flex-shrink-0"></i>
+        <div class="text-sm text-gray-300">
+          <strong class="text-gray-100">Important:</strong> Meeting dates and times are subject to change. Please verify with your coach or check Microsoft Teams for the latest meeting updates. For competition and event changes, follow our social media channels.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16 md:py-20 bg-gradient-dark relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">
+      Never Miss a Beat
+    </h2>
+    <p class="text-lg text-gray-300 mb-8">
+      Want to stay updated on all team activities? Follow us on social media or subscribe to our newsletter.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/follow_us/" class="btn-primary inline-flex items-center justify-center">
+        <i class="fa-solid fa-bell mr-2"></i>Follow Our Updates
+      </a>
+      <a href="/contact_us/" class="btn-primary-outline inline-flex items-center justify-center">
+        <i class="fa-solid fa-envelope mr-2"></i>Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FullCalendar Library -->
+<script src="/lib/fullcalendar/index.global.min.js"></script>
+
+<!-- Calendar Styles -->
+<link rel="stylesheet" href="/css/calendar.css">
+
+<!-- Pass events data to JavaScript -->
+<script>
+  window.calendarEventsData = [{"title":"Kickoff Event","date":"2026-01-10","endDate":null,"time":"9:00 AM - 4:00 PM","location":"Lufkin High School","type":"competition","description":"Annual FIRST Robotics Competition season kickoff. Game reveal and initial strategy session.","icon":"fa-rocket"},{"title":"Build Session - Week 1","date":"2026-01-12","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 1 build session - Robot design and prototyping.","icon":"fa-wrench"},{"title":"Build Session - Week 1","date":"2026-01-13","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 1 build session - Robot design and prototyping.","icon":"fa-wrench"},{"title":"Build Session - Week 1","date":"2026-01-15","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 1 build session - Robot design and prototyping.","icon":"fa-wrench"},{"title":"Build Session - Week 1","date":"2026-01-16","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 1 build session - Robot design and prototyping.","icon":"fa-wrench"},{"title":"Build Session - Week 1","date":"2026-01-17","endDate":null,"time":"10:00 AM - 5:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 1 build session - Extended Saturday work day.","icon":"fa-wrench"},{"title":"MLK Holiday","date":"2026-01-19","endDate":null,"time":"All Day","location":"Hudson High School","type":"holiday","description":"Martin Luther King Jr. Day - No school, no build session.","icon":"fa-calendar-xmark"},{"title":"Build Session - Week 2","date":"2026-01-19","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 2 build session - Chassis and drivetrain construction.","icon":"fa-wrench","canceled":true},{"title":"Build Session - Week 2","date":"2026-01-20","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 2 build session - Chassis and drivetrain construction.","icon":"fa-wrench"},{"title":"Build Session - Week 2","date":"2026-01-22","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 2 build session - Chassis and drivetrain construction.","icon":"fa-wrench"},{"title":"Build Session - Week 2","date":"2026-01-23","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 2 build session - Chassis and drivetrain construction.","icon":"fa-wrench","canceled":true},{"title":"Build Session - Week 2","date":"2026-01-24","endDate":null,"time":"10:00 AM - 5:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 2 build session - Extended Saturday work day.","icon":"fa-wrench","canceled":true},{"title":"Build Session - Week 3","date":"2026-01-26","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 3 build session - Mechanism fabrication.","icon":"fa-wrench"},{"title":"Build Session - Week 3","date":"2026-01-27","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 3 build session - Mechanism fabrication.","icon":"fa-wrench"},{"title":"Build Session - Week 3","date":"2026-01-29","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 3 build session - Mechanism fabrication.","icon":"fa-wrench"},{"title":"Build Session - Week 3","date":"2026-01-30","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 3 build session - Mechanism fabrication.","icon":"fa-wrench"},{"title":"Build Session - Week 3","date":"2026-01-31","endDate":null,"time":"10:00 AM - 5:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 3 build session - Extended Saturday work day.","icon":"fa-wrench"},{"title":"Build Session - Week 4","date":"2026-02-02","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 4 build session - Electronics and wiring.","icon":"fa-wrench"},{"title":"Build Session - Week 4","date":"2026-02-03","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 4 build session - Electronics and wiring.","icon":"fa-wrench"},{"title":"Build Session - Week 4","date":"2026-02-05","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 4 build session - Electronics and wiring.","icon":"fa-wrench"},{"title":"Build Session - Week 4","date":"2026-02-06","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 4 build session - Electronics and wiring.","icon":"fa-wrench"},{"title":"Build Session - Week 4","date":"2026-02-07","endDate":null,"time":"10:00 AM - 5:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 4 build session - Extended Saturday work day.","icon":"fa-wrench"},{"title":"Build Session - Week 5","date":"2026-02-09","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 5 build session - Programming and testing.","icon":"fa-wrench"},{"title":"Build Session - Week 5","date":"2026-02-10","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 5 build session - Programming and testing.","icon":"fa-wrench"},{"title":"8th Grade CTE Tour","date":"2026-02-12","endDate":null,"time":"8:00 AM - 10:45 AM","location":"Hudson High School - Robotics Lab","type":"outreach","description":"Tour and Q&A session for 8th grade students. Team veterans will give tours and answer questions about robotics.","icon":"fa-school"},{"title":"Build Session - Week 5","date":"2026-02-12","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 5 build session - Programming and testing.","icon":"fa-wrench"},{"title":"Teacher Inservice Day","date":"2026-02-13","endDate":null,"time":"All Day","location":"Hudson High School","type":"holiday","description":"No school - Teacher professional development day.","icon":"fa-calendar-xmark"},{"title":"Build Session - Week 5","date":"2026-02-13","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 5 build session - Programming and testing.","icon":"fa-wrench"},{"title":"Build Session - Week 5","date":"2026-02-14","endDate":null,"time":"10:00 AM - 5:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 5 build session - Extended Saturday work day.","icon":"fa-wrench"},{"title":"President's Day","date":"2026-02-16","endDate":null,"time":"All Day","location":"Hudson High School","type":"holiday","description":"No school - President's Day holiday.","icon":"fa-calendar-xmark"},{"title":"Build Session - Week 6","date":"2026-02-16","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 6 build session - Final assembly and refinement.","icon":"fa-wrench"},{"title":"Build Session - Week 6","date":"2026-02-17","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 6 build session - Final assembly and refinement.","icon":"fa-wrench"},{"title":"Build Session - Week 6","date":"2026-02-19","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 6 build session - Final assembly and refinement.","icon":"fa-wrench"},{"title":"Build Session - Week 6","date":"2026-02-20","endDate":null,"time":"5:00 PM - 7:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 6 build session - Final assembly and refinement.","icon":"fa-wrench"},{"title":"Build Session - Week 6","date":"2026-02-21","endDate":null,"time":"10:00 AM - 5:00 PM","location":"Hudson High School - Robotics Lab","type":"meeting","description":"Week 6 build session - Extended Saturday work day.","icon":"fa-wrench"},{"title":"Spring Break","date":"2026-03-09","endDate":"2026-03-14","time":"All Day","location":"Hudson High School","type":"holiday","description":"Spring Break - No school.","icon":"fa-umbrella-beach"},{"title":"FIT District McAllen Event","date":"2026-03-12","endDate":"2026-03-15","time":"All Day","location":"McAllen, TX","type":"competition","description":"Week 2 FIT District competition. Three days of qualification and elimination matches.","icon":"fa-trophy"},{"title":"FIT District Waco Event","date":"2026-03-19","endDate":"2026-03-22","time":"All Day","location":"Waco, TX","type":"competition","description":"Week 3 FIT District competition. Three days of qualification and elimination matches.","icon":"fa-trophy"},{"title":"Good Friday Holiday","date":"2026-04-03","endDate":null,"time":"All Day","location":"Hudson High School","type":"holiday","description":"Good Friday - No school.","icon":"fa-calendar-xmark"},{"title":"School Holiday","date":"2026-04-06","endDate":null,"time":"All Day","location":"Hudson High School","type":"holiday","description":"No school.","icon":"fa-calendar-xmark"},{"title":"High School Graduation","date":"2026-05-23","endDate":null,"time":"TBD","location":"Hudson High School","type":"meeting","description":"Hudson High School graduation ceremony. Congratulations to our graduating seniors!","icon":"fa-graduation-cap"}];
+</script>
+
+<!-- Calendar Functionality -->
+<script src="/js/calendar.js"></script>
+
+    </main>
+    <footer class="bg-gray-950 border-t border-gray-800 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold text-gray-100 mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-tech rounded-full"></span>
+          Quick Links
+        </h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Home</a></li>
+          <li><a href="/about/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ About</a></li>
+          <li><a href="/about_first/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ About FIRST</a></li>
+          <li><a href="/contact_us/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Contact Us</a></li>
+          <li><a href="/follow_us/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Follow Us</a></li>
+          <li><a href="/members/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Members</a></li>
+          <li><a href="/gallery/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Gallery</a></li>
+          <li><a href="/blog/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Blog</a></li>
+          <li><a href="/sponsors/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Sponsors</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h3 class="text-lg font-bold text-gray-100 mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-tech rounded-full"></span>
+          Connect
+        </h3>
+        <div class="flex gap-4 mb-6">
+          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/@hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+        <p class="text-sm text-gray-400">Follow us for real-time updates and behind-the-scenes content.</p>
+      </div>
+
+      <!-- Contact & Info -->
+      <div>
+        <h3 class="text-lg font-bold text-gray-100 mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-tech rounded-full"></span>
+          Get in Touch
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+          <p class="flex items-start gap-2">
+            <i class="fa-solid fa-envelope text-tech mt-1"></i>
+            <a href="mailto:hudsonisdrobotics@gmail.com" class="hover:text-tech transition-colors duration-200">hudsonisdrobotics@gmail.com</a>
+          </p>
+          <p class="flex items-start gap-2">
+            <i class="fa-solid fa-map-pin text-tech mt-1"></i>
+            <span>6735 Ted Trout Dr<br/>Lufkin, TX 75904</span>
+          </p>
+        </div>
+        <img 
+          src="/images/logos/FRC_Logo-480.webp"
+          srcset="/images/logos/FRC_Logo-320.webp 320w,
+                  /images/logos/FRC_Logo-480.webp 480w,
+                  /images/logos/FRC_Logo-516.webp 516w"
+          sizes="(max-width: 480px) 320px, 
+                  (max-width: 768px) 480px, 
+                  516px"
+          width="200" height="120"
+          class="mt-4 opacity-70 hover:opacity-100 transition-opacity duration-300"
+          loading="lazy"
+          alt="FIRST Robotics Logo">
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-8"></div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center text-sm text-gray-400">
+      <p>© 2025 Hudson Stingers Robotics. Powered by innovation, fueled by passion. 🤖</p>
+    </div>
+  </div>
+</footer>
+  
+  </body>
+</html>
