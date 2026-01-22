@@ -77,7 +77,8 @@
     "location": "Hudson High School - Robotics Lab",
     "type": "meeting",
     "description": "Week 2 build session - Chassis and drivetrain construction.",
-    "icon": "fa-wrench"
+    "icon": "fa-wrench",
+    "canceled": true
   },
   {
     "title": "Build Session - Week 2",
@@ -107,7 +108,8 @@
     "location": "Hudson High School - Robotics Lab",
     "type": "meeting",
     "description": "Week 2 build session - Chassis and drivetrain construction.",
-    "icon": "fa-wrench"
+    "icon": "fa-wrench",
+    "canceled": true
   },
   {
     "title": "Build Session - Week 2",
@@ -117,7 +119,8 @@
     "location": "Hudson High School - Robotics Lab",
     "type": "meeting",
     "description": "Week 2 build session - Extended Saturday work day.",
-    "icon": "fa-wrench"
+    "icon": "fa-wrench",
+    "canceled": true
   },
   {
     "title": "Build Session - Week 3",

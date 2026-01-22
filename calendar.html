@@ -75,11 +75,11 @@ head: calendar
     <div class="space-y-6">
       {% assign sortedEvents = events | sort: 'date' %}
       {% for event in sortedEvents %}
-      <div class="event-card card hover-lift transition-all duration-300" data-type="{{ event.type }}">
+      <div class="event-card card hover-lift transition-all duration-300 {% if event.canceled %}opacity-60{% endif %}" data-type="{{ event.type }}">
         <div class="flex flex-col md:flex-row gap-6">
           <!-- Date Badge -->
           <div class="flex-shrink-0">
-            <div class="bg-gradient-to-br from-tech to-maroon-700 rounded-lg p-4 text-center min-w-[100px] shadow-lg">
+            <div class="{% if event.canceled %}bg-gradient-to-br from-gray-700 to-gray-800{% else %}bg-gradient-to-br from-tech to-maroon-700{% endif %} rounded-lg p-4 text-center min-w-[100px] shadow-lg">
               <div class="text-white font-black text-3xl">{{ event.date | date: "%d" }}</div>
               <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">{{ event.date | date: "%b" }}</div>
               <div class="text-gray-300 text-xs">{{ event.date | date: "%Y" }}</div>
@@ -90,20 +90,28 @@ head: calendar
           <div class="flex-grow">
             <div class="flex items-start justify-between gap-4 mb-3">
               <div>
-                <h3 class="text-2xl font-bold text-gray-100 mb-2">
-                  <i class="fa-solid {{ event.icon }} text-tech mr-2"></i>{{ event.title }}
+                <h3 class="text-2xl font-bold text-gray-100 mb-2 {% if event.canceled %}line-through{% endif %}">
+                  <i class="fa-solid {{ event.icon }} {% if event.canceled %}text-gray-500{% else %}text-tech{% endif %} mr-2"></i>{{ event.title }}
                 </h3>
+                {% if event.canceled %}
+                <div class="mb-2">
+                  <span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold uppercase">
+                    <i class="fa-solid fa-ban mr-1"></i>Canceled
+                  </span>
+                </div>
+                {% endif %}
                 <div class="flex flex-wrap gap-3 text-sm text-gray-400">
                   <span>
-                    <i class="fa-solid fa-clock mr-1 text-tech"></i>{{ event.time }}
+                    <i class="fa-solid fa-clock mr-1 {% if event.canceled %}text-gray-500{% else %}text-tech{% endif %}"></i>{{ event.time }}
                   </span>
                   <span>
-                    <i class="fa-solid fa-location-dot mr-1 text-tech"></i>{{ event.location }}
+                    <i class="fa-solid fa-location-dot mr-1 {% if event.canceled %}text-gray-500{% else %}text-tech{% endif %}"></i>{{ event.location }}
                   </span>
                 </div>
               </div>
               <span class="event-type-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap
-                {% if event.type == 'competition' %}bg-maroon-900 text-maroon-200
+                {% if event.canceled %}bg-gray-800 text-gray-400
+                {% elsif event.type == 'competition' %}bg-maroon-900 text-maroon-200
                 {% elsif event.type == 'meeting' %}bg-blue-900 text-blue-200
                 {% elsif event.type == 'workshop' %}bg-purple-900 text-purple-200
                 {% elsif event.type == 'outreach' %}bg-green-900 text-green-200
@@ -113,7 +121,7 @@ head: calendar
               </span>
             </div>
             
-            <p class="text-gray-300 leading-relaxed">{{ event.description }}</p>
+            <p class="text-gray-300 leading-relaxed {% if event.canceled %}line-through{% endif %}">{{ event.description }}</p>
             
             {% if event.endDate %}
             <div class="mt-3 text-sm text-gray-500 italic">

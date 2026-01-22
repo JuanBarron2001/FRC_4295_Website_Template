@@ -14,20 +14,28 @@ document.addEventListener('DOMContentLoaded', function() {
   const eventsData = window.calendarEventsData || [];
   
   // Transform events for FullCalendar
-  const calendarEvents = eventsData.map(event => ({
-    title: event.title,
-    start: event.date,
-    end: event.endDate || event.date,
-    allDay: true,
-    extendedProps: {
-      type: event.type,
-      location: event.location,
-      time: event.time,
-      description: event.description,
-      icon: event.icon
-    },
-    classNames: [`fc-event-${event.type}`]
-  }));
+  const calendarEvents = eventsData.map(event => {
+    const classNames = [`fc-event-${event.type}`];
+    if (event.canceled) {
+      classNames.push('fc-event-canceled');
+    }
+    
+    return {
+      title: event.title,
+      start: event.date,
+      end: event.endDate || event.date,
+      allDay: true,
+      extendedProps: {
+        type: event.type,
+        location: event.location,
+        time: event.time,
+        description: event.description,
+        icon: event.icon,
+        canceled: event.canceled || false
+      },
+      classNames: classNames
+    };
+  });
 
   calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
