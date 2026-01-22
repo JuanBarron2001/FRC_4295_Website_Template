@@ -1,0 +1,205 @@
+{
+  "students": [
+    {
+      "name": "Hayden Sawyer",
+      "roles": ["Co-Captain", "Drive Lead"],
+      "subteams": ["Leadership", "Drive"],
+      "specialty": "Co-Captain, Drive Lead",
+      "isLead": true,
+      "isCoCaptain": true
+    },
+    {
+      "name": "John Love",
+      "roles": ["Co-Captain", "Tech Lead", "Safety Lead"],
+      "subteams": ["Leadership", "Tech", "Safety"],
+      "specialty": "Co-Captain, Tech, Safety Lead",
+      "isLead": true,
+      "isCoCaptain": true
+    },
+    {
+      "name": "Israel Jones",
+      "roles": ["Tech Lead"],
+      "subteams": ["Tech"],
+      "specialty": "Tech Lead",
+      "isLead": true
+    },
+    {
+      "name": "Koen Kinard",
+      "roles": ["Tech Lead"],
+      "subteams": ["Tech"],
+      "specialty": "Tech Lead",
+      "isLead": true
+    },
+    {
+      "name": "Joseph Vazquez",
+      "roles": ["Coding Lead"],
+      "subteams": ["Coding"],
+      "specialty": "Coding Lead",
+      "isLead": true
+    },
+    {
+      "name": "Tovah House",
+      "roles": ["Coding Lead", "FOAM Lead"],
+      "subteams": ["Coding", "FOAM"],
+      "specialty": "Coding, FOAM Lead",
+      "isLead": true
+    },
+    {
+      "name": "Meyer Ater",
+      "roles": ["Drive Lead"],
+      "subteams": ["Drive"],
+      "specialty": "Drive Lead",
+      "isLead": true
+    },
+    {
+      "name": "Kairi Bruck",
+      "roles": ["FOAM Lead"],
+      "subteams": ["FOAM"],
+      "specialty": "FOAM Lead",
+      "isLead": true
+    },
+    {
+      "name": "Alexander Rivas",
+      "roles": ["Safety Lead"],
+      "subteams": ["Safety"],
+      "specialty": "Safety Lead",
+      "isLead": true
+    },
+    {
+      "name": "Hunter Deaton",
+      "roles": ["Team Member"],
+      "subteams": ["Mentoring", "Fabrication"],
+      "specialty": "New Member Mentor, Laser Engraving",
+      "isLead": false
+    },
+    {
+      "name": "Michael Killam",
+      "roles": ["Team Member"],
+      "subteams": ["Coding"],
+      "specialty": "Coding",
+      "isLead": false
+    },
+    {
+      "name": "Skylar Adams",
+      "roles": ["Team Member"],
+      "subteams": ["Tech"],
+      "specialty": "Toolmaster",
+      "isLead": false
+    },
+    {
+      "name": "Brooklyn Rainoshek",
+      "roles": ["Team Member"],
+      "subteams": ["Tech", "FOAM"],
+      "specialty": "Tech, FOAM",
+      "isLead": false
+    },
+    {
+      "name": "Izabella Hardy",
+      "roles": ["Team Member"],
+      "subteams": ["Coding", "FOAM"],
+      "specialty": "Coding, FOAM",
+      "isLead": false
+    },
+    {
+      "name": "Jase Smith",
+      "roles": ["Team Member"],
+      "subteams": ["Tech"],
+      "specialty": "Tech",
+      "isLead": false
+    },
+    {
+      "name": "Violet May",
+      "roles": ["Team Member"],
+      "subteams": ["FOAM", "Coding"],
+      "specialty": "FOAM, Coding",
+      "isLead": false
+    },
+    {
+      "name": "Christopher Hernandez",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    },
+    {
+      "name": "Kevin Correa Briones",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    },
+    {
+      "name": "Ramses Yahuaca",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    },
+    {
+      "name": "Killian Netherton",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    },
+    {
+      "name": "Zackary Barker",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    },
+    {
+      "name": "Josafath Luna Guevara",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    },
+    {
+      "name": "Jason Smith",
+      "roles": ["Team Member"],
+      "subteams": ["General"],
+      "specialty": "Team Member",
+      "isLead": false
+    }
+  ],
+  "mentors": [
+    {
+      "name": "Jason Sawyer",
+      "role": "Robo Coach",
+      "subteams": ["Leadership"],
+      "isHeadCoach": true
+    },
+    {
+      "name": "Robin L. Futch",
+      "role": "FOAM Mentor",
+      "subteams": ["FOAM"]
+    },
+    {
+      "name": "Juan Barron",
+      "role": "Programming Mentor",
+      "subteams": ["Coding"]
+    },
+    {
+      "name": "Bill Killam",
+      "role": "Tech Mentor",
+      "subteams": ["Tech"]
+    },
+    {
+      "name": "T. Deaton",
+      "role": "Tech Mentor",
+      "subteams": ["Tech"]
+    },
+    {
+      "name": "Joshua Smith",
+      "role": "Tech Mentor",
+      "subteams": ["Tech"]
+    },
+    {
+      "name": "Hector Trevino",
+      "role": "Tech Mentor",
+      "subteams": ["Tech"]
+    }
+  ]
+}

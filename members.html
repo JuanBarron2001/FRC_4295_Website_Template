@@ -27,22 +27,18 @@ head: members
         Team Co-Captains
       </h2>
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {% for student in members.students %}
+          {% if student.isCoCaptain %}
         <div class="card-hover p-6 border-2 border-yellow-500/30 bg-gradient-to-br from-gray-900 to-gray-800">
           <div class="flex items-center gap-3 mb-2">
             <i class="fa-solid fa-crown text-yellow-500 text-xl"></i>
-            <p class="text-xl font-bold text-gray-100">Hayden Sawyer</p>
+            <p class="text-xl font-bold text-gray-100">{{ student.name }}</p>
           </div>
           <p class="text-yellow-500 text-sm font-semibold">Co-Captain</p>
-          <p class="text-gray-400 text-sm mt-1">Drive Lead</p>
+          <p class="text-gray-400 text-sm mt-1">{{ student.specialty }}</p>
         </div>
-        <div class="card-hover p-6 border-2 border-yellow-500/30 bg-gradient-to-br from-gray-900 to-gray-800">
-          <div class="flex items-center gap-3 mb-2">
-            <i class="fa-solid fa-crown text-yellow-500 text-xl"></i>
-            <p class="text-xl font-bold text-gray-100">John Love</p>
-          </div>
-          <p class="text-yellow-500 text-sm font-semibold">Co-Captain</p>
-          <p class="text-gray-400 text-sm mt-1">Tech, Safety Lead</p>
-        </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 
@@ -52,7 +48,7 @@ head: members
     <div class="mb-16">
       <h2 class="subheading-tech flex items-center gap-3 mb-8">
         <i class="fa-solid fa-users-gear text-tech text-3xl"></i>
-        Department Leads
+        Sub-Team Leads
       </h2>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -63,9 +59,13 @@ head: members
             <h3 class="text-lg font-bold text-tech">Tech Lead</h3>
           </div>
           <div class="space-y-2">
-            <p class="text-gray-200 font-semibold">Israel Jones</p>
-            <p class="text-gray-200 font-semibold">Koen Kinard</p>
-            <p class="text-gray-200 font-semibold">John Love</p>
+            {% for student in members.students %}
+              {% for role in student.roles %}
+                {% if role == "Tech Lead" %}
+            <p class="text-gray-200 font-semibold">{{ student.name }}</p>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </div>
         </div>
 
@@ -76,8 +76,13 @@ head: members
             <h3 class="text-lg font-bold text-tech">Coding Lead</h3>
           </div>
           <div class="space-y-2">
-            <p class="text-gray-200 font-semibold">Joseph Vazquez</p>
-            <p class="text-gray-200 font-semibold">Tovah House</p>
+            {% for student in members.students %}
+              {% for role in student.roles %}
+                {% if role == "Coding Lead" %}
+            <p class="text-gray-200 font-semibold">{{ student.name }}</p>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </div>
         </div>
 
@@ -88,8 +93,13 @@ head: members
             <h3 class="text-lg font-bold text-tech">Drive Lead</h3>
           </div>
           <div class="space-y-2">
-            <p class="text-gray-200 font-semibold">Hayden Sawyer</p>
-            <p class="text-gray-200 font-semibold">Meyer Ater</p>
+            {% for student in members.students %}
+              {% for role in student.roles %}
+                {% if role == "Drive Lead" %}
+            <p class="text-gray-200 font-semibold">{{ student.name }}</p>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </div>
         </div>
 
@@ -100,8 +110,13 @@ head: members
             <h3 class="text-lg font-bold text-tech">FOAM Lead</h3>
           </div>
           <div class="space-y-2">
-            <p class="text-gray-200 font-semibold">Tovah House</p>
-            <p class="text-gray-200 font-semibold">Kairi Bruck</p>
+            {% for student in members.students %}
+              {% for role in student.roles %}
+                {% if role == "FOAM Lead" %}
+            <p class="text-gray-200 font-semibold">{{ student.name }}</p>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </div>
         </div>
 
@@ -112,8 +127,13 @@ head: members
             <h3 class="text-lg font-bold text-tech">Safety Lead</h3>
           </div>
           <div class="space-y-2">
-            <p class="text-gray-200 font-semibold">Alexander Rivas</p>
-            <p class="text-gray-200 font-semibold">John Love</p>
+            {% for student in members.students %}
+              {% for role in student.roles %}
+                {% if role == "Safety Lead" %}
+            <p class="text-gray-200 font-semibold">{{ student.name }}</p>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -129,62 +149,14 @@ head: members
       </h2>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for student in members.students %}
+          {% if not student.isLead and not student.isCoCaptain %}
         <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Hunter Deaton</p>
-          <p class="text-tech text-sm mt-1">New Member Mentor, Laser Engraving</p>
+          <p class="text-gray-200 font-semibold">{{ student.name }}</p>
+          <p class="text-tech text-sm mt-1">{{ student.specialty }}</p>
         </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Michael Killam</p>
-          <p class="text-tech text-sm mt-1">Coding</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Skylar Adams</p>
-          <p class="text-tech text-sm mt-1">Toolmaster</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Brooklyn Rainoshek</p>
-          <p class="text-tech text-sm mt-1">Tech, FOAM</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Izabella Hardy</p>
-          <p class="text-tech text-sm mt-1">Coding, FOAM</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Jase Smith</p>
-          <p class="text-tech text-sm mt-1">Tech</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Violet May</p>
-          <p class="text-tech text-sm mt-1">FOAM, Coding</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Christopher Hernandez</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Kevin Correa Briones</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Ramses Yahuaca</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Killian Netherton</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Zackary Barker</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Josafath Luna Guevara</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
-        <div class="card p-4 hover:bg-gray-800 transition-colors">
-          <p class="text-gray-200 font-semibold">Jason Smith</p>
-          <p class="text-tech text-sm mt-1">Team Member</p>
-        </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 
@@ -199,61 +171,23 @@ head: members
       <p class="text-gray-300 mb-8 max-w-3xl">Our experienced mentors guide students in engineering, programming, project management, and leadership—sharing decades of real-world experience.</p>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="card-hover p-5 border-l-4 border-yellow-500">
+        {% for mentor in members.mentors %}
+        <div class="card-hover p-5{% if mentor.isHeadCoach %} border-l-4 border-yellow-500{% endif %}">
           <div class="flex items-center gap-3 mb-2">
+            {% if mentor.role == "Robo Coach" %}
             <i class="fa-solid fa-trophy text-yellow-500 text-xl"></i>
-            <p class="text-gray-100 font-bold text-lg">Jason Sawyer</p>
-          </div>
-          <p class="text-yellow-500 text-sm font-semibold">Robo Coach</p>
-        </div>
-        
-        <div class="card-hover p-5">
-          <div class="flex items-center gap-3 mb-2">
+            {% elsif mentor.role == "FOAM Mentor" %}
             <i class="fa-solid fa-bullhorn text-tech text-xl"></i>
-            <p class="text-gray-100 font-bold">Robin L. Futch</p>
-          </div>
-          <p class="text-tech text-sm font-semibold">FOAM Mentor</p>
-        </div>
-        
-        <div class="card-hover p-5">
-          <div class="flex items-center gap-3 mb-2">
+            {% elsif mentor.role == "Programming Mentor" %}
             <i class="fa-solid fa-code text-tech text-xl"></i>
-            <p class="text-gray-100 font-bold">Juan Barron</p>
-          </div>
-          <p class="text-tech text-sm font-semibold">Programming Mentor</p>
-        </div>
-        
-        <div class="card-hover p-5">
-          <div class="flex items-center gap-3 mb-2">
+            {% else %}
             <i class="fa-solid fa-screwdriver-wrench text-tech text-xl"></i>
-            <p class="text-gray-100 font-bold">Bill Killam</p>
+            {% endif %}
+            <p class="text-gray-100 font-bold{% if mentor.isHeadCoach %} text-lg{% endif %}">{{ mentor.name }}</p>
           </div>
-          <p class="text-tech text-sm font-semibold">Tech Mentor</p>
+          <p class="{% if mentor.isHeadCoach %}text-yellow-500{% else %}text-tech{% endif %} text-sm font-semibold">{{ mentor.role }}</p>
         </div>
-        
-        <div class="card-hover p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <i class="fa-solid fa-screwdriver-wrench text-tech text-xl"></i>
-            <p class="text-gray-100 font-bold">T. Deaton</p>
-          </div>
-          <p class="text-tech text-sm font-semibold">Tech Mentor</p>
-        </div>
-        
-        <div class="card-hover p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <i class="fa-solid fa-screwdriver-wrench text-tech text-xl"></i>
-            <p class="text-gray-100 font-bold">Joshua Smith</p>
-          </div>
-          <p class="text-tech text-sm font-semibold">Tech Mentor</p>
-        </div>
-        
-        <div class="card-hover p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <i class="fa-solid fa-screwdriver-wrench text-tech text-xl"></i>
-            <p class="text-gray-100 font-bold">Hector Trevino</p>
-          </div>
-          <p class="text-tech text-sm font-semibold">Tech Mentor</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
 
