@@ -1,8 +1,7 @@
 {
   "name": "frc_4295_website_template",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Official website for Hudson Stingers Robotics - FRC Team 4295 from Hudson High School",
   "scripts": {
     "clean": "if exist _site rmdir /s /q _site",
     "start": "npm run clean && npx @11ty/eleventy --serve",
@@ -12,8 +11,17 @@
     "type": "git",
     "url": "git+https://github.com/JuanBarron2001/FRC_4295_Website_Template.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "frc",
+    "first-robotics",
+    "robotics",
+    "team-4295",
+    "hudson-stingers",
+    "eleventy",
+    "static-site",
+    "stem"
+  ],
+  "author": "Hudson Stingers Robotics - Team 4295",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JuanBarron2001/FRC_4295_Website_Template/issues"
