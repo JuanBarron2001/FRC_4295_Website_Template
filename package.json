@@ -4,8 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "clean": "if exist _site rmdir /s /q _site",
+    "start": "npm run clean && npx @11ty/eleventy --serve",
+    "build": "npm run clean && npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
