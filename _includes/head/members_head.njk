@@ -2,8 +2,8 @@
 
 {% block headMeta %}
 <!-- SEO Meta -->
-<meta name="description" content="Meet the members of Hudson Stingers Robotics, FRC Team 4295 at Hudson High School in Lufkin, TX. Learn about our student team members and dedicated mentors who guide us in the FIRST Robotics Competition.">
-<meta name="keywords" content="Hudson Stingers Robotics members, FRC Team 4295 students, Hudson High School robotics mentors, FIRST Robotics Competition team, STEM education Hudson TX">
+<meta name="description" content="Meet the members of Hudson Stingers Robotics, FRC Team 4295 at Hudson High School in Lufkin, TX. Our team includes Co-Captains {{ members.students[0].name }} and {{ members.students[1].name }}, plus talented students and experienced mentors guiding us in the FIRST Robotics Competition.">
+<meta name="keywords" content="Hudson Stingers Robotics members, FRC Team 4295 students, {% for student in members.students %}{{ student.name }}{% if not loop.last %}, {% endif %}{% endfor %}, {% for mentor in members.mentors %}{{ mentor.name }}{% if not loop.last %}, {% endif %}{% endfor %}, Hudson High School robotics, FIRST Robotics Competition team, STEM education Hudson TX">
 
 <link rel="canonical" href="https://www.hudsonrobotics4295.com/members/">
 <meta name="robots" content="index, follow">
@@ -38,20 +38,62 @@
   "name":"Hudson Stingers Robotics",
   "alternateName":"Hudson High School FRC Team 4295",
   "url":"https://www.hudsonrobotics4295.com/",
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lufkin",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    }
+  },
   "member":[
-    {"@type":"Person","name":"Alex Johnson"},
-    {"@type":"Person","name":"Emily Parker"},
-    {"@type":"Person","name":"Michael Smith"},
-    {"@type":"Person","name":"Sarah Davis"},
-    {"@type":"Person","name":"Joshua Brown"},
-    {"@type":"Person","name":"Jessica Taylor"},
-    {"@type":"Person","name":"Daniel Wilson"},
-    {"@type":"Person","name":"Ashley Moore"},
-    {"@type":"Person","name":"Dr. Amanda Cooper","jobTitle":"Mentor"},
-    {"@type":"Person","name":"Mr. William Johnson","jobTitle":"Mentor"},
-    {"@type":"Person","name":"Mrs. Linda Martinez","jobTitle":"Mentor"},
-    {"@type":"Person","name":"Mr. Thomas Lee","jobTitle":"Mentor"},
-    {"@type":"Person","name":"Ms. Laura White","jobTitle":"Mentor"}
+    {% for student in members.students %}
+    {
+      "@type":"Person",
+      "name":"{{ student.name }}",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Hudson Stingers Robotics"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Hudson High School"
+      },
+      {% if student.isLead or student.isCoCaptain %}
+      "jobTitle":"{% if student.isCoCaptain %}Team Co-Captain{% endif %}{% if student.roles|length > 0 %}{% for role in student.roles %}{% if role != 'Team Member' %}{{ role }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}{% endif %}",
+      {% endif %}
+      "description":"{{ student.specialty }} - Hudson Stingers Robotics FRC Team 4295",
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "FIRST Robotics Competition Student",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "Lufkin, TX"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    {% for mentor in members.mentors %},
+    {
+      "@type":"Person",
+      "name":"{{ mentor.name }}",
+      "jobTitle":"{{ mentor.role }}",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Hudson Stingers Robotics"
+      },
+      "description":"{{ mentor.role }} for Hudson Stingers Robotics FRC Team 4295",
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "FIRST Robotics Competition Mentor",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "Lufkin, TX"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
   ]
 }
 </script>
