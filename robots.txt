@@ -1,0 +1,8 @@
+# Hudson Stingers Robotics - FRC Team 4295
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hudsonrobotics4295.com/sitemap.xml
