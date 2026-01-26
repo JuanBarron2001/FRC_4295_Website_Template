@@ -80,9 +80,9 @@ head: calendar
           <!-- Date Badge -->
           <div class="flex-shrink-0">
             <div class="{% if event.canceled %}bg-gradient-to-br from-gray-700 to-gray-800{% else %}bg-gradient-to-br from-tech to-maroon-700{% endif %} rounded-lg p-4 text-center min-w-[100px] shadow-lg">
-              <div class="text-white font-black text-3xl">{{ event.date | date: "%d" }}</div>
-              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">{{ event.date | date: "%b" }}</div>
-              <div class="text-gray-300 text-xs">{{ event.date | date: "%Y" }}</div>
+              <div class="text-white font-black text-3xl">{{ event.date | date: "%d", "UTC" }}</div>
+              <div class="text-gray-200 font-bold text-sm uppercase tracking-wider">{{ event.date | date: "%b", "UTC" }}</div>
+              <div class="text-gray-300 text-xs">{{ event.date | date: "%Y", "UTC" }}</div>
             </div>
           </div>
 
