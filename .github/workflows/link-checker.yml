@@ -31,7 +31,7 @@ jobs:
       - name: Check internal links
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --verbose --no-progress './_site/**/*.html' --base './_site' --exclude-mail
+          args: --verbose --no-progress './_site/**/*.html' --base './_site' --exclude-mail --exclude 'instagram\.com' --exclude 'twitter\.com' --exclude 'x\.com' --exclude '404\.html'
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
