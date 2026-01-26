@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Official website for Hudson Stingers Robotics - FRC Team 4295 from Hudson High School",
   "scripts": {
-    "clean": "if exist _site rmdir /s /q _site",
+    "clean": "rimraf _site",
     "start": "npm run clean && npx @11ty/eleventy --serve",
     "build": "npm run clean && npx @11ty/eleventy"
   },
@@ -32,6 +32,7 @@
     "autoprefixer": "^10.4.22",
     "lite-youtube-embed": "^0.3.3",
     "postcss": "^8.5.6",
+    "rimraf": "^6.1.2",
     "tailwindcss": "^4.1.17"
   },
   "dependencies": {
