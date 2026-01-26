@@ -39,10 +39,12 @@ jobs:
           configPath: './.lighthouserc.json'
           uploadArtifacts: false
           temporaryPublicStorage: false
+        continue-on-error: true
 
       - name: Comment PR with results
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && always()
         uses: actions/github-script@v6
+        continue-on-error: true
         with:
           script: |
             const fs = require('fs');
