@@ -37,8 +37,8 @@ jobs:
             http://localhost/calendar/index.html
             http://localhost/members/index.html
           configPath: './.lighthouserc.json'
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+          uploadArtifacts: false
+          temporaryPublicStorage: false
 
       - name: Comment PR with results
         if: github.event_name == 'pull_request'
