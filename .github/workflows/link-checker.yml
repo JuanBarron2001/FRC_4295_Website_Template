@@ -1,0 +1,45 @@
+name: Check Links
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    # Run weekly on Sundays at 2 AM
+    - cron: '0 2 * * 0'
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          LAMBDA_URL: ${{ secrets.LAMBDA_URL }}
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress './_site/**/*.html' --base './_site' --exclude-mail
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Issue on failure
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Broken Links Detected
+          content-filepath: ./lychee/out.md
+          labels: bug, automated

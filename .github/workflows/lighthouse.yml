@@ -1,0 +1,65 @@
+name: Lighthouse CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          LAMBDA_URL: ${{ secrets.LAMBDA_URL }}
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          urls: |
+            http://localhost/index.html
+            http://localhost/about/index.html
+            http://localhost/blog/index.html
+            http://localhost/calendar/index.html
+            http://localhost/members/index.html
+          configPath: './.lighthouserc.json'
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const results = JSON.parse(fs.readFileSync('.lighthouseci/manifest.json'));
+            
+            let comment = '## Lighthouse CI Results\n\n';
+            comment += '| Page | Performance | Accessibility | Best Practices | SEO |\n';
+            comment += '|------|-------------|---------------|----------------|-----|\n';
+            
+            results.forEach(result => {
+              const scores = result.summary;
+              comment += `| ${result.url} | ${scores.performance * 100} | ${scores.accessibility * 100} | ${scores['best-practices'] * 100} | ${scores.seo * 100} |\n`;
+            });
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
