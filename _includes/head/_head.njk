@@ -25,11 +25,25 @@
     <!-- Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Custom Font -->
+    <style>
+      @font-face {
+        font-family: 'Hudson Stinger';
+        src: url('/fonts/husdonstinger.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
     <!-- Custom Tailwind Configuration and Styles -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              stinger: ['Hudson Stinger', 'sans-serif'],
+            },
             colors: {
               tech: '#822008',
               dark: '#0f0f0f',
