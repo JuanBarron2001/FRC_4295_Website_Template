@@ -38,6 +38,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        stinger: ['Hudson Stinger', 'sans-serif'],
         sans: ['Roboto', 'system-ui', 'sans-serif'],
         mono: ['Courier New', 'monospace'],
       },
