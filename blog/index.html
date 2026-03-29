@@ -27,11 +27,25 @@
     <!-- Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Custom Font -->
+    <style>
+      @font-face {
+        font-family: 'Hudson Stinger';
+        src: url('/fonts/husdonstinger.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
     <!-- Custom Tailwind Configuration and Styles -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              stinger: ['Hudson Stinger', 'sans-serif'],
+            },
             colors: {
               tech: '#822008',
               dark: '#0f0f0f',
@@ -189,33 +203,31 @@
   <body class="bg-gray-950 text-gray-200">
     <header class="sticky top-0 z-50 backdrop-blur-tech border-b border-gray-800">
   <!-- Banner & Branding -->
-  <div class="bg-gradient-dark relative overflow-hidden">
-    <!-- Animated gradient background -->
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-    </div>
+  <div class="relative overflow-hidden" style="background: linear-gradient(to right, #4D1618 0%, #4D1618 25%, #1a1a1a 75%);">
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <a href="/" class="flex items-center gap-4 group">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-6">
+      <a href="/" class="flex items-center gap-5 md:gap-8 group">
+        <!-- Square logo -->
         <img 
-          src="/images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp"
-          srcset="/images/banner/Hudson_FRC_4295_Banner_Cropped-480.webp 480w,
-                  /images/banner/Hudson_FRC_4295_Banner_Cropped-768.webp 768w,
-                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1200.webp 1200w,
-                  /images/banner/Hudson_FRC_4295_Banner_Cropped-1854.webp 1854w"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 300px, 400px"
-          width="400" height="120"
+          src="/images/logo/hudson_stingers_logo.webp"
+          srcset="/images/logo/hudson_stingers_logo-80.webp 80w,
+                  /images/logo/hudson_stingers_logo-120.webp 120w,
+                  /images/logo/hudson_stingers_logo-160.webp 160w,
+                  /images/logo/hudson_stingers_logo-200.webp 200w"
+          sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 120px"
+          width="120" height="120"
           fetchpriority="high"
-          alt="Hudson Stingers Banner"
-          class="h-16 w-auto object-contain group-hover:opacity-80 transition-opacity duration-300">
+          alt="Hudson Stingers Robotics Logo"
+          class="h-20 w-20 md:h-24 md:w-24 lg:h-[7rem] lg:w-[7rem] rounded-lg object-contain group-hover:scale-105 transition-transform duration-300"
+          style="background-color: #4D1618;">
+        <!-- Team name & subtitle -->
+        <div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-stinger tracking-tighter text-gray-100 leading-tight">
+            Hudson Stingers
+          </h1>
+          <p class="text-maroon-200 font-bold text-sm sm:text-base md:text-lg mt-1 tracking-wide">FIRST Robotics Competition • Team <span class="font-stinger text-base sm:text-lg md:text-xl">4295</span></p>
+        </div>
       </a>
-      <div class="mt-4">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-gray-100">
-          Hudson Stingers
-        </h1>
-        <p class="text-tech font-bold text-lg mt-2">FIRST Robotics Competition • Team 4295</p>
-      </div>
     </div>
   </div>
 
@@ -390,20 +402,31 @@
           Connect
         </h3>
         <div class="flex gap-4 mb-6">
-          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+          <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers Facebook">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers X">
             <i class="fa-brands fa-x-twitter"></i>
           </a>
-          <a href="https://www.youtube.com/@hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl">
+          <a href="https://www.youtube.com/@hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers YouTube">
             <i class="fa-brands fa-youtube"></i>
           </a>
+          <a href="https://github.com/Hudson-Robotics" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Robotics GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
-        <p class="text-sm text-gray-400">Follow us for real-time updates and behind-the-scenes content.</p>
+        <p class="text-sm text-gray-400 mb-4">Follow us for real-time updates and behind-the-scenes content.</p>
+        <div class="space-y-2 text-sm">
+          <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-chart-simple text-tech"></i> The Blue Alliance — Team 4295
+          </a>
+          <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-ranking-star text-tech"></i> FIRST Inspires — Team 4295
+          </a>
+        </div>
       </div>
 
       <!-- Contact & Info -->
