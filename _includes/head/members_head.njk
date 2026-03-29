@@ -60,8 +60,10 @@
         "@type": "EducationalOrganization",
         "name": "Hudson High School"
       },
-      {% if student.isLead or student.isCoCaptain %}
-      "jobTitle":"{% if student.isCoCaptain %}Team Co-Captain{% endif %}{% if student.roles|length > 0 %}{% for role in student.roles %}{% if role != 'Team Member' %}{{ role }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}{% endif %}",
+      {% if student.isCoCaptain %}
+      "jobTitle":"Team Co-Captain",
+      {% elif student.isLead and student.roles|length > 0 %}
+      "jobTitle":"{% for role in student.roles %}{% if role != 'Team Member' %}{{ role }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}",
       {% endif %}
       "description":"{{ student.specialty }} - Hudson Stingers Robotics FRC Team 4295",
       "hasOccupation": {
@@ -74,8 +76,8 @@
       }
     }{% if not loop.last %},{% endif %}
     {% endfor %}
-    {% for mentor in members.mentors %},
-    {
+    {% for mentor in members.mentors %}
+    ,{
       "@type":"Person",
       "name":"{{ mentor.name }}",
       "jobTitle":"{{ mentor.role }}",
@@ -92,7 +94,7 @@
           "name": "Lufkin, TX"
         }
       }
-    }{% if not loop.last %},{% endif %}
+    }
     {% endfor %}
   ]
 }
