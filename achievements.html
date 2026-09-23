@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+title: Achievements & Awards | Hudson Stingers Robotics FRC Team 4295
+head: achievements
+---
+
+{% assign award_count = 0 %}
+{% for season in awards.seasons %}
+  {% assign award_count = award_count | plus: season.awards.size %}
+{% endfor %}
+
+<section class="relative overflow-hidden bg-gradient-dark py-16 md:py-24">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-1/4 -left-20 w-96 h-96 bg-tech rounded-full filter blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="heading-tech mb-4">Achievements</h1>
+    <p class="text-xl text-gray-300">Awards Hudson Stingers Robotics has earned at FIRST Robotics Competition events, in the judges' own words.</p>
+    <p class="mt-8 inline-flex items-center gap-3 text-gray-200 font-semibold">
+      <i class="fa-solid fa-trophy text-yellow-500 text-2xl"></i>
+      <span><span class="text-3xl font-black text-gray-100">{{ award_count }}</span> FIRST awards</span>
+    </p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="py-16 md:py-24 bg-gray-950">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    {% for season in awards.seasons %}
+    <div class="mb-16">
+      <h2 class="subheading-tech flex items-center gap-3 mb-8">
+        <i class="fa-solid fa-calendar-check text-tech text-3xl"></i>
+        {{ season.year }} Season
+      </h2>
+
+      <div class="space-y-6">
+        {% for item in season.awards %}
+        <article class="card-hover p-8 border-l-4 border-yellow-500">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-award text-yellow-500 text-3xl mt-1"></i>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-gray-100">{{ item.award }}</h3>
+              <p class="text-tech font-semibold mt-1">{{ item.event }} &middot; {{ season.year }}</p>
+
+              {% if item.script %}
+              <details class="mt-5 group">
+                <summary class="cursor-pointer text-gray-300 hover:text-tech font-semibold transition-colors duration-200">
+                  Read the judges' script
+                </summary>
+                <blockquote class="mt-4 border-l-2 border-gray-700 pl-5 space-y-3 text-gray-300 italic leading-relaxed">
+                  {% for paragraph in item.script %}
+                  <p>{{ paragraph }}</p>
+                  {% endfor %}
+                </blockquote>
+              </details>
+              {% endif %}
+
+              <a href="{{ item.source }}" target="_blank" rel="noopener" class="inline-block mt-5 text-sm text-tech hover:underline">
+                View on FIRST Inspires <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="section-divider"></div>
+
+    <div class="card p-10 mt-12">
+      <h2 class="subheading-tech flex items-center gap-3 mb-4">
+        <i class="fa-solid fa-chart-line text-tech text-3xl"></i>
+        Full Competition Record
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        Match results, rankings, and every event we have attended are on <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="text-tech hover:underline">The Blue Alliance</a> and in our official record on <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="text-tech hover:underline">FIRST Inspires</a>.
+      </p>
+    </div>
+
+    <div class="card-hover p-10 text-center mt-12">
+      <h3 class="subheading-tech mb-4">Help Us Earn the Next One</h3>
+      <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+        Every award on this page was built by students with the support of our sponsors and mentors. Join the team or help fund next season.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/sponsors/" class="btn-primary">Become a Sponsor</a>
+        <a href="/contact_us/" class="btn-primary-outline">Join the Team</a>
+      </div>
+    </div>
+  </div>
+</section>

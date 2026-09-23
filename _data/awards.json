@@ -1,0 +1,44 @@
+{
+  "seasons": [
+    {
+      "year": 2026,
+      "awards": [
+        {
+          "award": "Industrial Design Award",
+          "event": "FIT District Waco Event",
+          "source": "https://frc-events.firstinspires.org/2026/TXWAC/awards",
+          "script": [
+            "The Industrial Design Award celebrates the team that demonstrates industrial design principles, striking a balance between form, function, and aesthetics.",
+            "This year's recipient impressed judges with a remarkably refined and efficient build that turned heads throughout the competition. Inspired by the poised, watchful grace of an ancient protector this team's sleek machine fused striking visual symmetry with championship-caliber engineering precision. Team 4295 the Hudson Stingers",
+            "Congratulations Team 4295!"
+          ]
+        },
+        {
+          "award": "Judges' Award",
+          "event": "FIT District McAllen Event",
+          "source": "https://frc-events.firstinspires.org/2026/TXMCA/awards",
+          "script": [
+            "During the course of the competition, the judging panel may decide that a team's unique efforts, performance, or dynamics merit recognition.",
+            "This team has built a buzzing culture of collaboration and commitment since 2021. They foster deep camaraderie among teammates while recruiting and mentoring new students. Their teamwork, community engagement, and family camaraderie truly sting in the best way.",
+            "Congratulations Team 4295!"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "awards": [
+        {
+          "award": "Quality Award",
+          "event": "FIT District Pasadena Event #2",
+          "source": "https://frc-events.firstinspires.org/2022/TXPA2/awards",
+          "script": [
+            "The Quality Award celebrates machine robustness in concept and fabrication. Building the robot is only part of their success and the judges recognize them as a quality example to others.",
+            "Like the M1 Abrams, this robot is battle-ready easily withstanding the rigors of the game. Like a high clearance vehicle, this team's machine can overcome any obstacle. Built to take on the game from any angle, the elevated, reinforced corners were an unstoppable force on the field. Although we won't be going here today, there is no way that captain Sully can avoid this today.",
+            "Congratulations Team 4295!"
+          ]
+        }
+      ]
+    }
+  ]
+}

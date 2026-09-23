@@ -24,6 +24,13 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://hudsonrobotics4295.com/achievements/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Team & Members -->
   <url>
     <loc>https://hudsonrobotics4295.com/members/</loc>
