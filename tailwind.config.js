@@ -16,6 +16,9 @@ module.exports = {
       },
       colors: {
         tech: '#822008',
+        // Lighter brand red for text and icons on the dark backgrounds; maroon text
+        // on near-black fails WCAG contrast (2.0:1). #e85c3a is 5.7:1.
+        'tech-light': '#e85c3a',
         dark: '#0f0f0f',
         gray: {
           950: '#0a0a0a',
@@ -24,7 +27,7 @@ module.exports = {
           700: '#3a3a3a',
           600: '#4a4a4a',
           500: '#606060',
-          400: '#757575',
+          400: '#808080', // was #757575, 4.3:1 on gray-950; #808080 is 5.0:1
           300: '#999999',
           200: '#d3d3d3',
           100: '#e8e8e8',

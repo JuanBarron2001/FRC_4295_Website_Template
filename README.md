@@ -172,6 +172,7 @@ Edit `tailwind.config.js`:
 ```javascript
 colors: {
   tech: '#822008',        // Primary maroon
+  'tech-light': '#e85c3a', // Brand red for text and icons (maroon text is unreadable on black)
   dark: '#0f0f0f',
   gray: { /* shades */ }
 }

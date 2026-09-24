@@ -47,7 +47,7 @@ head: members
     <!-- Team Leads Section -->
     <div class="mb-16">
       <h2 class="subheading-tech flex items-center gap-3 mb-8">
-        <i class="fa-solid fa-users-gear text-tech text-3xl"></i>
+        <i class="fa-solid fa-users-gear text-tech-light text-3xl"></i>
         Sub-Team Leads
       </h2>
       
@@ -55,8 +55,8 @@ head: members
         <!-- Tech Lead -->
         <div class="card-hover p-6 border-l-4 border-tech">
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-screwdriver-wrench text-tech text-2xl"></i>
-            <h3 class="text-lg font-bold text-tech">Tech Lead</h3>
+            <i class="fa-solid fa-screwdriver-wrench text-tech-light text-2xl"></i>
+            <h3 class="text-lg font-bold text-tech-light">Tech Lead</h3>
           </div>
           <div class="space-y-2">
             {% for student in members.students %}
@@ -72,8 +72,8 @@ head: members
         <!-- Coding Lead -->
         <div class="card-hover p-6 border-l-4 border-tech">
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-code text-tech text-2xl"></i>
-            <h3 class="text-lg font-bold text-tech">Coding Lead</h3>
+            <i class="fa-solid fa-code text-tech-light text-2xl"></i>
+            <h3 class="text-lg font-bold text-tech-light">Coding Lead</h3>
           </div>
           <div class="space-y-2">
             {% for student in members.students %}
@@ -89,8 +89,8 @@ head: members
         <!-- Drive Lead -->
         <div class="card-hover p-6 border-l-4 border-tech">
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-gamepad text-tech text-2xl"></i>
-            <h3 class="text-lg font-bold text-tech">Drive Lead</h3>
+            <i class="fa-solid fa-gamepad text-tech-light text-2xl"></i>
+            <h3 class="text-lg font-bold text-tech-light">Drive Lead</h3>
           </div>
           <div class="space-y-2">
             {% for student in members.students %}
@@ -106,8 +106,8 @@ head: members
         <!-- FOAM Lead -->
         <div class="card-hover p-6 border-l-4 border-tech">
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-bullhorn text-tech text-2xl"></i>
-            <h3 class="text-lg font-bold text-tech">FOAM Lead</h3>
+            <i class="fa-solid fa-bullhorn text-tech-light text-2xl"></i>
+            <h3 class="text-lg font-bold text-tech-light">FOAM Lead</h3>
           </div>
           <div class="space-y-2">
             {% for student in members.students %}
@@ -123,8 +123,8 @@ head: members
         <!-- Safety Lead -->
         <div class="card-hover p-6 border-l-4 border-tech">
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-shield-halved text-tech text-2xl"></i>
-            <h3 class="text-lg font-bold text-tech">Safety Lead</h3>
+            <i class="fa-solid fa-shield-halved text-tech-light text-2xl"></i>
+            <h3 class="text-lg font-bold text-tech-light">Safety Lead</h3>
           </div>
           <div class="space-y-2">
             {% for student in members.students %}
@@ -144,7 +144,7 @@ head: members
     <!-- Team Members Section -->
     <div class="mb-16">
       <h2 class="subheading-tech flex items-center gap-3 mb-8">
-        <i class="fa-solid fa-graduation-cap text-tech text-3xl"></i>
+        <i class="fa-solid fa-graduation-cap text-tech-light text-3xl"></i>
         Team Members
       </h2>
       
@@ -153,7 +153,7 @@ head: members
           {% if not student.isLead and not student.isCoCaptain %}
         <div class="card p-4 hover:bg-gray-800 transition-colors">
           <p class="text-gray-200 font-semibold">{{ student.name }}</p>
-          <p class="text-tech text-sm mt-1">{{ student.specialty }}</p>
+          <p class="text-tech-light text-sm mt-1">{{ student.specialty }}</p>
         </div>
           {% endif %}
         {% endfor %}
@@ -165,7 +165,7 @@ head: members
     <!-- Mentors Section -->
     <div class="mt-16">
       <h2 class="subheading-tech flex items-center gap-3 mb-8">
-        <i class="fa-solid fa-chalkboard-user text-tech text-3xl"></i>
+        <i class="fa-solid fa-chalkboard-user text-tech-light text-3xl"></i>
         Our Mentors
       </h2>
       <p class="text-gray-300 mb-8 max-w-3xl">Our experienced mentors guide students in engineering, programming, project management, and leadership—sharing decades of real-world experience.</p>
@@ -177,15 +177,15 @@ head: members
             {% if mentor.role == "Robo Coach" %}
             <i class="fa-solid fa-trophy text-yellow-500 text-xl"></i>
             {% elsif mentor.role == "FOAM Mentor" %}
-            <i class="fa-solid fa-bullhorn text-tech text-xl"></i>
+            <i class="fa-solid fa-bullhorn text-tech-light text-xl"></i>
             {% elsif mentor.role == "Programming Mentor" %}
-            <i class="fa-solid fa-code text-tech text-xl"></i>
+            <i class="fa-solid fa-code text-tech-light text-xl"></i>
             {% else %}
-            <i class="fa-solid fa-screwdriver-wrench text-tech text-xl"></i>
+            <i class="fa-solid fa-screwdriver-wrench text-tech-light text-xl"></i>
             {% endif %}
             <p class="text-gray-100 font-bold{% if mentor.isHeadCoach %} text-lg{% endif %}">{{ mentor.name }}</p>
           </div>
-          <p class="{% if mentor.isHeadCoach %}text-yellow-500{% else %}text-tech{% endif %} text-sm font-semibold">{{ mentor.role }}</p>
+          <p class="{% if mentor.isHeadCoach %}text-yellow-500{% else %}text-tech-light{% endif %} text-sm font-semibold">{{ mentor.role }}</p>
         </div>
         {% endfor %}
       </div>
