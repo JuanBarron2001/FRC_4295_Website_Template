@@ -13,7 +13,7 @@ Official website for Hudson Stingers Robotics, FRC Team 4295 from Hudson High Sc
 
 ## Prerequisites
 
-- Node.js 18.x or higher (CI uses Node 22)
+- Node.js 24 LTS, the version CI uses (`.nvmrc` pins it, so `nvm use` picks it up)
 - npm (comes with Node.js)
 - Git
 
