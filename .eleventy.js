@@ -7,8 +7,14 @@ module.exports = function(eleventyConfig) {
 
     // Compile Tailwind after every build. tailwind.config.js scans the built
     // pages in _site, so this has to run after Eleventy has written them.
+    // BROWSERSLIST_IGNORE_OLD_DATA hides the "caniuse-lite is outdated" warning:
+    // Tailwind 3.4.17 bundles its own copy, so `npx update-browserslist-db`
+    // cannot update it, and it only affects vendor prefixes.
     eleventyConfig.on("eleventy.after", () => {
-        execSync("npx tailwindcss -i styles/tailwind.css -o _site/styles/tailwind.css --minify", { stdio: "inherit" });
+        execSync("npx tailwindcss -i styles/tailwind.css -o _site/styles/tailwind.css --minify", {
+            stdio: "inherit",
+            env: { ...process.env, BROWSERSLIST_IGNORE_OLD_DATA: "1" },
+        });
     });
     // Reload the browser when the compiled CSS changes during `npm start`.
     eleventyConfig.setServerOptions({ watch: ["_site/styles/**/*.css"] });
