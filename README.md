@@ -6,14 +6,14 @@ Official website for Hudson Stingers Robotics, FRC Team 4295 from Hudson High Sc
 
 - **Static Site Generator**: [Eleventy (11ty)](https://www.11ty.dev/) v3.1.2
 - **Templating**: Nunjucks (.njk)
-- **Styling**: Tailwind CSS v4.1.17
+- **Styling**: Tailwind CSS 3.4.17, compiled at build time (runs automatically after every Eleventy build)
 - **JavaScript**: FullCalendar, Form Validation
 - **Hosting**: GitHub Pages
 - **Deployment**: GitHub Actions (automated)
 
 ## Prerequisites
 
-- Node.js 18.x or higher
+- Node.js 18.x or higher (CI uses Node 22)
 - npm (comes with Node.js)
 - Git
 
@@ -31,10 +31,11 @@ Official website for Hudson Stingers Robotics, FRC Team 4295 from Hudson High Sc
    ```
 
 3. **Create environment file (optional)**
-   ```bash
-   cp .env.example .env
+   Create a `.env` file in the project root with the contact-form endpoint:
+   ```env
+   LAMBDA_URL=https://your-lambda-url.on.aws/
    ```
-   Add your AWS Lambda URL if using form submissions.
+   Without it the site still builds; the contact forms just have nowhere to send.
 
 4. **Start development server**
    ```bash
@@ -55,6 +56,7 @@ Official website for Hudson Stingers Robotics, FRC Team 4295 from Hudson High Sc
 ```
 FRC_4295_Website_Template/
 ├── _data/                  # JSON data files
+│   ├── awards.json        # Awards shown on /achievements/
 │   ├── events.json        # Calendar events
 │   └── members.json       # Team roster
 ├── _includes/             # Reusable components
@@ -65,19 +67,20 @@ FRC_4295_Website_Template/
 │   ├── footer.njk         # Site footer
 │   └── form.njk           # Contact form component
 ├── _site/                 # Generated site (git-ignored)
-├── aws-lambda/            # Serverless form handlers
-├── css/                   # Stylesheets
+├── css/                   # Plain stylesheets (calendar.css)
 ├── entries/               # Blog posts (Markdown)
-├── examples/              # Content templates
+├── examples/              # BLOG_TEMPLATE.md
 ├── images/                # Image assets
 │   ├── gallery/          # Photo gallery
-│   ├── icon/             # Favicons
+│   ├── icon/             # Favicons and app icons
+│   ├── logo/             # Team logo and link-preview image
 │   └── logos/            # Sponsor/partner logos
 ├── js/                    # JavaScript files
 │   ├── calendar.js       # Calendar functionality
 │   └── form_handler.mjs  # Form validation
 ├── .eleventy.js           # Eleventy configuration
-├── tailwind.config.js     # Tailwind configuration
+├── styles/tailwind.css    # Tailwind entry point
+├── tailwind.config.js     # Tailwind configuration (brand colors)
 ├── package.json           # Dependencies & scripts
 └── README.md              # This file
 ```
@@ -152,7 +155,7 @@ Edit `_data/events.json`:
 }
 ```
 
-**Event Types**: `meeting`, `competition`, `outreach`, `fundraiser`, `social`
+**Event Types**: `meeting`, `competition`, `outreach`, `holiday`, `workshop` (colors are in `css/calendar.css`)
 
 ### Updating Gallery Images
 
@@ -169,10 +172,12 @@ Edit `tailwind.config.js`:
 ```javascript
 colors: {
   tech: '#822008',        // Primary maroon
-  maroon: { /* shades */ },
+  dark: '#0f0f0f',
   gray: { /* shades */ }
 }
 ```
+
+Tailwind only generates the classes it finds in the built pages (`_site/**/*.html`) and in `js/`, so a class that is only assembled from strings at runtime will not exist. Write class names out in full.
 
 ### Navigation Menu
 
@@ -200,7 +205,7 @@ GitHub Actions automatically builds and deploys when you push to `main` branch:
    - Build the site with `npm run build`
    - Deploy to GitHub Pages
 
-3. Site will be live at: `https://yourusername.github.io/repo-name/`
+3. Site will be live at: `https://hudsonrobotics4295.com/` (set by the `CNAME` file)
 
 ### Manual Build
 

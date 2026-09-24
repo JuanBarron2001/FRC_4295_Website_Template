@@ -1,0 +1,4 @@
+/* Tailwind entry point. Compiled to _site/styles/tailwind.css after every Eleventy build (see .eleventy.js). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

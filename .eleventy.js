@@ -1,7 +1,17 @@
 require("dotenv").config();
+const { execSync } = require("child_process");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addGlobalData("lambda_url", process.env.LAMBDA_URL);
+    eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
+
+    // Compile Tailwind after every build. tailwind.config.js scans the built
+    // pages in _site, so this has to run after Eleventy has written them.
+    eleventyConfig.on("eleventy.after", () => {
+        execSync("npx tailwindcss -i styles/tailwind.css -o _site/styles/tailwind.css --minify", { stdio: "inherit" });
+    });
+    // Reload the browser when the compiled CSS changes during `npm start`.
+    eleventyConfig.setServerOptions({ watch: ["_site/styles/**/*.css"] });
 
     // Add date filter
     eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -28,7 +38,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("fonts");
-    eleventyConfig.addPassthroughCopy("favicon");
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("favicon.ico");
     eleventyConfig.addPassthroughCopy("site.webmanifest");
