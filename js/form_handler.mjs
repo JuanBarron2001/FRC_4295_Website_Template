@@ -1,4 +1,10 @@
-import validator from "https://cdn.jsdelivr.net/npm/validator@13.11.0/+esm";
+// validator.js is only needed when someone submits a form, so it's loaded on
+// first submit instead of with every page that has a form.
+let validatorModule;
+const loadValidator = async () => {
+  validatorModule ??= (await import("https://cdn.jsdelivr.net/npm/validator@13.11.0/+esm")).default;
+  return validatorModule;
+};
 
 // Enhanced form styling and focus effects
 const form = document.getElementById('contact-form');
@@ -36,7 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     resetMessage(form);
 
     const values = grabValuesFromForm(form);
-    const errors = validate(values);
+    // If validator.js can't be loaded, rely on the browser's own checks
+    // (required fields, type="email"), which run before this handler.
+    const validator = await loadValidator().catch(() => null);
+    const errors = validator ? validate(values, validator) : [];
 
     if (errors.length) {
       showMessage(form, false, "❌ Please fix the following:<br>" + errors.join("<br>"));
@@ -109,7 +118,7 @@ const grabValuesFromForm = (form) => ({
   honeyPot: form.querySelector("#website").value.trim()
 });
 
-const validate = ({ name, phoneNumber, email, message, honeyPot }) => {
+const validate = ({ name, phoneNumber, email, message, honeyPot }, validator) => {
   const errors = [];
   if (validator.isEmpty(name)) errors.push("Name is required.");
   if (!validator.isEmail(email)) errors.push("Valid email is required.");

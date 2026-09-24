@@ -253,6 +253,11 @@ LAMBDA_URL=https://your-api-gateway-url.amazonaws.com/prod/contact
    ```
 3. Add link in header navigation
 
+## Checks on every pull request
+
+- **Lighthouse** (`.lighthouserc.json`): accessibility below 90 fails the check; performance, best practices and SEO only warn. A few audits are turned off because they can only fail against CI's local test server, not the real site: HTTPS, text compression, caching and server response time (`is-on-https`, `redirects-http`, `uses-text-compression`, `uses-long-cache-ttl`, `cache-insight`, `document-latency-insight`). GitHub Pages handles all of those.
+- **Link check** (`link-checker.yml`): Lychee checks every link in the built site, and `scripts/check-site-urls.mjs` checks share images and structured-data URLs that Lychee skips.
+
 ## Troubleshooting
 
 **Build fails**: Delete `node_modules/` and `package-lock.json`, then run `npm install`
