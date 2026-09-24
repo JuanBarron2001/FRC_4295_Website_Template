@@ -70,7 +70,6 @@ FRC_4295_Website_Template/
 ├── entries/               # Blog posts (Markdown)
 ├── examples/              # Content templates
 ├── images/                # Image assets
-│   ├── banner/           # Team banners
 │   ├── gallery/          # Photo gallery
 │   ├── icon/             # Favicons
 │   └── logos/            # Sponsor/partner logos
