@@ -91,7 +91,7 @@ head: calendar
             <div class="flex items-start justify-between gap-4 mb-3">
               <div>
                 <h3 class="text-2xl font-bold text-gray-100 mb-2 {% if event.canceled %}line-through{% endif %}">
-                  <i class="fa-solid {{ event.icon }} {% if event.canceled %}text-gray-500{% else %}text-tech{% endif %} mr-2"></i>{{ event.title }}
+                  <i class="fa-solid {{ event.icon }} {% if event.canceled %}text-gray-500{% else %}text-tech-light{% endif %} mr-2"></i>{{ event.title }}
                 </h3>
                 {% if event.canceled %}
                 <div class="mb-2">
@@ -102,10 +102,10 @@ head: calendar
                 {% endif %}
                 <div class="flex flex-wrap gap-3 text-sm text-gray-400">
                   <span>
-                    <i class="fa-solid fa-clock mr-1 {% if event.canceled %}text-gray-500{% else %}text-tech{% endif %}"></i>{{ event.time }}
+                    <i class="fa-solid fa-clock mr-1 {% if event.canceled %}text-gray-500{% else %}text-tech-light{% endif %}"></i>{{ event.time }}
                   </span>
                   <span>
-                    <i class="fa-solid fa-location-dot mr-1 {% if event.canceled %}text-gray-500{% else %}text-tech{% endif %}"></i>{{ event.location }}
+                    <i class="fa-solid fa-location-dot mr-1 {% if event.canceled %}text-gray-500{% else %}text-tech-light{% endif %}"></i>{{ event.location }}
                   </span>
                 </div>
               </div>
@@ -124,7 +124,7 @@ head: calendar
             <p class="text-gray-300 leading-relaxed {% if event.canceled %}line-through{% endif %}">{{ event.description }}</p>
             
             {% if event.endDate %}
-            <div class="mt-3 text-sm text-gray-500 italic">
+            <div class="mt-3 text-sm text-gray-400 italic">
               <i class="fa-solid fa-arrow-right mr-1"></i>
               Multi-day event ending {{ event.endDate | date: "%B %d, %Y" }}
             </div>
@@ -138,7 +138,7 @@ head: calendar
     <!-- Empty State -->
     <div id="no-events" class="hidden text-center py-16">
       <i class="fa-solid fa-calendar-xmark text-6xl text-gray-700 mb-4"></i>
-      <p class="text-xl text-gray-500">No events found in this category.</p>
+      <p class="text-xl text-gray-400">No events found in this category.</p>
     </div>
   </div>
 </section>
@@ -148,7 +148,7 @@ head: calendar
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="p-4 bg-gray-900 border border-gray-700 rounded-lg">
       <div class="flex items-start gap-3">
-        <i class="fa-solid fa-circle-info text-tech text-xl mt-1 flex-shrink-0"></i>
+        <i class="fa-solid fa-circle-info text-tech-light text-xl mt-1 flex-shrink-0"></i>
         <div class="text-sm text-gray-300">
           <strong class="text-gray-100">Important:</strong> Meeting dates and times are subject to change. Please verify with your coach or check Microsoft Teams for the latest meeting updates. For competition and event changes, follow our social media channels.
         </div>
@@ -182,7 +182,8 @@ head: calendar
 </section>
 
 <!-- FullCalendar Library -->
-<script src="/lib/fullcalendar/index.global.min.js"></script>
+<script src="/lib/fullcalendar/core.global.min.js"></script>
+<script src="/lib/fullcalendar/daygrid.global.min.js"></script>
 
 <!-- Calendar Styles -->
 <link rel="stylesheet" href="/css/calendar.css">

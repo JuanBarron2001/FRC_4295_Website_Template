@@ -31,7 +31,7 @@ head: achievements
     {% for season in awards.seasons %}
     <div class="mb-16">
       <h2 class="subheading-tech flex items-center gap-3 mb-8">
-        <i class="fa-solid fa-calendar-check text-tech text-3xl"></i>
+        <i class="fa-solid fa-calendar-check text-tech-light text-3xl"></i>
         {{ season.year }} Season
       </h2>
 
@@ -42,11 +42,11 @@ head: achievements
             <i class="fa-solid fa-award text-yellow-500 text-3xl mt-1"></i>
             <div class="flex-1">
               <h3 class="text-2xl font-bold text-gray-100">{{ item.award }}</h3>
-              <p class="text-tech font-semibold mt-1">{{ item.event }} &middot; {{ season.year }}</p>
+              <p class="text-tech-light font-semibold mt-1">{{ item.event }} &middot; {{ season.year }}</p>
 
               {% if item.script %}
               <details class="mt-5 group">
-                <summary class="cursor-pointer text-gray-300 hover:text-tech font-semibold transition-colors duration-200">
+                <summary class="cursor-pointer text-gray-300 hover:text-tech-light font-semibold transition-colors duration-200">
                   Read the judges' script
                 </summary>
                 <blockquote class="mt-4 border-l-2 border-gray-700 pl-5 space-y-3 text-gray-300 italic leading-relaxed">
@@ -57,7 +57,7 @@ head: achievements
               </details>
               {% endif %}
 
-              <a href="{{ item.source }}" target="_blank" rel="noopener" class="inline-block mt-5 text-sm text-tech hover:underline">
+              <a href="{{ item.source }}" target="_blank" rel="noopener" class="inline-block mt-5 text-sm text-tech-light hover:underline">
                 View on FIRST Inspires <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
@@ -72,11 +72,11 @@ head: achievements
 
     <div class="card p-10 mt-12">
       <h2 class="subheading-tech flex items-center gap-3 mb-4">
-        <i class="fa-solid fa-chart-line text-tech text-3xl"></i>
+        <i class="fa-solid fa-chart-line text-tech-light text-3xl"></i>
         Full Competition Record
       </h2>
       <p class="text-gray-300 leading-relaxed">
-        Match results, rankings, and every event we have attended are on <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="text-tech hover:underline">The Blue Alliance</a> and in our official record on <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="text-tech hover:underline">FIRST Inspires</a>.
+        Match results, rankings, and every event we have attended are on <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="text-tech-light underline underline-offset-2">The Blue Alliance</a> and in our official record on <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="text-tech-light underline underline-offset-2">FIRST Inspires</a>.
       </p>
     </div>
 
