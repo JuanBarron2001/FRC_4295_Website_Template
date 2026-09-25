@@ -17,13 +17,9 @@
     <!-- Web App Manifest -->
     <link rel="manifest" href="/site.webmanifest">
   
-    <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8af3554e29.js" crossorigin="anonymous"></script>
-    
-    <!-- Tailwind CSS from CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- Font Awesome Free, self-hosted (built by .eleventy.js from the npm package) -->
+    <link rel="stylesheet" href="/styles/fontawesome.css">
+
     <!-- Custom Font -->
     <style>
       @font-face {
@@ -35,90 +31,7 @@
       }
     </style>
 
-    <!-- Custom Tailwind Configuration and Styles -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              stinger: ['Hudson Stinger', 'sans-serif'],
-            },
-            colors: {
-              tech: '#822008',
-              dark: '#0f0f0f',
-              gray: {
-                950: '#0a0a0a',
-                900: '#1a1a1a',
-                800: '#2e2e2e',
-                700: '#3a3a3a',
-                600: '#4a4a4a',
-                500: '#606060',
-                400: '#757575',
-                300: '#999999',
-                200: '#d3d3d3',
-                100: '#e8e8e8',
-                50: '#f5f5f5',
-              },
-            },
-            backgroundImage: {
-              'gradient-dark': 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2e2e2e 100%)',
-              'gradient-tech': 'linear-gradient(135deg, #0f0f0f 0%, #3a3a3a 25%, #822008 50%, #3a3a3a 75%, #0f0f0f 100%)',
-              'gradient-accent': 'linear-gradient(135deg, #822008 0%, #c73220 50%, #822008 100%)',
-            },
-            boxShadow: {
-              'glow-maroon': '0 0 20px rgba(130, 32, 8, 0.5)',
-              'glow-maroon-lg': '0 0 40px rgba(130, 32, 8, 0.6)',
-              'tech': '0 10px 40px rgba(0, 0, 0, 0.8)',
-            },
-          }
-        }
-      }
-    </script>
-
-    <!-- Custom CSS -->
-    <style>
-      @layer components {
-        .btn-primary {
-          @apply px-6 py-3 bg-tech hover:bg-maroon-600 text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300 active:scale-95;
-        }
-        .btn-primary-outline {
-          @apply px-6 py-3 border-2 border-tech text-tech hover:bg-tech hover:text-white font-semibold rounded-md transition-all duration-300;
-        }
-        .card {
-          @apply bg-gray-900 border border-gray-800 rounded-lg shadow-tech overflow-hidden;
-        }
-        .card-hover {
-          @apply card hover:border-tech hover:border-opacity-100 hover:shadow-glow-maroon transition-all duration-300 border-opacity-30;
-        }
-        .section-divider {
-          @apply h-1 bg-gradient-to-r from-transparent via-tech to-transparent my-12;
-        }
-        .form-input {
-          @apply w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 focus:border-tech focus:outline-none focus:ring-1 focus:ring-tech transition-all duration-200;
-        }
-        .form-label {
-          @apply block text-gray-300 font-semibold mb-2;
-        }
-        .heading-tech {
-          @apply text-4xl md:text-5xl font-black tracking-tighter text-gray-100;
-        }
-        .subheading-tech {
-          @apply text-xl md:text-2xl font-bold text-gray-200 mt-4;
-        }
-        .gradient-text-tech {
-          @apply bg-gradient-to-r from-tech to-orange-400 bg-clip-text text-transparent;
-        }
-        .backdrop-blur-tech {
-          @apply backdrop-blur-sm bg-gray-950 bg-opacity-80;
-        }
-      }
-    </style>
-  
-    <!-- Lite YouTube Embed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"></script>
-    
-    <script data-goatcounter="https://juanbarron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://juanbarron.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   
     
 <!-- SEO Meta -->
@@ -180,6 +93,10 @@
 }
 </script>
 
+
+    <!-- Tailwind, compiled at build time (see tailwind.config.js). Linked last so it
+         keeps the cascade position the CDN's injected <style> had. -->
+    <link rel="stylesheet" href="/styles/tailwind.css">
   </head>
   <body class="bg-gray-950 text-gray-200">
     <header class="sticky top-0 z-50 backdrop-blur-tech border-b border-gray-800">
@@ -217,7 +134,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-tech hover:bg-gray-800 focus:outline-none" aria-expanded="false">
+        <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-tech-light hover:bg-gray-800 focus:outline-none" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -226,17 +143,17 @@
 
         <!-- Desktop navigation -->
         <div class="hidden md:flex items-center space-x-1">
-          <a href="/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Home</a>
-          <a href="/about/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About</a>
-          <a href="/about_first/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">About FIRST</a>
-          <a href="/achievements/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Achievements</a>
-          <a href="/calendar/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Calendar</a>
-          <a href="/contact_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Contact</a>
-          <a href="/follow_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Follow Us</a>
-          <a href="/members/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Members</a>
-          <a href="/gallery/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Gallery</a>
-          <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Blog</a>
-          <a href="/sponsors/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech hover:bg-gray-800 rounded-md transition-colors duration-200">Sponsors</a>
+          <a href="/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Home</a>
+          <a href="/about/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">About</a>
+          <a href="/about_first/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">About FIRST</a>
+          <a href="/achievements/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Achievements</a>
+          <a href="/calendar/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Calendar</a>
+          <a href="/contact_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Contact</a>
+          <a href="/follow_us/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Follow Us</a>
+          <a href="/members/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Members</a>
+          <a href="/gallery/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Gallery</a>
+          <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Blog</a>
+          <a href="/sponsors/" class="nav-link px-3 py-2 text-sm font-medium hover:text-tech-light hover:bg-gray-800 rounded-md transition-colors duration-200">Sponsors</a>
         </div>
       </div>
     </div>
@@ -244,17 +161,17 @@
     <!-- Mobile navigation -->
     <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Home</a>
-        <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About</a>
-        <a href="/about_first/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">About FIRST</a>
-        <a href="/achievements/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Achievements</a>
-        <a href="/calendar/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Calendar</a>
-        <a href="/contact_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Contact</a>
-        <a href="/follow_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Follow Us</a>
-        <a href="/members/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Members</a>
-        <a href="/gallery/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Gallery</a>
-        <a href="/blog/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Blog</a>
-        <a href="/sponsors/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech hover:bg-gray-700 transition-colors duration-200">Sponsors</a>
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Home</a>
+        <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">About</a>
+        <a href="/about_first/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">About FIRST</a>
+        <a href="/achievements/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Achievements</a>
+        <a href="/calendar/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Calendar</a>
+        <a href="/contact_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Contact</a>
+        <a href="/follow_us/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Follow Us</a>
+        <a href="/members/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Members</a>
+        <a href="/gallery/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Gallery</a>
+        <a href="/blog/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Blog</a>
+        <a href="/sponsors/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-tech-light hover:bg-gray-700 transition-colors duration-200">Sponsors</a>
       </div>
     </div>
   </nav>
@@ -290,56 +207,56 @@
     <!-- Instagram -->
     <div class="card-hover p-12 mb-12 text-center group">
       <div class="p-5 bg-tech bg-opacity-20 rounded-lg w-fit mx-auto mb-6 group-hover:bg-opacity-40 transition-all">
-        <i class="fa-brands fa-instagram text-tech text-5xl"></i>
+        <i class="fa-brands fa-instagram text-tech-light text-5xl"></i>
       </div>
       <h2 class="heading-tech mb-3">Instagram</h2>
       <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-        Follow us on Instagram <span class="text-tech font-bold">@hudsonstingers4295</span> for behind-the-scenes photos, build season updates, competition highlights, and team moments.
+        Follow us on Instagram <span class="text-tech-light font-bold">@hudsonstingers4295</span> for behind-the-scenes photos, build season updates, competition highlights, and team moments.
       </p>
       <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-        <i class="fa-solid fa-arrow-up-right"></i> Visit Instagram
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Instagram
       </a>
     </div>
 
     <!-- Facebook -->
     <div class="card-hover p-12 mb-12 text-center group">
       <div class="p-5 bg-tech bg-opacity-20 rounded-lg w-fit mx-auto mb-6 group-hover:bg-opacity-40 transition-all">
-        <i class="fa-brands fa-facebook text-tech text-5xl"></i>
+        <i class="fa-brands fa-facebook text-tech-light text-5xl"></i>
       </div>
       <h2 class="heading-tech mb-3">Facebook</h2>
       <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
         Like our Facebook page to stay updated on event announcements, sponsor shoutouts, community outreach activities, and team achievements throughout the season.
       </p>
       <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-        <i class="fa-solid fa-arrow-up-right"></i> Visit Facebook
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Facebook
       </a>
     </div>
 
     <!-- YouTube -->
     <div class="card-hover p-12 mb-12 text-center group">
       <div class="p-5 bg-tech bg-opacity-20 rounded-lg w-fit mx-auto mb-6 group-hover:bg-opacity-40 transition-all">
-        <i class="fa-brands fa-youtube text-tech text-5xl"></i>
+        <i class="fa-brands fa-youtube text-tech-light text-5xl"></i>
       </div>
       <h2 class="heading-tech mb-3">YouTube</h2>
       <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
         Subscribe to our YouTube channel for competition match videos, robot reveals, technical tutorials from our team, and exclusive behind-the-scenes content.
       </p>
       <a href="https://www.youtube.com/@hudsonstingers4295" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-        <i class="fa-solid fa-arrow-up-right"></i> Visit YouTube
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit YouTube
       </a>
     </div>
 
     <!-- GitHub -->
     <div class="card-hover p-12 mb-12 text-center group">
       <div class="p-5 bg-tech bg-opacity-20 rounded-lg w-fit mx-auto mb-6 group-hover:bg-opacity-40 transition-all">
-        <i class="fa-brands fa-github text-tech text-5xl"></i>
+        <i class="fa-brands fa-github text-tech-light text-5xl"></i>
       </div>
       <h2 class="heading-tech mb-3">GitHub</h2>
       <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
         Explore our open-source robot code, autonomous routines, and software projects. See how Hudson Stingers Robotics builds and programs our competition robots.
       </p>
       <a href="https://github.com/Hudson-Robotics" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-        <i class="fa-solid fa-arrow-up-right"></i> Visit GitHub
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit GitHub
       </a>
     </div>
 
@@ -349,28 +266,28 @@
       <!-- The Blue Alliance -->
       <div class="card-hover p-10 text-center group">
         <div class="p-5 bg-tech bg-opacity-20 rounded-lg w-fit mx-auto mb-6 group-hover:bg-opacity-40 transition-all">
-          <i class="fa-solid fa-chart-simple text-tech text-5xl"></i>
+          <i class="fa-solid fa-chart-simple text-tech-light text-5xl"></i>
         </div>
         <h3 class="heading-tech mb-3">The Blue Alliance</h3>
         <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
           View our match history, event results, awards, and performance statistics on The Blue Alliance — the community-driven hub for FRC team data.
         </p>
         <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-          <i class="fa-solid fa-arrow-up-right"></i> View Team 4295
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Team 4295
         </a>
       </div>
 
       <!-- FIRST Inspires -->
       <div class="card-hover p-10 text-center group">
         <div class="p-5 bg-tech bg-opacity-20 rounded-lg w-fit mx-auto mb-6 group-hover:bg-opacity-40 transition-all">
-          <i class="fa-solid fa-ranking-star text-tech text-5xl"></i>
+          <i class="fa-solid fa-ranking-star text-tech-light text-5xl"></i>
         </div>
         <h3 class="heading-tech mb-3">FIRST Inspires</h3>
         <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
           See our official FIRST Robotics Competition record, event schedule, and registration details on the FIRST Inspires events page.
         </p>
         <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-          <i class="fa-solid fa-arrow-up-right"></i> View Team 4295
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Team 4295
         </a>
       </div>
     </div>
@@ -403,15 +320,15 @@
           Quick Links
         </h3>
         <ul class="space-y-2">
-          <li><a href="/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Home</a></li>
-          <li><a href="/about/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ About</a></li>
-          <li><a href="/about_first/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ About FIRST</a></li>
-          <li><a href="/contact_us/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Contact Us</a></li>
-          <li><a href="/follow_us/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Follow Us</a></li>
-          <li><a href="/members/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Members</a></li>
-          <li><a href="/gallery/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Gallery</a></li>
-          <li><a href="/blog/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Blog</a></li>
-          <li><a href="/sponsors/" class="text-gray-300 hover:text-tech transition-colors duration-200">→ Sponsors</a></li>
+          <li><a href="/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Home</a></li>
+          <li><a href="/about/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ About</a></li>
+          <li><a href="/about_first/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ About FIRST</a></li>
+          <li><a href="/contact_us/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Contact Us</a></li>
+          <li><a href="/follow_us/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Follow Us</a></li>
+          <li><a href="/members/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Members</a></li>
+          <li><a href="/gallery/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Gallery</a></li>
+          <li><a href="/blog/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Blog</a></li>
+          <li><a href="/sponsors/" class="text-gray-300 hover:text-tech-light transition-colors duration-200">→ Sponsors</a></li>
         </ul>
       </div>
 
@@ -422,29 +339,29 @@
           Connect
         </h3>
         <div class="flex gap-4 mb-6">
-          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers Instagram">
+          <a href="https://www.instagram.com/hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 text-2xl" aria-label="Hudson Stingers Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers Facebook">
+          <a href="https://www.facebook.com/hudsonstingers" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 text-2xl" aria-label="Hudson Stingers Facebook">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers X">
+          <a href="https://twitter.com/frc4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 text-2xl" aria-label="Hudson Stingers X">
             <i class="fa-brands fa-x-twitter"></i>
           </a>
-          <a href="https://www.youtube.com/@hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Stingers YouTube">
+          <a href="https://www.youtube.com/@hudsonstingers4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 text-2xl" aria-label="Hudson Stingers YouTube">
             <i class="fa-brands fa-youtube"></i>
           </a>
-          <a href="https://github.com/Hudson-Robotics" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 text-2xl" aria-label="Hudson Robotics GitHub">
+          <a href="https://github.com/Hudson-Robotics" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 text-2xl" aria-label="Hudson Robotics GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
         <p class="text-sm text-gray-400 mb-4">Follow us for real-time updates and behind-the-scenes content.</p>
         <div class="space-y-2 text-sm">
-          <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 flex items-center gap-2">
-            <i class="fa-solid fa-chart-simple text-tech"></i> The Blue Alliance — Team 4295
+          <a href="https://www.thebluealliance.com/team/4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-chart-simple text-tech-light"></i> The Blue Alliance — Team 4295
           </a>
-          <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech transition-colors duration-200 flex items-center gap-2">
-            <i class="fa-solid fa-ranking-star text-tech"></i> FIRST Inspires — Team 4295
+          <a href="https://frc-events.firstinspires.org/team/4295" target="_blank" rel="noopener" class="text-gray-400 hover:text-tech-light transition-colors duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-ranking-star text-tech-light"></i> FIRST Inspires — Team 4295
           </a>
         </div>
       </div>
@@ -457,11 +374,11 @@
         </h3>
         <div class="space-y-3 text-sm text-gray-300">
           <p class="flex items-start gap-2">
-            <i class="fa-solid fa-envelope text-tech mt-1"></i>
-            <a href="mailto:hudsonisdrobotics@gmail.com" class="hover:text-tech transition-colors duration-200">hudsonisdrobotics@gmail.com</a>
+            <i class="fa-solid fa-envelope text-tech-light mt-1"></i>
+            <a href="mailto:hudsonisdrobotics@gmail.com" class="hover:text-tech-light transition-colors duration-200">hudsonisdrobotics@gmail.com</a>
           </p>
           <p class="flex items-start gap-2">
-            <i class="fa-solid fa-map-pin text-tech mt-1"></i>
+            <i class="fa-solid fa-map-pin text-tech-light mt-1"></i>
             <span>6735 Ted Trout Dr<br/>Lufkin, TX 75904</span>
           </p>
         </div>
