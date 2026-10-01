@@ -5,29 +5,23 @@
     "amount": 500,
     "reward": "large logo",
     "tile": "w-full sm:w-[28rem] p-10",
-    "logoHeight": "h-28",
-    "iconSize": "text-6xl",
-    "nameSize": "text-2xl"
+    "logoHeight": "max-h-28"
   },
   {
     "id": "motor",
     "name": "Motor Level",
     "amount": 250,
     "reward": "medium logo",
-    "tile": "w-full sm:w-72 p-8",
-    "logoHeight": "h-20",
-    "iconSize": "text-5xl",
-    "nameSize": "text-xl"
+    "tile": "w-[calc(50%-0.75rem)] sm:w-72 p-4 sm:p-8",
+    "logoHeight": "max-h-20"
   },
   {
     "id": "gear",
     "name": "Gear Level",
     "amount": 100,
     "reward": "small logo",
-    "tile": "w-[calc(50%-0.75rem)] sm:w-48 p-6",
-    "logoHeight": "h-14",
-    "iconSize": "text-3xl",
-    "nameSize": "text-base"
+    "tile": "w-[calc(33.333%-1rem)] sm:w-48 p-3 sm:p-6",
+    "logoHeight": "max-h-14"
   },
   {
     "id": "stinger",

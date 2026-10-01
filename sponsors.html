@@ -48,13 +48,8 @@ head: sponsors
       <div class="flex flex-wrap justify-center gap-6">
         {% for s in members %}
         <div class="{{ level.tile }} bg-gray-900 border border-gray-800 rounded-lg flex flex-col items-center justify-center text-center hover:border-tech hover:shadow-glow-maroon transition-all duration-300">
-          {% if s.logo %}
-          <img src="/images/logos/{{ s.logo }}" alt="{{ s.name | escape }} sponsor logo" class="{{ level.logoHeight }} w-auto max-w-full object-contain mb-3" loading="lazy" width="{{ s.width }}" height="{{ s.height }}" />
-          <p class="text-gray-300 font-semibold">{{ s.name | escape }}</p>
-          {% else %}
-          <i class="fa-solid {{ s.icon }} {{ level.iconSize }} text-tech-light mb-3" aria-hidden="true"></i>
-          <p class="{{ level.nameSize }} font-bold text-gray-100">{{ s.name | escape }}</p>
-          {% endif %}
+          <img src="/images/logos/{{ s.logo }}" alt="{{ s.name | escape }} sponsor logo" class="w-full h-auto {{ level.logoHeight }} object-contain mb-4" loading="lazy" width="{{ s.width }}" height="{{ s.height }}" />
+          <p class="text-sm sm:text-base text-gray-300 font-semibold">{{ s.name | escape }}</p>
         </div>
         {% endfor %}
       </div>
