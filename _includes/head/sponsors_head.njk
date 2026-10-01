@@ -40,11 +40,9 @@
   "url":"https://hudsonrobotics4295.com/",
   "logo":"https://hudsonrobotics4295.com/images/logo/hudson_stingers_logo.png",
   "sponsor":[
-    {"@type":"Organization","name":"Lockheed Martin"},
-    {"@type":"Organization","name":"Optimum"},
-    {"@type":"Organization","name":"Kasye's Kreations"},
-    {"@type":"Organization","name":"Southern Magic Travel"},
-    {"@type":"Organization","name":"East Texas Glass"}
+    {%- for s in sponsors %}
+    {"@type":"Organization","name":{{ s.name | dump | safe }}}{{ "," if not loop.last }}
+    {%- endfor %}
   ],
   "makesOffer":{
     "@type":"Offer",

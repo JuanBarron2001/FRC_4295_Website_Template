@@ -1,0 +1,32 @@
+[
+  {
+    "id": "robot",
+    "name": "Robot Level",
+    "amount": 500,
+    "reward": "large logo",
+    "logoHeight": "h-28",
+    "slotWidth": "w-72"
+  },
+  {
+    "id": "motor",
+    "name": "Motor Level",
+    "amount": 250,
+    "reward": "medium logo",
+    "logoHeight": "h-20",
+    "slotWidth": "w-56"
+  },
+  {
+    "id": "gear",
+    "name": "Gear Level",
+    "amount": 100,
+    "reward": "small logo",
+    "logoHeight": "h-14",
+    "slotWidth": "w-40"
+  },
+  {
+    "id": "stinger",
+    "name": "Stinger Level",
+    "amount": 50,
+    "reward": "name"
+  }
+]

@@ -1,0 +1,117 @@
+<!-- Sponsor form. Opens the visitor's email app with everything filled in, so
+     it works without a server. See the sponsor branch in js/form_handler.mjs. -->
+<section id="sponsor-form" class="py-12 md:py-16 scroll-mt-4" data-form-id="sponsor-form" data-form-kind="sponsor" data-contact-email="hudsonisdrobotics@gmail.com">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gray-900 border-2 border-tech border-opacity-30 rounded-lg shadow-tech p-8 md:p-10">
+      <div class="mb-10 pb-8 border-b-2 border-gray-800">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-3">Become a Sponsor</h2>
+        <p class="text-gray-300 text-lg leading-relaxed">Fill in the details below and press <strong class="text-gray-200">Open in Email</strong>. Your email app opens with everything filled in, so all that's left is to attach your logo and press Send.</p>
+      </div>
+
+      <form class="space-y-6" id="sponsor-form-fields">
+        <div class="form-group">
+          <label for="business" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            <span class="text-tech-light">*</span> Business or Sponsor Name
+          </label>
+          <input type="text" id="business" name="business" autocomplete="organization" placeholder="Your business, family, or organization" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-name" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            <span class="text-tech-light">*</span> Contact Name
+          </label>
+          <input type="text" id="contact-name" name="contact-name" autocomplete="name" placeholder="Who should we talk to?" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200" required>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="form-group">
+            <label for="sponsor-email" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+              <span class="text-tech-light">*</span> Email
+            </label>
+            <input type="email" id="sponsor-email" name="email" autocomplete="email" placeholder="you@example.com" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200" required>
+          </div>
+          <div class="form-group">
+            <label for="sponsor-phone" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+              Phone
+            </label>
+            <input type="tel" id="sponsor-phone" name="phone" autocomplete="tel" placeholder="(936) 555-1234" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="form-group">
+            <label for="sponsor-level" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+              <span class="text-tech-light">*</span> Sponsor Level
+            </label>
+            <select id="sponsor-level" name="level" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200" required>
+              <option value="">Choose a level</option>
+              {% for level in sponsorLevels %}
+              <option value="{{ level.id }}" data-name="{{ level.name }}" data-amount="{{ level.amount }}" data-reward="{{ level.reward }}">{{ level.name }} · ${{ level.amount }}+</option>
+              {% endfor %}
+              <option value="unsure" data-name="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sponsor-amount" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+              Amount
+            </label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true">$</span>
+              <input type="text" inputmode="decimal" id="sponsor-amount" name="amount" placeholder="500" aria-describedby="sponsor-amount-help" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg pl-8 pr-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200">
+            </div>
+            <p id="sponsor-amount-help" class="text-xs text-gray-300 mt-1">In US dollars</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="shirt-text" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            Name on the Shirt
+          </label>
+          <input type="text" id="shirt-text" name="shirt-text" placeholder="Exactly as it should appear" aria-describedby="shirt-text-help" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200">
+          <p id="shirt-text-help" class="text-xs text-gray-300 mt-1">Leave blank to use the business name. Logo levels: attach your logo to the email.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="sponsor-message" class="block text-gray-300 font-semibold mb-2 text-sm tracking-wide uppercase">
+            Message
+          </label>
+          <textarea id="sponsor-message" name="message" placeholder="Anything else we should know? (optional)" rows="4" class="w-full bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-600 focus:border-tech focus:outline-none focus:ring-2 focus:ring-tech focus:ring-opacity-30 transition-all duration-200 resize-none"></textarea>
+        </div>
+
+        <!-- Honeypot (hidden from users) -->
+        <div class="hidden">
+          <label for="sponsor-website">Leave this field empty</label>
+          <input type="text" id="sponsor-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <button type="submit" class="flex-1 px-6 py-4 bg-tech text-white font-semibold rounded-lg shadow-lg hover:shadow-glow-maroon transition-all duration-300 active:scale-95 text-lg">
+            <span class="flex items-center justify-center gap-2">
+              <i class="fa-solid fa-envelope"></i>
+              Open in Email
+            </span>
+          </button>
+          <button type="reset" class="flex-1 px-6 py-4 bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold rounded-lg shadow-lg transition-all duration-300 active:scale-95 text-lg">
+            <span class="flex items-center justify-center gap-2">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+              Clear
+            </span>
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-10 pt-8 border-t border-gray-800 space-y-4 text-sm text-gray-300">
+        <p class="flex items-start gap-3">
+          <i class="fa-solid fa-file-pdf text-tech-light text-xl flex-shrink-0 mt-0.5"></i>
+          <span>Prefer paper? <a href="/files/hudson-stingers-sponsorship-packet.pdf" download class="text-tech-light underline underline-offset-2">Download the sponsorship packet</a>, fill in the form on the last page, and mail it or give it to a team member.</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i class="fa-solid fa-circle-info text-tech-light text-xl flex-shrink-0 mt-0.5"></i>
+          <span>Questions? Email us at <a href="mailto:hudsonisdrobotics@gmail.com" class="text-tech-light underline underline-offset-2">hudsonisdrobotics@gmail.com</a>. We typically respond within 2 business days.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="/js/form_handler.mjs"></script>
