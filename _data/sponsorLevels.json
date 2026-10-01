@@ -4,24 +4,30 @@
     "name": "Robot Level",
     "amount": 500,
     "reward": "large logo",
+    "tile": "w-full sm:w-[28rem] p-10",
     "logoHeight": "h-28",
-    "slotWidth": "w-72"
+    "iconSize": "text-6xl",
+    "nameSize": "text-2xl"
   },
   {
     "id": "motor",
     "name": "Motor Level",
     "amount": 250,
     "reward": "medium logo",
+    "tile": "w-full sm:w-72 p-8",
     "logoHeight": "h-20",
-    "slotWidth": "w-56"
+    "iconSize": "text-5xl",
+    "nameSize": "text-xl"
   },
   {
     "id": "gear",
     "name": "Gear Level",
     "amount": 100,
     "reward": "small logo",
+    "tile": "w-[calc(50%-0.75rem)] sm:w-48 p-6",
     "logoHeight": "h-14",
-    "slotWidth": "w-40"
+    "iconSize": "text-3xl",
+    "nameSize": "text-base"
   },
   {
     "id": "stinger",

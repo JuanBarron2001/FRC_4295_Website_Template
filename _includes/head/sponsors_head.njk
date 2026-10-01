@@ -39,11 +39,15 @@
   "alternateName":"Hudson High School FRC Team 4295",
   "url":"https://hudsonrobotics4295.com/",
   "logo":"https://hudsonrobotics4295.com/images/logo/hudson_stingers_logo.png",
+  {#- Only real sponsors that are on the page: placed in a level, not an example. #}
+  {%- set listed = sponsors | selectattr("level") | rejectattr("example") %}
+  {%- if listed | length %}
   "sponsor":[
-    {%- for s in sponsors %}
+    {%- for s in listed %}
     {"@type":"Organization","name":{{ s.name | dump | safe }}}{{ "," if not loop.last }}
     {%- endfor %}
   ],
+  {%- endif %}
   "makesOffer":{
     "@type":"Offer",
     "name":"Hudson Stingers Robotics Sponsorship",

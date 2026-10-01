@@ -8,18 +8,64 @@ head: sponsors
   <div class="absolute inset-0 opacity-10">
     <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-tech rounded-full filter blur-3xl"></div>
   </div>
-
+  
   <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-gray-100 mb-4">Our Sponsors</h1>
     <p class="text-xl text-gray-300">Thank you to the businesses and organizations supporting STEM education through Hudson Stingers Robotics.</p>
-    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#levels" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-tech text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300">
+    <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+      <a href="#our-sponsors" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-tech text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300">
+        <i class="fa-solid fa-star"></i> See Our Sponsors
+      </a>
+      <a href="#levels" class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-tech-light text-gray-100 font-semibold rounded-md hover:bg-tech transition-all duration-300">
         <i class="fa-solid fa-layer-group"></i> See Sponsor Levels
       </a>
       <a href="#sponsor-form" class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-tech-light text-gray-100 font-semibold rounded-md hover:bg-tech transition-all duration-300">
         <i class="fa-solid fa-handshake"></i> Become a Sponsor
       </a>
     </div>
+  </div>
+</section>
+
+<div class="h-1 bg-gradient-to-r from-transparent via-tech to-transparent"></div>
+
+<!-- Our Sponsors, grouped by level like the shirt. A sponsor shows here once its
+     "level" is set in _data/sponsors.json. -->
+<section id="our-sponsors" class="py-16 md:py-24 bg-gray-950 scroll-mt-4">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <!-- DRAFT: example sponsors until FOAM places the real ones. Delete the "example" entries in _data/sponsors.json before this goes live. -->
+      <span class="inline-block mb-4 px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wide bg-yellow-200 text-yellow-900">Preview: example sponsors</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Thank You to Our Sponsors</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">These partners make our season possible, from robot parts to travel to competitions.</p>
+    </div>
+
+    {% for level in sponsorLevels %}
+    {% assign members = sponsors | where: "level", level.id %}
+    {% if members.size > 0 %}
+    <div class="mb-14 last:mb-0">
+      <h3 class="text-center text-sm font-bold uppercase tracking-widest text-tech-light mb-6">{{ level.name }}</h3>
+      {% if level.logoHeight %}
+      <div class="flex flex-wrap justify-center gap-6">
+        {% for s in members %}
+        <div class="{{ level.tile }} bg-gray-900 border border-gray-800 rounded-lg flex flex-col items-center justify-center text-center hover:border-tech hover:shadow-glow-maroon transition-all duration-300">
+          {% if s.logo %}
+          <img src="/images/logos/{{ s.logo }}" alt="{{ s.name | escape }} sponsor logo" class="{{ level.logoHeight }} w-auto max-w-full object-contain mb-3" loading="lazy" width="{{ s.width }}" height="{{ s.height }}" />
+          <p class="text-gray-300 font-semibold">{{ s.name | escape }}</p>
+          {% else %}
+          <i class="fa-solid {{ s.icon }} {{ level.iconSize }} text-tech-light mb-3" aria-hidden="true"></i>
+          <p class="{{ level.nameSize }} font-bold text-gray-100">{{ s.name | escape }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-center text-gray-300 text-lg leading-loose max-w-3xl mx-auto">
+        {% for s in members %}<span class="whitespace-nowrap">{{ s.name | escape }}</span>{% unless forloop.last %} <span class="text-tech-light" aria-hidden="true">·</span> {% endunless %}{% endfor %}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
   </div>
 </section>
 
@@ -65,72 +111,6 @@ head: sponsors
       <span class="inline-block mr-2 px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wide bg-yellow-200 text-yellow-900">Draft: to confirm</span>
       Donations may be tax deductible. Checks should be made payable to <strong class="text-gray-100">Hudson Robotics</strong>. Any amount is appreciated and fuels the success of our team!
     </div>
-
-    <!-- Packet downloads. DRAFT: three versions so FOAM can compare; keep one before this goes live. -->
-    <div class="mt-10 text-center">
-      <h3 class="text-xl font-bold text-gray-100 mb-2">Download the Sponsorship Packet</h3>
-      <p class="text-gray-400 mb-6">The packet has our letter, budget, ways to mentor, and a sponsorship form you can print and mail.</p>
-      <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
-        <a href="/files/hudson-stingers-sponsorship-packet.pdf" download class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-tech text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300">
-          <i class="fa-solid fa-file-pdf"></i> 2026–27 Packet (PDF)
-        </a>
-        <a href="/files/hudson-stingers-sponsorship-packet-season-logo.pdf" download class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-tech text-white font-semibold rounded-md shadow-lg hover:shadow-glow-maroon transition-all duration-300">
-          <i class="fa-solid fa-file-pdf"></i> 2026–27 Packet, Season Logo (PDF)
-        </a>
-        <a href="/files/hudson-stingers-sponsorship-packet-2024.pdf" download class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold rounded-md shadow-lg transition-all duration-300">
-          <i class="fa-solid fa-file-pdf"></i> 2024 Packet (PDF)
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="h-1 bg-gradient-to-r from-transparent via-tech to-transparent"></div>
-
-<!-- Current Sponsors, grouped by level like the shirt. A sponsor moves into its
-     level when its "level" is set in _data/sponsors.json. -->
-<section class="py-16 md:py-24 bg-gray-950">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-100 text-center mb-12">Our Partners</h2>
-
-    {% for level in sponsorLevels %}
-    {% assign members = sponsors | where: "level", level.id %}
-    <div class="mb-14">
-      <h3 class="text-center text-sm font-bold uppercase tracking-widest text-tech-light mb-6">{{ level.name }} · ${{ level.amount }}+</h3>
-      {% if level.logoHeight %}
-      <div class="flex flex-wrap justify-center gap-6">
-        {% for s in members %}
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center">
-          <img src="/images/logos/{{ s.logo }}" alt="{{ s.name | escape }} sponsor logo" class="{{ level.logoHeight }} w-auto object-contain mb-3" loading="lazy" width="{{ s.width }}" height="{{ s.height }}" />
-          <p class="text-gray-300 font-semibold">{{ s.name | escape }}</p>
-        </div>
-        {% endfor %}
-        <a href="#sponsor-form" class="{{ level.slotWidth }} max-w-full border-2 border-dashed border-gray-700 hover:border-tech-light rounded-lg p-6 flex flex-col items-center justify-center text-center transition-colors duration-300">
-          <span class="{{ level.logoHeight }} flex items-center justify-center text-tech-light text-3xl"><i class="fa-solid fa-plus"></i></span>
-          <span class="mt-3 text-tech-light font-bold">Your logo here</span>
-        </a>
-      </div>
-      {% else %}
-      <p class="text-center text-gray-300 text-lg">
-        {% for s in members %}{{ s.name | escape }} · {% endfor %}<a href="#sponsor-form" class="text-tech-light font-semibold underline underline-offset-2">Your name here</a>
-      </p>
-      {% endif %}
-    </div>
-    {% endfor %}
-
-    {% assign unplaced = sponsors | where: "level", nil %}
-    {% if unplaced.size > 0 %}
-    <!-- DRAFT: these sponsors gave before the levels existed. FOAM decides where each one goes. -->
-    <h3 class="text-center text-sm font-bold uppercase tracking-widest text-tech-light mb-6">Past Sponsors</h3>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-      {% for s in unplaced %}
-      <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 flex flex-col items-center justify-center text-center group hover:shadow-glow-maroon transition-all duration-300">
-        <img src="/images/logos/{{ s.logo }}" alt="{{ s.name | escape }} sponsor logo" class="h-20 object-contain mb-4 group-hover:scale-110 transition-transform" loading="lazy" width="{{ s.width }}" height="{{ s.height }}" />
-        <p class="text-gray-300 font-semibold">{{ s.name | escape }}</p>
-      </div>
-      {% endfor %}
-    </div>
-    {% endif %}
   </div>
 </section>
 

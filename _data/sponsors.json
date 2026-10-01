@@ -1,4 +1,16 @@
 [
+  { "name": "Acme Engineering", "icon": "fa-gears", "level": "robot", "example": true },
+  { "name": "Example Auto Parts", "icon": "fa-car", "level": "motor", "example": true },
+  { "name": "Sample Credit Union", "icon": "fa-building-columns", "level": "motor", "example": true },
+  { "name": "Demo Hardware", "icon": "fa-screwdriver-wrench", "level": "gear", "example": true },
+  { "name": "Placeholder Pizza", "icon": "fa-pizza-slice", "level": "gear", "example": true },
+  { "name": "Test Kitchen Cafe", "icon": "fa-mug-hot", "level": "gear", "example": true },
+  { "name": "The Smith Family", "level": "stinger", "example": true },
+  { "name": "Jane Doe", "level": "stinger", "example": true },
+  { "name": "Example Realty", "level": "stinger", "example": true },
+  { "name": "The Garcia Family", "level": "stinger", "example": true },
+  { "name": "John Doe", "level": "stinger", "example": true },
+
   { "name": "Chick-fil-A", "logo": "chick-fil-a-sponsor-logo.webp", "width": 400, "height": 225, "level": null },
   { "name": "Gene Haas Foundation", "logo": "gene-haas-foundation-sponsor-logo.webp", "width": 400, "height": 386, "level": null },
   { "name": "Siemens", "logo": "siemens-sponsor-logo.webp", "width": 400, "height": 63, "level": null },
