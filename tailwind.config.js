@@ -19,6 +19,14 @@ module.exports = {
         // Lighter brand red for text and icons on the dark backgrounds; maroon text
         // on near-black fails WCAG contrast (2.0:1). #e85c3a is 5.7:1.
         'tech-light': '#e85c3a',
+        // Shades around the brand red (tech, #822008, sits between 600 and 700):
+        // lighter for hovers and text on dark maroon, darker for gradients and badges.
+        maroon: {
+          200: '#f5c2b6',
+          600: '#9c2a0e',
+          700: '#6a1a07',
+          900: '#3d0f04',
+        },
         dark: '#0f0f0f',
         gray: {
           950: '#0a0a0a',
