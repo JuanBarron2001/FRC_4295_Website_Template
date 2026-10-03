@@ -126,7 +126,7 @@ head: calendar
             {% if event.endDate %}
             <div class="mt-3 text-sm text-gray-400 italic">
               <i class="fa-solid fa-arrow-right mr-1"></i>
-              Multi-day event ending {{ event.endDate | date: "%B %d, %Y" }}
+              Multi-day event ending {{ event.endDate | date: "%B %d, %Y", "UTC" }}
             </div>
             {% endif %}
           </div>
