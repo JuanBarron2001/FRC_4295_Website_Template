@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth'
+      right: ''
     },
     events: calendarEvents,
     eventClick: function(info) {
