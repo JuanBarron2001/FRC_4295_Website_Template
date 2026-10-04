@@ -28,7 +28,7 @@ jobs:
         env:
           LAMBDA_URL: ${{ secrets.LAMBDA_URL }}
 
-      # --remap checks links to hudsonrobotics4295.com against the fresh build
+      # --remap checks links to hudsonstingers4295.org against the fresh build
       # instead of the live site, so a pull request can add a file and link to
       # it in the same change.
       - name: Check internal links
@@ -37,7 +37,7 @@ jobs:
           args: >-
             --verbose --no-progress './_site/**/*.html'
             --root-dir '${{ github.workspace }}/_site'
-            --remap 'https://hudsonrobotics4295\.com/(.*) file://${{ github.workspace }}/_site/$1'
+            --remap 'https://hudsonstingers4295\.org/(.*) file://${{ github.workspace }}/_site/$1'
             --exclude 'instagram\.com' --exclude 'twitter\.com' --exclude 'x\.com'
             --exclude '404\.html' --exclude 'lambda-url.*\.on\.aws'
           fail: true
