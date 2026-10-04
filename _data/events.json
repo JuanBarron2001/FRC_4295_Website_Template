@@ -355,7 +355,7 @@
   {
     "title": "Spring Break",
     "date": "2026-03-09",
-    "endDate": "2026-03-14",
+    "endDate": "2026-03-13",
     "time": "All Day",
     "location": "Hudson High School",
     "type": "holiday",
@@ -365,7 +365,7 @@
   {
     "title": "FIT District McAllen Event",
     "date": "2026-03-12",
-    "endDate": "2026-03-15",
+    "endDate": "2026-03-14",
     "time": "All Day",
     "location": "McAllen, TX",
     "type": "competition",
@@ -375,7 +375,7 @@
   {
     "title": "FIT District Waco Event",
     "date": "2026-03-19",
-    "endDate": "2026-03-22",
+    "endDate": "2026-03-21",
     "time": "All Day",
     "location": "Waco, TX",
     "type": "competition",
@@ -411,5 +411,435 @@
     "type": "meeting",
     "description": "Hudson High School graduation ceremony. Congratulations to our graduating seniors!",
     "icon": "fa-graduation-cap"
+  },
+  {
+    "title": "Labor Day Holiday",
+    "date": "2026-09-07",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Labor Day Holiday.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-10-01",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-10-08",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Fall Break",
+    "date": "2026-10-12",
+    "endDate": "2026-10-16",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Fall Break.",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-10-22",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-10-29",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-11-05",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-11-12",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-11-19",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Thanksgiving Holidays",
+    "date": "2026-11-23",
+    "endDate": "2026-11-27",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Thanksgiving Holidays.",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-12-03",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-12-10",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2026-12-17",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Christmas Holiday / Winter Break",
+    "date": "2026-12-21",
+    "endDate": "2026-12-31",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Christmas Holiday / Winter Break.",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "title": "New Year Holiday / Winter Break",
+    "date": "2027-01-01",
+    "endDate": "2027-01-04",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - New Year Holiday / Winter Break.",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-01-07",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Kickoff Event",
+    "date": "2027-01-09",
+    "endDate": null,
+    "time": "TBA",
+    "location": "TBA",
+    "type": "competition",
+    "description": "FIRST Robotics Competition season kickoff. Game reveal and initial strategy session.",
+    "icon": "fa-rocket"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-01-14",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "MLK Holiday",
+    "date": "2027-01-18",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Martin Luther King Jr. Day.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-01-21",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-01-28",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-02-04",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-02-11",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "President's Day",
+    "date": "2027-02-15",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - President's Day holiday.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-02-18",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-02-25",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-03-04",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Spring Break",
+    "date": "2027-03-08",
+    "endDate": "2027-03-12",
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Spring Break.",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "title": "FIT District McAllen Event",
+    "date": "2027-03-11",
+    "endDate": "2027-03-13",
+    "time": "All Day",
+    "location": "McAllen, TX",
+    "type": "competition",
+    "description": "FIT District competition. Three days of qualification and elimination matches.",
+    "icon": "fa-trophy"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-03-18",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-03-25",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Good Friday Holiday",
+    "date": "2027-03-26",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Good Friday Holiday.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-04-01",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-04-08",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-04-15",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-04-22",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-04-29",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "School Holiday",
+    "date": "2027-04-30",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - School holiday.",
+    "icon": "fa-calendar-xmark"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-05-06",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-05-13",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "Team Meeting",
+    "date": "2027-05-20",
+    "endDate": null,
+    "time": "5:00 PM - 7:00 PM",
+    "location": "Hudson High School - Robotics Lab",
+    "type": "meeting",
+    "description": "Weekly team meeting.",
+    "icon": "fa-wrench"
+  },
+  {
+    "title": "High School Graduation",
+    "date": "2027-05-22",
+    "endDate": null,
+    "time": "TBA",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "Hudson High School graduation. Congratulations to our graduating seniors!",
+    "icon": "fa-graduation-cap"
+  },
+  {
+    "title": "Memorial Day Holiday",
+    "date": "2027-05-31",
+    "endDate": null,
+    "time": "All Day",
+    "location": "Hudson High School",
+    "type": "holiday",
+    "description": "No school - Memorial Day Holiday.",
+    "icon": "fa-calendar-xmark"
   }
 ]

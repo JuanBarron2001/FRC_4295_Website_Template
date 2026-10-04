@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const eventsData = window.calendarEventsData || [];
   
   // Transform events for FullCalendar
+  // endDate in events.json is the last day of the event; FullCalendar wants the day after.
+  const dayAfter = (isoDate) => {
+    const d = new Date(`${isoDate}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() + 1);
+    return d.toISOString().slice(0, 10);
+  };
+
   const calendarEvents = eventsData.map(event => {
     const classNames = [`fc-event-${event.type}`];
     if (event.canceled) {
@@ -23,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return {
       title: event.title,
       start: event.date,
-      end: event.endDate || event.date,
+      end: event.endDate ? dayAfter(event.endDate) : event.date,
       allDay: true,
       extendedProps: {
         type: event.type,
@@ -42,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth'
+      right: ''
     },
     events: calendarEvents,
     eventClick: function(info) {

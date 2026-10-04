@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Page titles: big, in the team font (Hudson Stinger has a single weight, so no bold). */
+  .heading-tech {
+    @apply font-stinger text-4xl md:text-5xl tracking-tight leading-tight text-gray-100;
+  }
+
+  /* Section titles, the size the sponsors page uses. */
+  .subheading-tech {
+    @apply text-3xl md:text-4xl font-bold text-gray-100;
+  }
+}
