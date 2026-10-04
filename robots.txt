@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://hudsonrobotics4295.com/sitemap.xml
+Sitemap: https://hudsonstingers4295.org/sitemap.xml

@@ -206,7 +206,7 @@ GitHub Actions automatically builds and deploys when you push to `main` branch:
    - Build the site with `npm run build`
    - Deploy to GitHub Pages
 
-3. Site will be live at: `https://hudsonrobotics4295.com/` (set by the `CNAME` file)
+3. Site will be live at: `https://hudsonstingers4295.org/` (set by the `CNAME` file)
 
 ### Manual Build
 
