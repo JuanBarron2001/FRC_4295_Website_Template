@@ -20,14 +20,19 @@
     <!-- Font Awesome Free, self-hosted (built by .eleventy.js from the npm package) -->
     <link rel="stylesheet" href="/styles/fontawesome.css">
 
-    <!-- Custom Font -->
+    <!-- Custom Font, preloaded because every page title uses it -->
+    <link rel="preload" href="/fonts/husdonstinger.woff2" as="font" type="font/woff2" crossorigin>
     <style>
       @font-face {
         font-family: 'Hudson Stinger';
-        src: url('/fonts/husdonstinger.otf') format('opentype');
+        src: url('/fonts/husdonstinger.woff2') format('woff2'),
+             url('/fonts/husdonstinger.otf') format('opentype');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
+        /* The font only draws letters and digits (its punctuation is blank), so "&", "?"
+           and the like fall back to the normal font. */
+        unicode-range: U+0020, U+0030-0039, U+0041-005A, U+0061-007A;
       }
     </style>
 
@@ -118,9 +123,9 @@
           style="background-color: #4D1618;">
         <!-- Team name & subtitle -->
         <div>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-stinger tracking-tighter text-gray-100 leading-tight">
+          <p class="text-3xl sm:text-4xl md:text-5xl font-stinger tracking-tighter text-gray-100 leading-tight">
             Hudson Stingers
-          </h1>
+          </p>
           <p class="text-maroon-200 font-bold text-sm sm:text-base md:text-lg mt-1 tracking-wide">FIRST Robotics Competition • Team <span class="font-stinger text-base sm:text-lg md:text-xl">4295</span></p>
         </div>
       </a>
